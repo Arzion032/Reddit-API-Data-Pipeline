@@ -1,0 +1,6 @@
+.venv/
+.env
+.env.*
+airflow.env
+.vscode/
+__pycache__/
