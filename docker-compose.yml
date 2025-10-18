@@ -87,17 +87,18 @@ services:
 
   airflow-worker:
     <<: *airflow-common
-    command: celery worker
+    command: celery worker -H worker@%h
     environment:
       DUMB_INIT_SETSID: "0"
-    hostname: airflow-worker
+      AIRFLOW__CELERY__WORKER_CONCURRENCY: 16
+    hostname: worker
     healthcheck:
-      test: ["CMD-SHELL", "celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d celery@airflow-worker"]
+      test: ["CMD-SHELL", "celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d worker@worker"]
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 30s
-      
+
 volumes:
   postgres-db-volume:
   redis-data-volume:
