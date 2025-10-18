@@ -5,4 +5,4 @@
 airflow.env
 .vscode/
 __pycache__/
-.conf
+*.conf
