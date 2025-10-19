@@ -3,11 +3,12 @@ x-airflow-common:
   build:
     context: .
     dockerfile: Dockerfile
-  image: custom-airflow:3.1.0-python3.12
+  image: custom-airflow:3.0.0-python3.12
   env_file:
     - airflow.env
   environment:
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
+    AIRFLOW__API__API_SERVER_URL: http://airflow-api-server:9091
   volumes:
     - ./config:/opt/airflow/config
     - ./dags:/opt/airflow/dags
