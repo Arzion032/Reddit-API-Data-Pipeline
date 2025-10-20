@@ -1,2 +1,6 @@
 project:
-    name: reddit-api-data-pipeline
+  name: reddit-api-data-pipeline
+
+deploy:
+  runtime_version: 3.1.2
+  executor: CeleryExecutor
