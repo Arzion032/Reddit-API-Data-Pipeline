@@ -5,7 +5,7 @@ What about data analysts? data scientists? statisticians? ad-hoc reports?
 
 Most data books focus on the data engineering lifecycle, sometimes they talk about the ""Analytics sandbox"", but they rarely address heads-on the personas doing analytics work in production. Modern data platform allow the decoupling of compute and data, enabling workload isolation to allow users read-only access to production data without affecting production workloads. Other teams perform data replication from production to lower environments. There's also the ""blue-green development architecture"", with two systems with production data.
 
-How are you dealing with users requesting production data?",23,29,aburkh,404257,2025-10-21 13:26:54,https://www.reddit.com/r/dataengineering/comments/1occxjl/developing_with_production_data_who_and_how/,0.9,False,False,False,False
+How are you dealing with users requesting production data?",24,29,aburkh,404261,2025-10-21 13:26:54,https://www.reddit.com/r/dataengineering/comments/1occxjl/developing_with_production_data_who_and_how/,0.9,False,False,False,False
 1ocst3a,Need advice choosing between Data engineer vs Sr Data analyst,"Hey all I could really use some career advice from this community.
 
 I was fortunate to land 2 offers in this market, but now I’m struggling to make the right long term decision.
@@ -24,8 +24,8 @@ What would you do in my shoes?
 Go hard into engineering now and level up fast even if it’s stressful without much support? Or take the analyst role at a big company, build brand and transition later?
 
 Would appreciate any advice from people who’ve been on either path.
-",13,17,Agile_Yak3819,404257,2025-10-21 23:41:05,https://www.reddit.com/r/dataengineering/comments/1ocst3a/need_advice_choosing_between_data_engineer_vs_sr/,0.81,False,False,False,False
-1ocie74,Our 7 Snowflake query optimization tips and why they work,Hope y'all find it useful!,9,1,hornyforsavings,404257,2025-10-21 16:58:09,https://blog.greybeam.ai/snowflake-query-optimization/,0.91,False,False,False,False
+",14,18,Agile_Yak3819,404261,2025-10-21 23:41:05,https://www.reddit.com/r/dataengineering/comments/1ocst3a/need_advice_choosing_between_data_engineer_vs_sr/,0.82,False,False,False,False
+1ocie74,Our 7 Snowflake query optimization tips and why they work,Hope y'all find it useful!,8,1,hornyforsavings,404261,2025-10-21 16:58:09,https://blog.greybeam.ai/snowflake-query-optimization/,0.8,False,False,False,False
 1od2x2k,Parquet vs. Open Table Formats: Worth the Metadata Overhead?,"I recently ran into all sorts of pain working directly with raw Parquet files for an analytics project  broken schemas, partial writes, and painfully slow scans.   
 That experience made me realize something simple: Parquet is *just* a storage format. It’s great at compression and column pruning, but that’s where it ends. No ACID guarantees, no safe schema evolution, no time travel, and a whole lot of chaos when multiple jobs touch the same data.
 
@@ -42,8 +42,8 @@ In practice, these features made a *huge* difference  reliable BI queries runnin
 But it does make you think  is that extra metadata layer really worth the added complexity?  
  Or can clever workarounds and tooling keep raw Parquet setups running just fine at scale?
 
-Wrote a blog on this that i am sharing here looking forward to your thoughts ",5,1,DevWithIt,404257,2025-10-22 08:46:11,https://olake.io/blog/iceberg-vs-parquet-table-format-vs-file-format,0.86,False,False,False,False
-1ocqznw,Tools for automated migration away from Informatica,"Has anyone ever had any success using tools like DataBricks Lakebridge or Snowflake's SnowConvert to migrate Informatica powercenter ETL pipelines to another platform? I assume at best they ""kind of work sometimes for some things"" but am curious to hear anyone's actual experience with them in the wild.",5,2,BadKafkaPartitioning,404257,2025-10-21 22:22:39,https://www.reddit.com/r/dataengineering/comments/1ocqznw/tools_for_automated_migration_away_from/,1.0,False,False,False,False
+Wrote a blog on this that i am sharing here looking forward to your thoughts ",5,1,DevWithIt,404261,2025-10-22 08:46:11,https://olake.io/blog/iceberg-vs-parquet-table-format-vs-file-format,0.78,False,False,False,False
+1ocqznw,Tools for automated migration away from Informatica,"Has anyone ever had any success using tools like DataBricks Lakebridge or Snowflake's SnowConvert to migrate Informatica powercenter ETL pipelines to another platform? I assume at best they ""kind of work sometimes for some things"" but am curious to hear anyone's actual experience with them in the wild.",5,2,BadKafkaPartitioning,404261,2025-10-21 22:22:39,https://www.reddit.com/r/dataengineering/comments/1ocqznw/tools_for_automated_migration_away_from/,1.0,False,False,False,False
 1oca4c7,Help a noob: CI/CD pipelines with medallion architecture,"Hello,   
 I have worked for a few years as an analyst (self taught) and now I am trying to get into data engineering. I am trying to simply understand how to structure a DWH using **medallion architecture** (Bronze → Silver → Gold) across **multiple environments** (Dev / Test / Prod).
 
@@ -59,7 +59,7 @@ DWH |
 
 \-> ProdDB -> BronzeSchema, SilverSchema, GoldSchema
 
-Would you even create a bronze layer on staging and test DBs or not really? I mean it is just the raw data no? ",7,3,Nomad_chh,404257,2025-10-21 11:13:49,https://www.reddit.com/r/dataengineering/comments/1oca4c7/help_a_noob_cicd_pipelines_with_medallion/,0.82,False,False,False,False
+Would you even create a bronze layer on staging and test DBs or not really? I mean it is just the raw data no? ",5,3,Nomad_chh,404261,2025-10-21 11:13:49,https://www.reddit.com/r/dataengineering/comments/1oca4c7/help_a_noob_cicd_pipelines_with_medallion/,0.78,False,False,False,False
 1ocz7qu,What is the best way to orchestrate dbt job in aws,"I recently joined my company, and they currently run dbt jobs using AWS Step Functions and a Fargate task that executes the project, and so on.
 
 However, I’m not sure if this is the best approach to orchestrate dbt jobs. Another important point is that the company manages most workflows through events following a DDD (Domain-Driven Design) pattern.
@@ -70,12 +70,12 @@ Additionally, in the future, there might be other processes that depend on those
 
 In my opinion, Airflow doesn’t fit well here.
 
-What do you think would be a better way to manage these processes? Would it make sense to build something more custom for these types of cases",4,3,jonathanrodrigr12,404257,2025-10-22 04:54:04,https://www.reddit.com/r/dataengineering/comments/1ocz7qu/what_is_the_best_way_to_orchestrate_dbt_job_in_aws/,0.71,False,False,False,False
+What do you think would be a better way to manage these processes? Would it make sense to build something more custom for these types of cases",4,3,jonathanrodrigr12,404261,2025-10-22 04:54:04,https://www.reddit.com/r/dataengineering/comments/1ocz7qu/what_is_the_best_way_to_orchestrate_dbt_job_in_aws/,0.71,False,False,False,False
 1ocalca,Any good PR review tools for data stacks?,"Has anyone tried using PR review tools like **CodeRabbit** or **Greptile** for data engineering workflows (dbt, Airflow, Snowflake, etc.)?
 
-If anyone can share theier experience on if they can handle things like schema changes, query optimization, or data quality checks well, or if they’re more tuned for general code reviews (which I m mostly expecting).",3,0,Hot_Donkey9172,404257,2025-10-21 11:39:23,https://www.reddit.com/r/dataengineering/comments/1ocalca/any_good_pr_review_tools_for_data_stacks/,0.72,False,False,False,False
-1od0cqr,Anyone experienced with jOOQ as SQL transpiler?,Does anyone have experience with jOOQ (https://github.com/jOOQ/jOOQ) as a transpiler between two different SQL dialects? We are searching for options in Java to run queries from other dialects on Exasol without the users having to rewrite them.,2,0,exagolo,404257,2025-10-22 06:01:32,https://www.reddit.com/r/dataengineering/comments/1od0cqr/anyone_experienced_with_jooq_as_sql_transpiler/,0.67,False,False,False,False
-1ocy398,The Death of Thread Per Core,,2,0,sionescu,404257,2025-10-22 03:53:22,https://buttondown.com/jaffray/archive/the-death-of-thread-per-core/,0.67,False,False,False,False
+If anyone can share theier experience on if they can handle things like schema changes, query optimization, or data quality checks well, or if they’re more tuned for general code reviews (which I m mostly expecting).",2,0,Hot_Donkey9172,404261,2025-10-21 11:39:23,https://www.reddit.com/r/dataengineering/comments/1ocalca/any_good_pr_review_tools_for_data_stacks/,0.63,False,False,False,False
+1od0cqr,Anyone experienced with jOOQ as SQL transpiler?,Does anyone have experience with jOOQ (https://github.com/jOOQ/jOOQ) as a transpiler between two different SQL dialects? We are searching for options in Java to run queries from other dialects on Exasol without the users having to rewrite them.,2,0,exagolo,404261,2025-10-22 06:01:32,https://www.reddit.com/r/dataengineering/comments/1od0cqr/anyone_experienced_with_jooq_as_sql_transpiler/,0.67,False,False,False,False
+1ocy398,The Death of Thread Per Core,,2,0,sionescu,404261,2025-10-22 03:53:22,https://buttondown.com/jaffray/archive/the-death-of-thread-per-core/,0.67,False,False,False,False
 1ocksmo,Thoughts on Using Synthetic Tabular data for DE projects ?,"Thoughts on using Synthetic Data for Projects ?
 
 I'm currently a DB Specialist with 3 YOE learning Spark, DBT, Python, Airflow and AWS to switch to DE roles.
@@ -137,21 +137,26 @@ Built a synthetic transaction pipeline (750k+ txns, 3.75M steps, anomaly injecti
 
 * IP concerns (inspired by work but no copied code/keywords)
 * Whether it’s a strong enough DE project for Product Based Companies and Fintech. 
-* Pros/cons of using synthetic vs real-world messy data",2,3,Markymark285,404257,2025-10-21 18:26:56,https://www.reddit.com/r/dataengineering/comments/1ocksmo/thoughts_on_using_synthetic_tabular_data_for_de/,0.67,False,False,False,False
+* Pros/cons of using synthetic vs real-world messy data",2,3,Markymark285,404261,2025-10-21 18:26:56,https://www.reddit.com/r/dataengineering/comments/1ocksmo/thoughts_on_using_synthetic_tabular_data_for_de/,0.67,False,False,False,False
 1ocery5,Anyone else use AWS Redshift Zero-ETL in US-EAST-1?,"This is a service that basically puts a read replica of an RDS streaming into your Redshift data warehouse. 
 
-We have this set up in our environment and it runs many critical systems. After the nightmares of yesterday I checked this morning after getting some complaints from unhappy users about stale data and our ZETL integrations appear to have disappeared entirely. I can see the data and it appears to have stopped updating coincident with yesterday's outage. Looks like I'll have to completely remake these. This is pretty irritating because I can't find any information anywhere from AWS about the outage having *deleted* this infrastructure.",4,1,bingbongbangchang,404257,2025-10-21 14:40:29,https://www.reddit.com/r/dataengineering/comments/1ocery5/anyone_else_use_aws_redshift_zeroetl_in_useast1/,0.75,False,False,False,False
+We have this set up in our environment and it runs many critical systems. After the nightmares of yesterday I checked this morning after getting some complaints from unhappy users about stale data and our ZETL integrations appear to have disappeared entirely. I can see the data and it appears to have stopped updating coincident with yesterday's outage. Looks like I'll have to completely remake these. This is pretty irritating because I can't find any information anywhere from AWS about the outage having *deleted* this infrastructure.",3,1,bingbongbangchang,404261,2025-10-21 14:40:29,https://www.reddit.com/r/dataengineering/comments/1ocery5/anyone_else_use_aws_redshift_zeroetl_in_useast1/,0.67,False,False,False,False
 1occmld,DBT unit tests on Redshift,"Hello!
 
 I'm trying to implement unit tests for the DBT models used by my team, so we have more trust on those models and their logic. However I'm getting stuck when the model contains a SUPER-typed column for JSON data.
 
 If I write the JSON object inside a string in the YAML file of the test, then DBT expects unquoted JSON. If I remove the quotes around the JSOn object, then I get a syntax error on the YAML file. I also tried writing the JSON object as a YAML object with indent but it fails too. 
 
-What should I do ?",2,5,Adrien0623,404257,2025-10-21 13:14:11,https://www.reddit.com/r/dataengineering/comments/1occmld/dbt_unit_tests_on_redshift/,0.63,False,False,False,False
-1od2c18,"Data Modeling for the Agentic Era: Semantics, Speed, and Stewardship",,1,0,sspaeti,404257,2025-10-22 08:07:45,https://www.rilldata.com/blog/data-modeling-for-the-agentic-era-semantics-speed-and-stewardship,0.67,False,False,False,False
+What should I do ?",2,5,Adrien0623,404261,2025-10-21 13:14:11,https://www.reddit.com/r/dataengineering/comments/1occmld/dbt_unit_tests_on_redshift/,0.58,False,False,False,False
+1od2c18,"Data Modeling for the Agentic Era: Semantics, Speed, and Stewardship",,1,0,sspaeti,404261,2025-10-22 08:07:45,https://www.rilldata.com/blog/data-modeling-for-the-agentic-era-semantics-speed-and-stewardship,0.67,False,False,False,False
+1od0cdl,What do you think it would happen to dbt certificates since it was merged with Fivetran?,"A bit of context, I am coming from non tech education so I am always looking for ways to learn more about data engineering. 
+
+I was thinking to prepare for the dbt certificates but since the news came out. I am observing. 
+
+What do you think?",1,2,Ragnareuk,404261,2025-10-22 06:00:57,https://www.reddit.com/r/dataengineering/comments/1od0cdl/what_do_you_think_it_would_happen_to_dbt/,0.6,False,False,False,False
 1ocvodq,Data Streaming Delivery Semantics,"https://preview.redd.it/h4k1298ikkwf1.png?width=1744&format=png&auto=webp&s=ebf666f0ad1f466edc7e8802e4087f65c35dfd4c
 
-[https://codepen.io/gangtao/full/raxdOOK](https://codepen.io/gangtao/full/raxdOOK) ",1,0,gangtao,404257,2025-10-22 01:54:02,https://www.reddit.com/r/dataengineering/comments/1ocvodq/data_streaming_delivery_semantics/,0.67,False,False,False,False
+[https://codepen.io/gangtao/full/raxdOOK](https://codepen.io/gangtao/full/raxdOOK) ",1,0,gangtao,404261,2025-10-22 01:54:02,https://www.reddit.com/r/dataengineering/comments/1ocvodq/data_streaming_delivery_semantics/,0.67,False,False,False,False
 1oce5db,Schema Evolution in GCP,"Hi, i have experience with ELT pipelines on GCP. One that loads data from Postgres tables data into BigQuery and another one that loads CSV files data from SFTP server to BigQuery. 
 
 * Postgres to BQ:
@@ -188,15 +193,10 @@ Now, could you please explain how below could be handled in both cases?:
 Thank you in advance! 
 
 
-",1,0,FeeOk6875,404257,2025-10-21 14:15:38,https://www.reddit.com/r/dataengineering/comments/1oce5db/schema_evolution_in_gcp/,0.57,False,False,False,False
+",1,0,FeeOk6875,404261,2025-10-21 14:15:38,https://www.reddit.com/r/dataengineering/comments/1oce5db/schema_evolution_in_gcp/,0.57,False,False,False,False
 1ocaik3,Integrating sqlmesh models with Dagster,"Hey folks,
 
-I’m currently using Dagster as the orchestrator in my team’s data stack and I’m considering incorporating sqlmesh as our transformation library. But, I can’t really figure out a way to integrate my sqlmesh models with Dagster so that they show up as individual assets. Has anyone had any luck in achieving this ? How did you go about doing it ?",1,1,YameteGPT,404257,2025-10-21 11:35:12,https://www.reddit.com/r/dataengineering/comments/1ocaik3/integrating_sqlmesh_models_with_dagster/,0.57,False,False,False,False
-1od0cdl,What do you think it would happen to dbt certificates since it was merged with Fivetran?,"A bit of context, I am coming from non tech education so I am always looking for ways to learn more about data engineering. 
-
-I was thinking to prepare for the dbt certificates but since the news came out. I am observing. 
-
-What do you think?",0,2,Ragnareuk,404257,2025-10-22 06:00:57,https://www.reddit.com/r/dataengineering/comments/1od0cdl/what_do_you_think_it_would_happen_to_dbt/,0.5,False,False,False,False
+I’m currently using Dagster as the orchestrator in my team’s data stack and I’m considering incorporating sqlmesh as our transformation library. But, I can’t really figure out a way to integrate my sqlmesh models with Dagster so that they show up as individual assets. Has anyone had any luck in achieving this ? How did you go about doing it ?",1,1,YameteGPT,404261,2025-10-21 11:35:12,https://www.reddit.com/r/dataengineering/comments/1ocaik3/integrating_sqlmesh_models_with_dagster/,0.57,False,False,False,False
 1oco9fs,Date time granularity,"Hi all,
 
 I have some room booking data I need to do some time-related calculations with using Power Bi.
@@ -211,4 +211,4 @@ I have a dim date table connected to snapshot\_date in the room bookings table a
 
 Question is do I need to have my room bookings data at the same time granularity (hourly) as the room occupancy data to make life easier with time calculations moving forward.
 
-Cheers",0,2,ImFizzyGoodNice,404257,2025-10-21 20:35:28,https://www.reddit.com/r/dataengineering/comments/1oco9fs/date_time_granularity/,0.4,False,False,False,False
+Cheers",0,2,ImFizzyGoodNice,404261,2025-10-21 20:35:28,https://www.reddit.com/r/dataengineering/comments/1oco9fs/date_time_granularity/,0.4,False,False,False,False
