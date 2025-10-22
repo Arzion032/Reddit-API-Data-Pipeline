@@ -8,11 +8,9 @@ def extract_reddit(file_name: str, subreddit: str, time_filter='day', limit=None
     
     # Extract subreddit post
     post = extract_posts(reddit, subreddit, time_filter, limit)
-    print(post)
-    
+   
     # Transform the data
     post_df = pd.DataFrame(post)
-    print('head',post_df.head())
     post_df = transform_data(post_df)
     
     # Load data as csv
