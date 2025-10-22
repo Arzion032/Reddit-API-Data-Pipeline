@@ -1,5 +1,7 @@
-import praw, sys
+import praw, sys, pandas as pd, numpy as np
 from praw import Reddit
+
+from utils.contants import POST_FIELDS
 
 def reddit_conn(client_id, client_secret, user_agent)-> Reddit:
   
@@ -14,13 +16,32 @@ def reddit_conn(client_id, client_secret, user_agent)-> Reddit:
         print(f"Error: {e}")
         sys.exit(1)
         
-def extract_posts(reddit: Reddit, subreddit: str, time_filter: str, limit=None):
-    subreddit = reddit.subreddit(subreddit)
-    posts = subreddit.top(time_filter=time_filter, limit=limit)
-    
+def extract_posts(instance: Reddit, subreddit: str, time_filter: str, limit=None):
+    subreddit_instance = instance.subreddit(subreddit)
+    posts = subreddit_instance.top(time_filter=time_filter, limit=limit)
+
     post_lists = []
-    
+   
     for post in posts:
         post_dict = vars(post)
-        print(post_dict)
-        # post = {key: post_dict[key] for key in POST_FIELDS}
+        post = {key: post_dict[key] for key in POST_FIELDS}
+        post_lists.append(post)
+    
+    print('post_lists', post_lists)
+    return post_lists
+
+def transform_data(post_df: pd.DataFrame):
+    print(post_df.columns)
+    post_df['created_utc'] = pd.to_datetime(post_df['created_utc'], unit='s')
+    post_df['over_18'] = np.where((post_df['over_18'] == True), True, False)
+    post_df['author'] = post_df['author'].astype(str)
+    return post_df
+
+def load_data_to_csv(data: pd.DataFrame, path: str):
+    data.to_csv(path, index=False)
+    
+    
+    
+    
+    
+    

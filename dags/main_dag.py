@@ -1,8 +1,7 @@
-from airflow import DAG
+from airflow.sdk import DAG, task
 from datetime import datetime
 import os, sys 
 from airflow.providers.standard.operators.python import PythonOperator
-
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
