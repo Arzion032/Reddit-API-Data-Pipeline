@@ -7,3 +7,6 @@ airflow.env
 __pycache__/
 *.conf
 airflow.env
+logs/*
+!logs/.gitkeep
+!.gitignore

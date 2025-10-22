@@ -16,4 +16,5 @@ def extract_reddit(file_name: str, subreddit: str, time_filter='day', limit=None
     post_df = transform_data(post_df)
     
     # Load data as csv
-    load_data_to_csv(post_df, OUTPUT_PATH)
+    file_path = f"{OUTPUT_PATH}/{file_name}.csv"
+    load_data_to_csv(post_df, file_path)
