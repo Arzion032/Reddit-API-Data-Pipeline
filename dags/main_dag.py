@@ -6,6 +6,7 @@ from airflow.providers.standard.operators.python import PythonOperator
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipelines.extract_reddit import extract_reddit
+from pipelines.aws_s3_pipeline import upload_to_s3_pipeline
 
 file_postfix = datetime.now().strftime("%Y%m%d")
 
@@ -33,3 +34,11 @@ with DAG(
             'limit': 100,
         }
     )
+    
+    upload_to_s3 = PythonOperator(
+        task_id="s3_upload",
+        python_callable=upload_to_s3_pipeline,
+        dag=dag
+    )
+    
+    extract >> upload_to_s3

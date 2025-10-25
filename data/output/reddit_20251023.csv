@@ -1,0 +1,193 @@
+id,title,selftext,score,num_comments,author,subreddit_subscribers,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+1odfg0o,dbt-core fork: OpenDBT is here to enable community,"Hey all,
+
+Recently there is increased concerns about the future of the dbt-core. To be honest regardless of the the fivetran acquisition, dbt-core never got any improvement over time. And it always neglected community contributions. 
+
+[OpenDBT](https://github.com/memiiso/opendbt) fork is created to solve this problem. Enabling community to extend dbt to their own needs and evolve opensource version and make it feature rich.
+
+[OpenDBT](https://github.com/memiiso/opendbt) dynamically extends dbt-core. It's already adding significant features that aren't in the dbt-core. This is a path toward a complete community-driven fork.
+
+We are inviting developers and the wider data community to collaborate. 
+
+Please check out the features we've already added, star the repo, and feel free to submit a PR! 
+
+[https://github.com/memiiso/opendbt](https://github.com/memiiso/opendbt)",251,30,gelyinegel,404407,2025-10-22 17:54:56,https://www.reddit.com/r/dataengineering/comments/1odfg0o/dbtcore_fork_opendbt_is_here_to_enable_community/,0,False,False,False,False
+1odp2y6,Just got hired as a Senior Data Engineer. Never been a Data Engineer,"Oh boy, somehow I got myself into the sweet ass job. I’ve never held the title of Data Engineer however I’ve held several other “data” roles/titles. I’m joining a small, growing digital marketing company here in San Antonio. Freaking JAZZED to be joining the ranks of Data Engineers. And I can now officially call myself a professional engineer! ",113,29,Uncle_Snake43,404407,2025-10-23 00:21:16,https://www.reddit.com/r/dataengineering/comments/1odp2y6/just_got_hired_as_a_senior_data_engineer_never/,0,False,False,False,False
+1od2x2k,Parquet vs. Open Table Formats: Worth the Metadata Overhead?,"I recently ran into all sorts of pain working directly with raw Parquet files for an analytics project  broken schemas, partial writes, and painfully slow scans.   
+That experience made me realize something simple: Parquet is *just* a storage format. It’s great at compression and column pruning, but that’s where it ends. No ACID guarantees, no safe schema evolution, no time travel, and a whole lot of chaos when multiple jobs touch the same data.
+
+Then I explored open table formats like Apache Iceberg, Delta Lake, and Hudi  and it was like adding a missing layer of order on top  impressive is what they are bringing in 
+
+* ACID transaction**s** through atomic metadata commits
+* Schema evolution without having to rewrite everything
+* for easy rollbacks and historical analysis we have Time travel 
+* you can scan millions of files in milliseconds by Manifest indexing another cool thing 
+* not to forget the hidden partitions 
+
+In practice, these features made a *huge* difference  reliable BI queries running on the same data as streaming ETL jobs, painless GDPR-style deletes, and background compaction that keeps things tidy.
+
+But it does make you think  is that extra metadata layer really worth the added complexity?  
+ Or can clever workarounds and tooling keep raw Parquet setups running just fine at scale?
+
+Wrote a blog on this that i am sharing here looking forward to your thoughts ",45,12,DevWithIt,404407,2025-10-22 08:46:11,https://olake.io/blog/iceberg-vs-parquet-table-format-vs-file-format,0,False,False,False,False
+1od40jc,PSA: Coordinated astroturfing campaign using LLM–driven bots to promote or manipulate SEO and public perception of several software vendors,"Patterns of possible automated bot activity promoting several vendors across r/dataengineering and broader Reddit have been detected.
+
+Easy way to find dozens of bot accounts:  Find one shilling a bunch of tools then search these tools together.
+
+Here's an [example query](https://www.reddit.com/search/?q=airbyte+dreamfactory&type=comments&sort=new) or[ this one](https://www.reddit.com/search/?q=airbyte+windsor&type=comments&sort=new) which find **dozens of bot users and hundreds of comments**. When pasting these comments to an LLM it will immediately identify patterns and highlight which vendors are being shilled with what tactic.
+
+Community: **stay alert and report suspected bots. Tell your vendor if on the list that their tactics are backfiring.** When buying, consider vendor ethics, not just product features.
+
+# Consequences exist! All it takes some pissed off reports.
+
+Luckily astroturfing is illegal in all of the countries where these vendors are based.[ ](https://www.bloomberg.com/news/articles/2013-09-25/operation-clean-turf-and-the-war-on-fake-yelp-reviews)
+
+[Here's what happened in 2013 to vendors with deceptive practise in sting operation ""clean turf"".](https://www.bloomberg.com/news/articles/2013-09-25/operation-clean-turf-and-the-war-on-fake-yelp-reviews) Founders and their CEOS were publicly named and shamed in major news outlets, like The Guardian, for personally orchestrating the fraud. Individuals were personally fined and forced to sign legally binding ""assurance of discontinuance"", in some cases prohibiting them from starting companies again.
+
+For the 19 companies, the founders/owners were forced to personally pay fines ranging from $2,500 to just under $100,000 and sign an ""Assurance of Discontinuance,"" legally binding them to stop astroturfing.
+
+# Reddit context
+
+A [Reddit ban on AI bot research](https://www.reddit.com/r/Switzerland/comments/1kczxvw/reddit_bans_researchers_who_used_ai_bots_to/) shows how seriously this is taken. If that's ""a highly unethical experiment"" then **doing it for money instead of science is so much worse.**",44,14,None,404407,2025-10-22 09:55:35,https://www.reddit.com/r/dataengineering/comments/1od40jc/psa_coordinated_astroturfing_campaign_using/,0,False,False,False,False
+1odk2ry,What's the community's take on semantic layers?,"It feels to me that semantic layers are having a renaissance these days, largely driven by the need to enable AI automation in the BI layer. 
+
+I'm trying to separate hype from signal and my feeling is that the community here is a great place to get help on that.
+
+  
+Do you currently have a semantic layer or do you plan to implement one? 
+
+What's the primary reason to invest into one?
+
+I'd love to hear about your experience with semantic layers and any blockers/issues you have faced.
+
+  
+Thank you!",36,21,cpardl,404407,2025-10-22 20:48:02,https://www.reddit.com/r/dataengineering/comments/1odk2ry/whats_the_communitys_take_on_semantic_layers/,0,False,False,False,False
+1od6qy5,How much time are we actually losing provisioning non-prod data,"Had a situation last week where PII leaked into our analytics sandbox because manual masking missed a few fields. Took half a day to track down which tables were affected and get it sorted. Not the first time either. 
+
+Got me thinking about how much time actually goes into just getting clean, compliant data into non-prod environments. 
+
+Every other thread here mentions dealing with inconsistent schemas, manual masking workflows, or data refreshes that break dev environments. 
+
+For those managing dev, staging, or analytics environments, how much of your week goes to this stuff vs actual engineering work? And has this got worse with AI projects? 
+
+Feels like legacy data issues that teams ignored for years are suddenly critical because AI needs properly structured, clean data. 
+
+Curious what your reality looks like. Are you automating this or still doing manual processes?",19,19,EstablishmentBasic43,404407,2025-10-22 12:22:08,https://www.reddit.com/r/dataengineering/comments/1od6qy5/how_much_time_are_we_actually_losing_provisioning/,0,False,False,False,False
+1odains,Ducklake on AWS,"Just finished a working version of a dockerized dataplatform using Ducklake! My friend has a startup and they had a need to display some data so I offered him that I could build something for them.
+
+The idea was to use Superset, since that's what one of their analysts has used before. Superset seems to also have at least some kind of support for Ducklake, so I wanted to try that as well.
+
+So I set up an EC2 where I pull a git repo and then spin up few docker compose services. First service is postgres that acts as a metadata for both Superset and Ducklake. Then Superset service spins up nginx and gunicorn that run the BI layer.
+
+Actual ETL can be done anywhere on the EC2 (or Lambdas if you will) but basically I'm just pulling data from open source API's, doing a bit of transformation and then pushing the data to Ducklake. Storage is S3 and Ducklake handles the parquet files there.
+
+Superset has access to the Ducklake metadata DB and therefore is able to access the data on S3.
+
+To my surprise, this is working quite nicely. The only issue seems to be how Superset displays the schema of the Ducklake, as it shows all the secrets of the connection URI (:
+
+I don't want to publish the git repo as it's not very polished, but I just wanted to maybe raise discussion if anyone else has tried something similar before?
+This sure was refreshing and different than my day to day job with big data.
+
+And if anyone has any questions regarding setting this up, I'm more than happy to help!",16,2,theManag3R,404407,2025-10-22 14:55:09,https://www.reddit.com/r/dataengineering/comments/1odains/ducklake_on_aws/,0,False,False,False,False
+1od55tg,What's the best database IDE for Mac?,Because SQL Server is not possible to install and maybe you have other DDBB in Amazon or Oracle,12,31,Irachar,404407,2025-10-22 11:02:17,https://www.reddit.com/r/dataengineering/comments/1od55tg/whats_the_best_database_ide_for_mac/,0,False,False,False,False
+1odlsyu,hands-on Iceberg v3 tutorial,"If anyone wants to run some science fair experiments with Iceberg v3 features like binary deletion vectors, the variant datatype, and row-level lineage, I stood up a hands-on tutorial at [https://lestermartin.dev/tutorials/trino-iceberg-v3/](https://lestermartin.dev/tutorials/trino-iceberg-v3/) that I'd love to get some feedback on.
+
+Yes, I'm a Trino DevRel at Starburst and YES... this currently only runs on Starburst, BUT today our CTO announced publicly at our Trino Day conference that will are going to commit these changes back to the open-source Trino Iceberg connector.
+
+Can't wait to do some interoperability tests with other engines that can read/write Iceberg v3. Any suggestions what engine I should start with first that has announced their v3 support?",7,1,lester-martin,404407,2025-10-22 21:56:30,https://www.reddit.com/r/dataengineering/comments/1odlsyu/handson_iceberg_v3_tutorial/,0,False,False,False,False
+1odvmmf,I got a job as a data engineer after graduation,"When I graduated, I had no idea what I wanted to do exactly. I interned  as back-end at startup and then volunteered at a non-profit as a data analyst. The strange thing is that after a while, I got a job offer as a data engineer, even though I literally had no experience. In the first month at work, I did nothing but test ETL work. Any advice in this regard would be helpful to me, given that many of you here have experience.",6,2,Illustrious-Music-29,404407,2025-10-23 06:05:26,https://www.reddit.com/r/dataengineering/comments/1odvmmf/i_got_a_job_as_a_data_engineer_after_graduation/,0,False,False,False,False
+1odiglr,Is HTAP the solution for combining OLTP and OLAP workloads?,"HTAP isn't a new concept, it has been called out by Garnter as a trend already in 2014. Modern cloud platforms like Snowflake provide HTAP solutions like Unistore and there are other vendors such as Singlestore. Now I have seen that MariaDB announced a new solution called [MariaDB Exa](https://www.exasol.com/blog/mariadb-exa-announcement/) together with Exasol. So it looks like there is still appetite for new solutions. My question: do you see these kind of hybrid solutions in your daily job or are you rather building up your own stacks with proper pipelines between best of breed components?",5,4,wenz0401,404407,2025-10-22 19:46:59,https://www.reddit.com/r/dataengineering/comments/1odiglr/is_htap_the_solution_for_combining_oltp_and_olap/,0,False,False,False,False
+1odic7i,Astronomer Cosmos CLI,"I am confused about Astronomer cosmos CLI.  When I sign up for the tutorials on their website I get hounded by Sales ppl who go radio silent once they hear I am just a minion with no budget to purchase anything. 
+
+So I want to run my Dbt Core projects and it seems like everyone in the community uses Airflow for orchestration.  Is it possible or worthwhile to use AstroCli (free version) in Airflow in production or do you have to pay for using the product outside of the local host?   Does anyone see a benefit to using Astronomer over just Airflow? 
+
+What do you think of the tool?  Or is it easier to just dbt in Snowflakes dbt projects??? 
+
+Sorry if this question is stupid, I just get confused by these softwares that are free and paid as to what is for what. ",6,7,Euphoric_Slip_5212,404407,2025-10-22 19:42:23,https://www.reddit.com/r/dataengineering/comments/1odic7i/astronomer_cosmos_cli/,0,False,False,False,False
+1odgtlh,EMR cost optimization tips,Our EMR (spark) cost crossed 100K annually. I want to start leveraging spot and reserve instances. How to get started and what type of instance should I choose for spot instances? Currently we are using on-demand r8g machines.,7,9,Then_Crow6380,404407,2025-10-22 18:45:48,https://www.reddit.com/r/dataengineering/comments/1odgtlh/emr_cost_optimization_tips/,1,False,False,False,False
+1odcr8u,How do you get your foot in the door for a role in data governance?,"I have for years worked in different roles related to data. A loss of job recently as a data analyst got me thinking about what I really wanted. I started reading up on many different paths and chose Data Governance. I armed myself with the necessary certifications and started dipping my toe into the job market. When I look at the skills section, I meet most but not all requirements. The problem however is that most of these job descriptions ask for 5 to 10 years of experience in a data governance related role. If you work in this space, how did you get your foot in the door? ",6,8,mokasinder,404407,2025-10-22 16:17:16,https://www.reddit.com/r/dataengineering/comments/1odcr8u/how_do_you_get_your_foot_in_the_door_for_a_role/,0,False,False,False,False
+1odqlcd,"How are you tracking data lineage across multiple platforms (Snowflake, dbt, Airflow)?","I’ve been thinking a lot about how teams handle lineage when the stack is split across tools like dbt, Airflow, and Snowflake. It feels like everyone wants end-to-end visibility, but most solutions still need a ton of setup or custom glue.
+
+Curious what people here are actually doing. Are you using something like OpenMetadata or Marquez, or did you just build your own? What’s working and what isn’t?",4,4,stephen8212438,404407,2025-10-23 01:33:30,https://www.reddit.com/r/dataengineering/comments/1odqlcd/how_are_you_tracking_data_lineage_across_multiple/,0,False,False,False,False
+1odqg2u,System design,"How to get better at system design in data engineering? Are there any channels, books or websites(like leetcode) that I can look up? Thanks ",3,1,Available_Fig_1157,404407,2025-10-23 01:26:33,https://www.reddit.com/r/dataengineering/comments/1odqg2u/system_design/,0,False,False,False,False
+1odgd30,What Platforms Features have Made you a more productive DE,"Whether it's databricks, snowflake, etc.
+
+Of the platforms you use, what are the features that have actually made you more productive vs. being something that got you excited but didn't actually change how you do things much.",3,2,AMDataLake,404407,2025-10-22 18:28:42,https://www.reddit.com/r/dataengineering/comments/1odgd30/what_platforms_features_have_made_you_a_more/,1,False,False,False,False
+1od2c18,"Data Modeling for the Agentic Era: Semantics, Speed, and Stewardship",,5,0,sspaeti,404407,2025-10-22 08:07:45,https://www.rilldata.com/blog/data-modeling-for-the-agentic-era-semantics-speed-and-stewardship,0,False,False,False,False
+1odpk4g,Doing Analytics/Dashboards for Excel-Heavy workflows,"As per title. Most of the data I'm working with for this particular project involves ingesting data directly from \*\*xlsx\*\* files and there is a lot of information security concerns (eg. they have no API to expose the client data, they would much rather have an admin person do the exporting directly from the CRM portal manually).
+
+
+
+In these cases, 
+
+
+
+1) what are the modern practices for creating analytics tools? As in libraries, workflows, or pipelines. For user-side tools, would Jupyter notebooks be applicable or should it be a fully baked app (whatever tech stack that entails)? I am concerned about hardcoding certain graphing functions too early (losing flexibility). What is common industry practice?
+
+
+
+2) Is there a point in trying to get them to migrate over to PostGres or MySQL? My instinct is that I should just accept the xlsx file as input (maybe make suggestions on specific changes for the table format) but while I came in initially to help them automate and streamline, I feel I have more value add on the visualization front due to the heavily low-tech nature of the org.
+
+
+
+Help?",2,2,MullingMulianto,404407,2025-10-23 00:44:02,https://www.reddit.com/r/dataengineering/comments/1odpk4g/doing_analyticsdashboards_for_excelheavy_workflows/,0,False,False,False,False
+1odwup9,"Horror Stories (cause you know, Halloween and all) - I'll start","After yesterday's thread about non-prod data being a nightmare, it turns out loads of you are also secretly using prod because everything else is broken. I am quite new to this posting thing, always been a bit of lurker, but it was really quite cathartic, and very useful. 
+
+Halloween's round the corner, so time for some therapeutic actual horror stories. 
+
+I'll start: Recently spent three days debugging why a customer's transactions weren't summing correctly in our dev environment. Turns out our snapshot was six weeks old, and the customer had switched payment processors in that time. 
+
+The data I was testing against literally couldn't produce the bug I was trying to fix. 
+
+Let's hear them.",1,0,EstablishmentBasic43,404407,2025-10-23 07:24:22,https://www.reddit.com/r/dataengineering/comments/1odwup9/horror_stories_cause_you_know_halloween_and_all/,1,False,False,False,False
+1odgz38,Help for hosting and operating sports data via API,"Hi 
+
+I need some help. I have some sports data from different athletes, where I need to consider how and where we will analyse the data. They have data from training sessions the last couple of years in a database, and we have the API's. They want us to visualise the data and look for patterns and also make sure, that they can use, when we are done. We have around 60-100 hours to execute it. 
+
+My question is what platform should we use
+
+\- Build a streamlit app? 
+
+\- Build a power BI dashboard? 
+
+\- Build it in Databricks
+
+Are there other ways to do it?  
+  
+ They need to pay for hosting and operation, so we also need to consider the costs for them, since they don't have that much.  ",1,0,OnionAdmirable7353,404407,2025-10-22 18:51:21,https://www.reddit.com/r/dataengineering/comments/1odgz38/help_for_hosting_and_operating_sports_data_via_api/,0,False,False,False,False
+1odgfnc,How to address query performance challenges in Snowflake,,1,0,noasync,404407,2025-10-22 18:31:18,https://www.capitalone.com/software/blog/addressing-query-performance-challenges-snowflake/?utm_campaign=fordev&utm_source=reddit&utm_medium=social-organic,0,False,False,False,False
+1odmqvh,Airflow secrets setup,"How do I set up secure way of accessing secrets in the DAGS, considering multiple teams will be working on their own Airflow Env.
+These credentials must be accessed very securely. I know we can use secrets manager and call secrets using sdks like boto3 or something. Just want best possible way to handle this",0,3,Real_Cardiologist809,404407,2025-10-22 22:36:35,https://www.reddit.com/r/dataengineering/comments/1odmqvh/airflow_secrets_setup/,0,False,False,False,False
+1od6jn2,MS Purview Pricing,"I'm a Data Quality Analyst for a Public Sector company based in the UK
+
+We're an MS Stack company and have decided to go down the route of Purview for Data Governance. Split down the middle I'm aligned with Data Quality/Health/Diagnosis etc and our IT team is looking after policies and governance.
+
+Looking at Purviews latest pricing model I've done about as much research as I can and trying to use Purviews Pricing Calculator but getting some crazy figures.
+
+In our proof of concept task we have 31 assets (31 tables from a specific schema in Azure SQL DB) will be running a scan every week and will need to use the Standard SKU for Data Quality as I want our rules to be dynamic and reflect business logic. 
+
+This is where it gets tricky. Using AI I tried to figure out how many DGPU (Data Governance Processing Units) would be needed to do the math. This came out at 250 units which seems huge and reflected in the cost of £15,000 a month.
+
+This seems an insane cost considering it's a proof of concept with not very many assets which we plan on growing the size of the assets.
+
+Has anyone any experience with this and could possibly help out because I am losing the plot a bit.
+
+  
+Thanks in advance",0,1,ataxxxi4,404407,2025-10-22 12:12:39,https://www.reddit.com/r/dataengineering/comments/1od6jn2/ms_purview_pricing/,0,False,False,False,False
+1odwtq0,Came across a session on handling analytics modernization — looks interesting for data folks,"Hey everyone,
+
+I came across an upcoming **free session** that might be helpful for anyone dealing with **legacy data systems, slow analytics, or complex migrations**.
+
+It’s focused on how teams can modernize analytics without all the usual pain — like **downtime, broken pipelines, or data loss** during migration.
+
+The speakers are sharing **real-world lessons** from modernization projects (no product demos or sales stuff).
+
+📅 **Date:** November 4, 2025  
+⏰ **Time:** 9:00 AM ET  
+🎙️ Speakers: Hemant Suri & Brajesh Pandey
+
+👉 **Register here:** [https://ibm.biz/Bdb29M](https://ibm.biz/Bdb29M)
+
+Thought this might be worth sharing here since a lot of us run into these challenges — legacy systems, migration pain, or analytics performance issues.
+
+*(Mods, please remove if not appropriate — just wanted to share something potentially useful for the community.)*",0,0,Unlucky_Village_5755,404407,2025-10-23 07:22:34,https://www.reddit.com/r/dataengineering/comments/1odwtq0/came_across_a_session_on_handling_analytics/,0,False,False,False,False
