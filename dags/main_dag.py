@@ -1,44 +1,41 @@
-from airflow.sdk import DAG, task
+from airflow.decorators import dag, task
 from datetime import datetime
-import os, sys 
-from airflow.providers.standard.operators.python import PythonOperator
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from pipelines.extract_reddit import extract_reddit
 from pipelines.aws_s3_pipeline import upload_to_s3_pipeline
 
-file_postfix = datetime.now().strftime("%Y%m%d")
-
-default_args = {
-    'owner': 'Melvin Sarabia',
-    'start_date': datetime(2025, 10, 18)
+# 💡 Move dynamic runtime values inside @task — not at DAG parse time
+DEFAULT_ARGS = {
+    "owner": "Melvin Sarabia",
+    "start_date": datetime(2025, 10, 18),
 }
 
-with DAG(
-    dag_id='reddit_api_data_pipeline',
-    default_args=default_args,
-    schedule='@daily',
+@dag(
+    dag_id="reddit_api_data_pipeline",
+    default_args=DEFAULT_ARGS,
+    schedule="@daily",
     catchup=False,
-    tags=['Reddit', 'Pipeline']
-) as dag:
-    
-    # Extract data from Reddit
-    extract = PythonOperator(
-        task_id='reddit_extraction',
-        python_callable=extract_reddit,
-        op_kwargs={
-            'file_name': f'reddit_{file_postfix}',
-            'subreddit': 'dataengineering',
-            'time_filter': 'day',
-            'limit': 100,
-        }
-    )
-    
-    upload_to_s3 = PythonOperator(
-        task_id="s3_upload",
-        python_callable=upload_to_s3_pipeline,
-        dag=dag
-    )
-    
-    extract >> upload_to_s3
+    tags=["Reddit", "Pipeline"],
+)
+def reddit_pipeline():
+
+    @task
+    def extract_task():
+        """Extract data from Reddit."""
+        file_postfix = datetime.now().strftime("%Y%m%d")
+        file_name = f"reddit_{file_postfix}"
+        return extract_reddit(
+            file_name=file_name,
+            subreddit="learnprogramming",
+            time_filter="day",
+            limit=100,
+        )
+
+    @task
+    def upload_task(file_path: str):
+        """Upload extracted data to S3."""
+        upload_to_s3_pipeline(file_path)
+
+    extracted_file = extract_task()
+    upload_task(extracted_file)
+
+reddit_pipeline()
