@@ -17,17 +17,48 @@ def reddit_conn(client_id, client_secret, user_agent)-> Reddit:
         sys.exit(1)
         
 def extract_posts(instance: Reddit, subreddit: str, time_filter: str, limit=None):
+    """_summary_
+
+    Args:
+        instance (Reddit): _description_
+        subreddit (str): _description_
+        time_filter (str): _description_
+        limit (_type_, optional): _description_. Defaults to None.
+
+    Returns:
+        _type_: _description_
+    """
     subreddit_instance = instance.subreddit(subreddit)
     posts = subreddit_instance.top(time_filter=time_filter, limit=limit)
 
     post_lists = []
-   
+
     for post in posts:
-        post_dict = vars(post)
-        post = {key: post_dict[key] for key in POST_FIELDS}
-        post_lists.append(post)
-    
-    print('post_lists', post_lists)
+        # Get the top 5 comments for each post
+        post.comments.replace_more(limit=0)
+        top_comments = [c.body for c in post.comments[:5]]
+        
+        # Extract only the needed attributes
+        post_data = {
+            'id': post.id,
+            'title': post.title,
+            'selftext': post.selftext,
+            'score': post.score,
+            'num_comments': post.num_comments,
+            'author': str(post.author) if post.author else None,
+            'subreddit': str(post.subreddit),
+            'subreddit_subscribers': post.subreddit.subscribers,
+            'created_utc': post.created_utc,
+            'url': post.url,
+            'over_18': post.over_18,
+            'edited': post.edited,
+            'spoiler': post.spoiler,
+            'stickied': post.stickied,
+            'comments': top_comments
+        }
+
+        post_lists.append(post_data)
+
     return post_lists
 
 def transform_data(post_df: pd.DataFrame):
