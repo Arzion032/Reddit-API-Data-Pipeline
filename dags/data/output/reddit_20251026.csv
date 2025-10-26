@@ -1,0 +1,508 @@
+id,title,selftext,score,num_comments,author,subreddit,subreddit_subscribers,created_utc,url,over_18,edited,spoiler,stickied,upvote_ratio,comments
+1oghzxt,I'm currently learning with AI and I feel like I'm a fraud.,"I keep seeing posts that contain a sentence similar to this. Let me give some generic advice: try doing it without AI.
+
+In the olden times, it was not uncommon for learners to have a project that did not work, and they could not figure out why. Now, thanks to AI, learners have a project that does work, and they can't figure out why.
+
+AI is not always bad or evil, but likewise, it definitely isn't always helpful. Learning requires reading, trying, making mistakes, getting confused, reading more, trying more, and repeating. 
+
+Start small -- there's a reason ""hello world"" is a common first task -- the actual coding is ridiculously simple, but it proves that your have done all of the necessary work to get your environment properly running. Once you've got that working, you can move on to something more complicated.
+
+I've seen a lot of people who, with the help of AI, start with a much bigger project. AI helps them get that bigger project running, but they don't fully understand what was done to reach that point, which means they're not able to successfully make changes or fixes to that project.
+
+There's nothing wrong with googling. There's nothing wrong with asking AI a question. But your best bet is to spend some time thinking and trying on your own before using either tool. My advice to anyone learning with AI: don't let AI read or write your code. If you're going to ask AI questions, do so in English. Use AI to help you find the terminology that you don't yet know, and once you've learned the right words, spend some time reading about what they mean. ",58,44,JoeyJoeJoeJrShab,learnprogramming,4260262,2025-10-26 11:12:23,https://www.reddit.com/r/learnprogramming/comments/1oghzxt/im_currently_learning_with_ai_and_i_feel_like_im/,False,False,False,False,0,"['At least some of the AIs are pretty good at handling a request in the form of: "" I have this problem. Don\'t just tell me how to solve it but give me hints or ask me questions guiding me towards solving this myself.""\xa0\n\nI do that regularly and I feel that it often works well at least for some fields.\xa0\n\nOther times I get lead on a wildly wrong path but that too somehow forces me to think myself.\xa0', 'It’s probably like learning maths using a scientific calculator. Punching Tan 90 degrees without knowing how it’s obtained using a triangle', ""In the past people would have copied any snippet from stack overflow/documentation/books/other repos and tried to understand why it works. So, it's always been the case. Don't feel too bad about it."", '“the old days” were just a couple years ago 💀\ni recommend doing research in various search engines rather than asking LLMs if your question is flawed the LLM will try to justify it by giving you an answer statistically most likely to please you. Thats what they’re designed to do and why they so often give incorrect answers or “hallucinate” which is a silly term for when its intended functionality produces nonsensical output since it just generates collages of things people have posted online with no sense of what is true, real, or accurate.\n\n\na lot of y’all just need to realize AI can be replaced by a rubber duck.', 'If you\'re using AI as a student you *are* a fraud. And the ""olden days"" was, like, 2  or 3 years ago.']"
+1og2npt,When/how often should I push to master?,"So right now it’s just me, so I can push/pull whenever I want and it’s no big deal right? But if I was working in a professional environment, how often do people push/merge their projects to master?
+
+Like right now, I’m working on a game. If I want to add a feature, I `git branch create-feature`. But that feature might take me four days to create, and in the meantime I don’t want to merge anything, so it’s four days before I merge. But if I was in a professional environment, I take it that other people would be working on other features, so by the time I merge back in, the codebase would have changed somewhat.
+
+So I’ve read, when you start every day, you pull from master into your branch to update the local codebase. But in doing that, wouldn’t I just be erasing everything I’ve done? Or how does that work?",22,24,case_steamer,learnprogramming,4260262,2025-10-25 21:05:47,https://www.reddit.com/r/learnprogramming/comments/1og2npt/whenhow_often_should_i_push_to_master/,False,False,False,False,0,"[""When you pull from master it doesn't replace your changes, it merges them."", ""When you pull in main it combines all of the new changes on your branch with all of the new stuff on main.  If those don't interfere with each other then all is good, you just get both.  If they do interfere that is a merge conflict.  Git will mark those places and you have to go through and fix them, telling it what you want to do there."", 'Organizations all have their own policies.\n\nYou can keep merging master into your feature beach to get other people’s changes.', ""For your own personal repos... Go with whatever works for you. If you're using git for work your organization will probably have a procedure in place for when and how you make pull requests (which then get merged into the main working branch. Not production directly unless you *want* your bugs in production). \n\nFor me, I pull develop (which is our primary branch for day-to-day work) before I start a new task, to make sure I'm working with the most up to date code possible (and fix any issues in my local environment). If there are merge conflicts when I'm done I will pull again and solve those on my local before updating my pull request."", 'Where I work, you merge into main when whatever feature or fix you’re working on is done (and has been code-reviewed).']"
+1og0ueg,"Which backend lang should I choose - Java, Go, JS, Python, Kotlin...?","I'm learning Native android development with all the modern tech stacks from the past few months and I have developed few apps that deals with some APIs and some do control native features like camera and flashlight features.
+
+Now, I want to get into the backend side so that, I can develop a full stack app and probably offer my services as a freelancer.
+
+But, there are so many confusion with which language to pick 😕 - Java, Go, JS, Python, Ruby, Kotlin etc.
+
+Which one should I go with? If this is what I want:
+
+
+- nice job/ freelance opportunities. (must)
+
+- can be used if I switch from Android to cross platform/iOS or Web. (nice to have)
+
+- beginner friendly. (preferred)
+
+- short learning period to use it in real world projects. (optional)
+
+
+Consider the scenario, I want to become a full stack Mobile developer.",21,14,Timely_Worth6916,learnprogramming,4260262,2025-10-25 19:49:30,https://www.reddit.com/r/learnprogramming/comments/1og0ueg/which_backend_lang_should_i_choose_java_go_js/,False,False,False,False,0,"[""1. Job/Freelancing opportunities depend on your region. In Europe/US as far as I know, Python, C# and Java are still pretty common, Go, JS and Ruby (and rust) exist, but at different and lower frequencies, I have seen only very few Kotlin backends, even though I love how it is done in the language. If you want real numbers, go on job portals in your area, and look through a few hundred backend jobs. (Yes, it will take 2-3 hours, but you will have an accurate answer, which did not come from the subjective, 2 years out of date experience of someone from germany)\n\n2. I mean... Not sure what you mean? A Backend REST (or GraphQL) API will work for any frontend, as long as that frontend can do network requests. You can use the same backend for a python Frontend, a JS Webapp and an embedded C controller, and I have done so in the past. \n\n3. You will have to learn the concepts of backend. This is not optional, and will be about the same amount of work for all of the options listed above. But once you know how it works and how to set it up, it works pretty much the same in every framework (+/-, different things will be included, there wil be different names and slightly different details). If you know what middleware is, or how a request/a form is handled, you can migrate frameworks pretty easily. If you don't know those things, you can't really work productively in teh backend. \n\n4. I don't think that there is a huge difference between languages/frameworks here. If you want to shorten it, use a language you already know. (So I guess Java or Kotlin, if you come from Android). I have built a toy project in Kotlin, but never anything in Java. I can't really give you advice there."", ""(Not a back-end expert).\n\n\nIf that might help : I can tell you that in my company (a world leader mastodon)\xa0:\n\n\n* Js (Node/Nest)\n* Python\n* Java\n* PHP\n\n\nare the most needed/looked after/used skills for the back-end. PHP for the ecommerce mainly, Python for the AI and companies' internal apps/tools, Java for IDK what, sorry (i'm in a sub-practice oriented toward front-end web user-experience).\n\n\nOne thing for sure is that Node is almost everywhere, and Python has been on the rise like crazy."", ""I started off with JavaScript and TypeScript and I think it's the best choice if you're starting out simply because of the versatility of the JavaScript ecosystem. And for freelancing for multiple platforms (Android, Web, Desktop) JS is great as well and also beginner friendly. I also recently started learning Go and I absolutely love it, I think it's great if you want to learn a more robust language that's meant for more serious and scalable applications while also keeping simplicity and ease of use.\n\nOverall, I think JavaScript/TypeScript is the better choice since it is such a versatile language."", 'Learn JS. You can do backend, front end, and use react native for native apps.', ""If it's mostly about work, look at the job ads in your area and see what employers are asking for.""]"
+1ofuvkx,Is focusing on web dev a bad idea?,"If I want to make sure I can get a job after graduating, is it a bad idea to focus on web dev?",18,32,No-Translator-5386,learnprogramming,4260262,2025-10-25 15:48:30,https://www.reddit.com/r/learnprogramming/comments/1ofuvkx/is_focusing_on_web_dev_a_bad_idea/,False,False,False,False,0,"[""I don't know if it's a bad idea for you but it was a bad idea for me! 4 years ago I started learning web dev and then when I got to REACT I quit. Now I started programming from scratch and I'm learning backend and I really like it. So if you start learning web dev and think programming isn't for you don't waste years like me just try doing backend! It's less html and design and more programming and architecture. 🙇"", 'In this economy, I would focus on the same as what Swimming_Solution said.  Learn backend first or Systems Admin.  With all of the AI and Robotics coming up, there will be a need for people to maintain and upgrade the software and hardware.  \n\nIt looks like crypto and cyber is becoming saturated but if Amazon is replacing 600,000 jobs with AI and automation then other companies will follow suit.', ""You need to become full stack but it's okay to learn frontend first."", 'Front end web dev will be destroyed by ai, and for the better. There will be a total future broadly in CS, but it will be systems, networking, data science, artificial intelligence. Front end web dev will no longer pay what it used to', 'It’s hard to say. It’s not that it’s a bad career to get into, it’s just tough right now because the market isn’t great. It is saturated for entry level in general id say but it seems like that’s for anything tech right now. I think things will clear up eventually. I’d try to take some AI classes tho if you can.']"
+1ogfpkd,"Is ""The C Programming Language"" worth reading if you don't code in C or do any low level stuff?","I write in js/ts and Swift/SwiftUI. I'd like to think I'm somewhere between a novice and intermediate programmer. But I'm always looking to learn more about the philosophy of code. You know, the general patterns and strategies that go into the solving the types of problems we solve. 
+
+People talk about *The C Programming Language* like it's the bible lol. I've listened to a few talks by Brian Kernighan and I've really liked them. Is the book going to teach me all-purpose lessons about how computers think and how to get them to solve problems? Or is it just a C manual?",11,17,BrohanGutenburg,learnprogramming,4260262,2025-10-26 08:51:20,https://www.reddit.com/r/learnprogramming/comments/1ogfpkd/is_the_c_programming_language_worth_reading_if/,False,False,False,False,0,"['It is just a C manual.\n\nBut it is an excellent example of how to write a guide for a programming language for people who know how to program. It doesn\'t waste page after page talking about concepts of integers and floating point variables, or try to teach you how to program with functions and their return-values.\n\nI really like the book, but I would tend to agree that it is completely useless if you don\'t program in C - but then again, everyone should program in C at some point in their career :)\n\nThere are better books about the ""philosophy of programming"" - books that are more generic. Like **The Pragmatic Programmer**. And many others.', 'Well. It\'s somewhat valuable to know how say js events and loops work under the hood.\n\n\nC itself is not a big language, unlike c++. There\'s a reason its thought at faculties to this day.\n\n\nBut do you really need it? Nope.\n\n\nLittle edit. I also believe if a front end dev doesn\'t have the curiosity to find out how loops and event listeners are working under the hood, then they lack fundamental curiosity and probably won\'t go places.\n\n\nFront end dev has taken a very bad turn, the new generation mostly hasn\'t got a clue how the broswer api works, it all started with the rise of reactjs and only got worse. ""But state management"" is something I can\'t hear anymore without blood almost pouring from my ears.', "">  Is the book going to teach me all-purpose lessons about how computers think and how to get them to solve problems?\n\nComputers aren't creatures that think, they're tools that _work_ or _function_.\n\n> Or is it just a C manual?\n\nIt's a manual for an old version of C, and doesn't cover modern engineering practices for C. The world has changed a lot over the ~40 years since it was published.\n\nThat said, it's a small book and it's highly regarded. If you're curious about it, you can probably just pick it up and read it.\n\n> But I'm always looking to learn more about the philosophy of code. You know, the general patterns and strategies that go into the solving the types of problems we solve.\n\nFor that I'd rather recommend [_Concepts, Techniques, and Models of Computer Programming_](https://webperso.info.ucl.ac.be/~pvr/book.html). The reference language used in it, [Oz](https://en.wikipedia.org/wiki/Oz_(programming_language\\)), drives me absolutely batty and seems like a perpetual uncanny valley, but it covers a wide range of, well, concepts, techniques and models of computer programming."", 'Start with the C Essentials courses. They are free and it makes things much easier:\n\nhttps://cppinstitute.org/c-essentials-1\n\nhttps://cppinstitute.org/c-essentials-2\n\nAfter that, do C Advanced: https://cppinstitute.org/c-advanced\n\nAlso get CLion as an IDE: https://www.jetbrains.com/clion/', 'Yeah because most programming languages are descended from C so it’s like the Latin of programming languages. It will help a lot in understanding most other programming languages better. C is also a good middle level language in the sense that you can do both low and high level operations with it so you can learn low level coding without going full assembly language.']"
+1ofw23m,How to properly learn a framework,"How does one properly learn a framework? I just don't get it. Should I memorize the syntax or should I learn the general architechture and relations of components? I'm currently learning it with AI and I feel like I'm a fraud. I mean I understand code but I wouldn't be able to build it from scratch by myself. I don't understand how does a person learns the framework syntax that repeats the same words after the same words separated by dots until it becomes a giant blob of text. Classes referencing classes referencing classes. Objects created from those classes. Oneliners that have 10 different objects referenced in them.
+
+Like you surely can't memorize it right? AI claims that everyone is either straight up copypasting stuff like that or is using AI and that I only have to know the architecture. How true is that? How do I learn this? I don't get it.
+
+  
+",9,13,Swimming_Solution_82,learnprogramming,4260262,2025-10-25 16:36:39,https://www.reddit.com/r/learnprogramming/comments/1ofw23m/how_to_properly_learn_a_framework/,False,False,False,False,1,"[""Well that's what you get from vibing.. if you want to get something real from it, you scrap what you have and redo it. This time without AI, and you keep at it untill it works, without AI. That's how you learn stuff, by doing it, without AI.\n\nCompare it to reading a book, right now AI is summarizing the book for you, but you have no clue of the details of the book, unless you actually read it. 😊 \nSo to learn a framework, you read the docs, you start a project and begin poking it untill it does what you want.\n\nTadaa you have learnt a framework. 😊"", ""Take a youtube course or udemy course on it, then make some sample projects with (these can be guided youtube videos as well.) I'm going to provide a sample course for svelte, since it's among the easiest and most modern frameworks to use:\n\n  \nComprehensive Course: [https://www.youtube.com/watch?v=UGBJHYpHPvA](https://www.youtube.com/watch?v=UGBJHYpHPvA)\n\nThis course is built by a maintainer of svelte itself and is very thorough and will provide excellent foundational knowledge for building other things\n\nBuild a Youtube Clone with Svelte: [https://www.youtube.com/watch?v=65yMfpsoH4o](https://www.youtube.com/watch?v=65yMfpsoH4o)\n\nBuild an online store: [https://www.youtube.com/watch?v=lwbNPEPt0E8](https://www.youtube.com/watch?v=lwbNPEPt0E8)\n\nAnd whatever other projects spark your intrigue"", 'Thats funny, anyone answered your question about HAD to memorize or not, i really wish i were right now a master in tech to answer you question', ""tbh, the best way to try your skills is when you build a project. imo, you don't have to memorize the syntax of anything; just build your logic and start with small things. make a little project after learning some of the operations.\n\ntry to use github too. push your project there; you would feel a little confident. do not let yourself be in doubt that you don't know anything. just don't keep learning and not trying on projects."", ""What are you learning? Because the first step is knowing the underlying, vanilla language. The amount of people who think they can jump straight to react with learn js is insane. \n\nBeyond that it's just like any other language. You don't learn French by memorizing all the vocabulary and syntax; You learn French by speaking French.""]"
+1og9y6t,Is this a good habit to start forming?,"I am just starting to learn programming with C#. I am finding that I like to store user inputs in variable, then use those variable to do any math I need to do and store that in another variable, the. I use the result variable to display the result/pass the result to whatever. I do this because I like to extend the exercise to try to find ways to reuse the result, or the pieces of the result, to expand the usefulness of the program.
+
+My question is this: is the above a good approach or should I be trying to do the math within the line of code to display the result, or within the method parameter that needs the result? Also would love to know the why.
+
+Apologies if this is unclear..
+
+",6,5,goodhaunts,learnprogramming,4260262,2025-10-26 02:58:47,https://www.reddit.com/r/learnprogramming/comments/1og9y6t/is_this_a_good_habit_to_start_forming/,False,False,False,False,0,"['I\'ll preface this by saying: every language, implementation, and style guide differs— so don\'t take this as *absolute* truth.\n\nReusing something you\'ve already calculated is always better than calculating it again— so storing the original result in a varible is a good idea.\n\nIf you find yourself doing something like this:\n\n```\nConsole.WriteLine(""The result is: "" + (x + y));\n```\n\nThen the compiler will automatically break that out into something like:\n```\nint temp_int = x + y;\nstring temp_string = ""The result is: "" + temp_int;\nConsole.WriteLine(temp_string);\n```\n\nCramming it all into one line isn\'t any better— and a lot of style guides will advise against cramming too much into one line (for lack of a more thorough explanation).', 'This makes your code easier to understand and debug, up to a point. (At some point, you may want to be able to see more of the logic at once without needing to page/scroll.)', ""This is something you decide on a case by case basis.\xa0\n\n\nIf it's something simple like `x+y` then probably not.\n\n\nIf it's something simple but conceptually important as a distinct value, then probably. Like `total = subtotal + tax` makes code more self-documenting even if you only use `total` once."", '**Your approach / habit is better!**\n\nA lot of programmers - and even editors/IDEs - like their one-liners, in fact so much that a whole bunch of operators have been implemented into programming languages to ""compress"" code into single lines, like `?:` `?.` `??` `=>` `->` `::` and others.\n\nI personally like code like:\n\n    double convertInchesToCentimeters( double inches ) {\n      double centimeters = inches * 2.54;\n      return centimeters;\n    }\n\neven though my own IDE suggests that I can get rid of the redundant \'`centimeters`\' variable.\n\nBecause using a variable does help document the code - you are telling the readers that the calculation actually results in centimeters, rather than just returning some calculated value.\n\nAnd the same when storing user-input in variables - by storing it in a variable named for what the input is supposed to represent, rather than just userinput, you make it easier to understand the program!\n\nAnd the best thing is that a variable can always be replaced with something else, another function-call, a constant, a temporary test-value, etc. And it can be output for debugging or testing, and it can be inspected in single-stepping debugging, and it can be used for more than just the one thing, without having to change every single place that uses that variable.\n\nSo please go ahead - make as many variables as you please - you can always compress the code later!', '\n\nThis sounds like a perfectly fine habit: removing variables early means you might add them back later.  \n\nSo, someone here offered a code snippet that made me twitch.  I\'d normally write it as:\n\n    double convertInchesToCentimeters(double inches) =>\n        inches * 2.54;\n\nHOWEVER, that\'s the final form.  If I needed to trace something, then I\'d need to go back to needlessly storing something, because now I needed it:\n\n    double convertInchesToCentimeters(double inches) {\n        var result = inches * 2.54;\n        Debug.WriteLine($""convertInchesToCentimeters({inches}) = {result}"");\n        return result\n    }\n\nThe issue with having lots of named variables it that... you have lots of variables.  In controlling the chaos of coding, the less moving parts the better.  However, you don\'t necessarily know what you need when mid process.\n\nFirst pass code can break all the rules it likes, as long as it works.  Then you go back and consider the mess you\'ve made and what you could clean up.  The more you code, the more you\'ll get the hang of what your personal level of acceptable mess is.']"
+1og8fqf,Any good way to understand recursion problems? My brain keeps refusing!,"Hello world,
+I’ve been trying to get better at problems involving recursion and it feels like my brain throws a stack overflow every time I see one.
+
+Everyone says
+“Just break the problem into smaller subproblems!”
+But when I stare at something like reversing a linked list or solving a tree traversal, I start thinking in loops again and lose the recursion flow entirely.
+
+I know the base case + recursive step theory, but applying it in problem solving still feels like magic spells where I just copy what the internet says and pray it works.
+
+So, how did you actually learn recursion?
+Any mental models, exercises, visualizations, or common beginner-friendly examples that helped you build intuition?
+Also, when do you decide recursion is the right approach in an interview problem instead of a fancy iterative one?
+
+Share your wisdom, fellow devs. Help a mere mortal understand function calls calling themselves... like a snake eating its own tail but more structured.
+
+Thanks in advance! 🙌",8,31,Main_God2005,learnprogramming,4260262,2025-10-26 01:39:34,https://www.reddit.com/r/learnprogramming/comments/1og8fqf/any_good_way_to_understand_recursion_problems_my/,False,False,False,False,0,"['To all following commenters: please, do not bring up the old circlejerk \njokes/memes about recursion (""Understanding recursion..."", ""This is \nrecursion..."", etc.). We\'ve all heard them n+2 too many times.\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/learnprogramming) if you have any questions or concerns.*', 'The way I think about it is a check and a do:\n\ncheck for the base case & handle it  \nor  \ndo the recursive case and call the function again.\n\nits really just an if statement in a top hat.\n\n... in terms of problem solving, I always had better success setting up the base case first, then the recursive action. Get a piece of paper and draw out a minimal example of the structure you are manipulating.', ""What really helped me visualize recursion was understanding the call stack first. Learning the call stack will help you visualize recursion SO much better. Also, just practice. I used to be in your same shoes, but the more you practice it, the more you understand it and if you learn how a call stack works it'll help you even more."", ""Dry run example problems over and over again, visualize the call stack, what the current and next state is...and don't give up. You'll get it."", 'Try this (disclaimer, i\'ve read the authors other books but not this one yet)\nhttps://inventwithpython.com/recursion/\n\nFor me, it\'s ""take a piece"", operate, ""take a piece"", operate, ... , no more pieces.\n\nI also like this comic\nhttps://abetterscientist.wordpress.com/2018/10/07/recursion-in-real-life/']"
+1ogfshb,Should I learn Typescript or React?,"I am a pretty non-technical person who is trying to break into the coding world.
+
+I have been building AI agents or workflow automations in N8n for a long time now, but I also wanted to learn bow to build scalable web apps and frontends on the top of those workflows.
+
+So, I thought why not learn JavaScript.
+
+But now I am confused with things like Typescript and React JS. What should I learn first? I am confused, and to be honest a bit overwhelmed.
+
+Can anyone help me with this?",5,12,riddhimaan,learnprogramming,4260262,2025-10-26 08:56:44,https://www.reddit.com/r/learnprogramming/comments/1ogfshb/should_i_learn_typescript_or_react/,False,False,False,False,0,"[""They are two non exclusive technologies. \n\nTrust me, at this point it would be pointless to explain the difference, because you shouldn't worry about any of the two for the time being, it's just too premature.\n\nIf you are here for the long run and want to understand web development, start with a course of HTML, CSS and plain JavaScript, with emphasis on plain. You'll find plenty of courses on udemy on sales for less than 20 USD/Euros.\n\nGoing for typescript or react would be like studying equations without understanding addition and multiplication.\n\nYou might be tempted into thinking that because you achieved results in the short term with AI that there is no need to commit months of studying and practicing code. \n\nIf you want to be able to truly control AI and not be dependent from others, you have to study."", ""If you want to learn JavaScript should learn JavaScript first. Vanilla JavaScript. Don't jump straight to a framework. \n\nAs far as typescript goes it's just JavaScript with strong types bolted onto it. It'll be easier for you to grok basic programming concepts in js before jumping into strongly typed code."", 'I think you should learn HTML, CSS, JavaScript first. You can create simple web page with this technology. React JS is progressive framework to building complex web application. I recommend you try Vue instead of React. Vue is simpler than React, but it does the same thing.', 'You should learn JavaScript. During that journey you’ll learn that TypeScript is just JavaScript with types and React is a JavaScript library used to build front end. Then you’ll use them all together along with Node, Express, and MongoDB or Next.js alone to build something dope.  So learn both. Eventually. Start with JavaScript so you realize if it has JS in the name it’s just JavaScript. And if you know JavaScript you know every framework and library enough to get the ball rolling.', ""Just learn JavaScript for now. Typescript is just JavaScript with static typing, if that doesn't mean anything to you then don't bother with typescript yet either. React is a library used to create user interfaces with either JavaScript or Typescript, so you must know how to program with one of them to use React. So:\n\nJavaScript/TypeScript - Programming languages\n\nReact - A set of tools to use alongside one of those languages.\n\nI would focus on JavaScript only.""]"
+1ofw1ce,Help making an automated death notices checker,"Skipping the whole backstory. I am looking for a way to automate a daily check of one particular city’s death notices. I want it to check the notices and flag to me if it finds a particular name. 
+
+I think what I’m looking for is a bot. Problem is I don’t know what I’m doing. At all. I’m old af (the last time I did any coding, it was in PASCAL) and while I want to learn, truth is I don’t have any idea where to start. 
+
+Someone can point me in a helpful direction? 
+
+To be clear, I don’t want this done for me. I want to learn how. But I’m so far out of the loop with modern tech, I don’t even know which questions to ask yet. I’m afraid if I just plow in, I’ll waste a ton of time on stuff I didn’t need to look at. 
+
+Thanks!
+
+[Also posted this question in r/botting]",4,7,AGoodFaceForRadio,learnprogramming,4260262,2025-10-25 16:35:49,https://www.reddit.com/r/learnprogramming/comments/1ofw1ce/help_making_an_automated_death_notices_checker/,False,False,False,False,0,"[""*Python* is commonly used for such tasks. *BeautifulSoup* is a Python library for *web scraping* - what is what you actually want to do.\n\nI'd suggest to do the MOOC [Python Programming 2025](https://programming-25.mooc.fi) up to at least part 5 and then supplement it with the second half of [Automate the Boring Stuff with Python](https://automatetheboringstuff.com) - a book dedicated to automating that also has a chapter on *web scraping*.\n\nAll materials are free - or, at least, free to read online."", ""This depends on some things. Is there a website where this is posted? Does the website have an API? Does the website require authentication like a login or token? Is the website static or dynamically generated?\n\nThe last question is probably the most important if there is no API. If the website is static (all content is sent upfront with the HTML), then I agree with the other commentor. I'd use Python, with `requests` to fetch the page and `BeautifulSoup` to parse it to get the data out.\n\nIf it's dynamic (Javascript is executed in the browser to fetch the actual content that you care about), that won't work. You'll need a tool like Selenium (basically, it allows you to control a browser via Python) which is capable of executing Javascript.\n\nYou can tell how the site is populated by opening the dev-tools and comparing the Elements and Sources tabs. If the content you want is in Elements but not Sources, it's dynamically generated. If the content is in Sources, it's static. If you're comfortable with it, you can DM the URL and I can take a look at the site."", ""You don't really need to *parse* the data. Human names are unique enough to where the chance of getting a false positive on a string search is negligible.\n\nImagine something like\n\n    <head>\n    ...\n    </head>\n    <body>\n    ...\n    Jon Doe\n    ...\n    </body>\n\nwhere Jon Doe is the name that you're looking for. \n\nI know you said that you don't want anybody to do this for you, but it's such a simple issue that it's a bit difficult to even point you in the right direction without giving you the answer. Others have suggested python, I'd do the same. Look into [requests.get\\(\\)] (https://www.w3schools.com/python/ref_requests_get.asp) then look into the [response you get from there] (https://www.w3schools.com/python/ref_requests_response.asp) and then just search the body for the name that you're looking for.\n\nUnless, again like others have said, the webpages you're scraping are dynamic. Then it's not as straightforward, but very possible and quite easy to figure out where the data is coming that you actually want to search using your browser's dev tools. Say you're visiting funerals.com or whatever, but the site actually fetches its data from funerals.com/funerals?start=2025-10-24&end=2525-10-25 and populates the website dynamically.\n\nNow you have the API (application programming interface) endpoint and you can just fetch that data instead of the whole website.\n\nOnce you have that working, you can look into cronjobs or scheduled tasks, if you're on windows, to make your script run automatically at specified times and then look into notifications. Via mail, some messenger, SMS, whatever, so you don't have to remember and bother with running the script manually.""]"
+1ogi19e,Is the change from Motion Design to Front-end worth it?,"Hey everyone
+
+I’ve been working as a video editor and motion designer for over five years now. I really enjoy what I do, but lately, I’ve been feeling a bit stuck. That excitement to learn something new just isn’t there anymore.
+
+I also don’t really see a clear path where I could grow financially and build a good life for myself and my family. So, I decided it’s time for a change, and that’s where coding comes in.
+
+I’ve always been interested in both coding and design. I have a degree in Design, and I even created a personal UI project just because I love building interfaces.
+
+Now I’m thinking about learning front-end development and mixing it with my motion design and UI skills to make my profile more interesting for companies and hopefully find better opportunities out there.
+
+And who knows, maybe later I’ll dive into back-end too, because even though I work in a creative field, I’ve always been quite a technical person at heart.
+
+What could you guys tell me about my decision? Do you think it would be a good choice? Any advice you could give me?",2,3,Marco_057_,learnprogramming,4260262,2025-10-26 11:14:30,https://www.reddit.com/r/learnprogramming/comments/1ogi19e/is_the_change_from_motion_design_to_frontend/,False,False,False,False,1,"['As a programmer for 10+ years who’s going into filmmaking, I don’t think you’re changing anything. You’re adding to your skillset and it’ll help with both pursuits. We only lose skill with neglect. So learn programming, especially JavaScript and let it open your mind to every possibility.', 'BTW, it’s so fkn worth it.']"
+1ofy98g,problem with star/pattern printing questions,"as the titles the says, i am having problem solving pattern questions(in which u print different patterns using a star or any other symbol), no matter how hard i try or think, i just can't solve those question
+
+please give me some suggestion/tutorial",2,7,IsThat-Me,learnprogramming,4260262,2025-10-25 18:03:58,https://www.reddit.com/r/learnprogramming/comments/1ofy98g/problem_with_starpattern_printing_questions/,False,False,False,False,1,"['Do them by hand and look for patterns. Put those patterns into words. Put those words into code.\n\nIf you want something more specific than that then you are going to have to give specific problems.', 'Use grid paper and draw out the patterns.\n\nThen, count the stars and spaces - try to find a relationship between row and number of stars/spaces (usually there is one).', 'Try to make the pattern on paper and notice things about it such as the number of rows, columns, spaces and how they are related to each other. Try to find some relation between them and then write it in your own words, then write pseudocode. Once you are comfortable with this, do a dry run of your code to understand more deeply.']"
+1ofw1h5,How can I get faster at advanced JavaScript and patterns?,"I know building is best for learning the basics but what is best for the things I don’t come across every day?
+
+I won’t always need to flatten an array, replace the third string if it starts with a B, push that into a new array and then display the contents on the page.
+
+Yet I find myself doing weird things like that at work, and I don’t know those are the solutions I’ll need until I’m done, and I’m only able to accomplish it using AI and lots of googling. So how do I prepare myself to see those types of solutions and pop them out faster?",2,12,IdeaExpensive3073,learnprogramming,4260262,2025-10-25 16:35:58,https://www.reddit.com/r/learnprogramming/comments/1ofw1h5/how_can_i_get_faster_at_advanced_javascript_and/,False,False,False,False,1,"[""Code wars can be helpful if you're just trying to develop some muscles."", 'Leetcode, Neetcode\n\nDSA.', ""By making mistakes  and learning from them. It's ok to learn at work and mistakes are inevitable, so dont feel like you need to be prepared for everything."", 'For one, upgrade to typescript. Types are a more advanced concept. And the sooner you get used to enforcing types the better.']"
+1oggz7c,Escaping Bubble.io — should I learn Python first or HTML/CSS/JS to stop being useless?,"I’ve been building apps on [Bubble.io](http://Bubble.io) for a few years — MVPs, dashboards, marketplaces — but I’m now painfully aware that no one wants to hire a Bubble dev unless it’s for $5 and heartbreak.
+
+I want to break out of the no-code sandbox and become a real developer. My plan is to start freelancing or get a junior dev job ASAP, and eventually shift into machine learning or AI (something with long-term growth).
+
+The problem is: I don’t know what to learn first. Some people say I need to start with HTML/CSS/JS and go the frontend → full-stack route. Others say Python is the better foundation because it teaches logic and sets me up for ML later.
+
+I’m willing to put in 1000+ hours and study like a lunatic. I just don’t want to spend 6 months going down the wrong path.
+
+What would you do if you were me? Is it smarter to:
+
+* Learn Python first, then circle back to web dev?
+* Or start with HTML/CSS/JS and risk struggling when I pivot into ML later?",1,0,Kwabz233,learnprogramming,4260262,2025-10-26 10:11:38,https://www.reddit.com/r/learnprogramming/comments/1oggz7c/escaping_bubbleio_should_i_learn_python_first_or/,False,False,False,False,0,[]
+1oggdsz,General questions about frontends and gui,"I'm programming mostly just for fun. I started with Python but now I'm doing most of my coding in Go (sometimes I try out other languages like C or Rust).
+
+I understand the logic of command line tools or lets say backend programming but I struggle when I want to do a GUI. In Go I did one small project where I used Fyne for the GUI. But the documentation and how to structure the program was difficult, I made it work but the code i a mess.
+
+Sometimes I can't find a good a library to do something I need in Go, then I do it in Python or Rust. But I don't want to learn how to program a GUI in every language.
+
+  
+Now I have some general questions. Would it be easier if I split the GUI/frontend and the backend? 
+
+For example, should I program a rest api in Go (or whatever languages I want to use at the moment) and then learn something like Flutter or React to do the GUI?
+
+Is Flutter easy to learn and does it make sense if I mostly want to do desktop applications?
+
+",1,0,rootsandstones,learnprogramming,4260262,2025-10-26 09:34:40,https://www.reddit.com/r/learnprogramming/comments/1oggdsz/general_questions_about_frontends_and_gui/,False,False,False,False,1,[]
+1ogfhtg,Backend developer roadmap,"I started to learn programming 2 months ago. I figured out I like backend. What language(s) is overall a better choice?
+
+I'd love to know every suggestion to become a backend developer.
+
+(By the way, I know fundamentals of javascript.)",1,0,Cool-Climate9908,learnprogramming,4260262,2025-10-26 08:37:16,https://www.reddit.com/r/learnprogramming/comments/1ogfhtg/backend_developer_roadmap/,False,False,False,False,1,[]
+1ogcfi8,Trying to make a calculator with pictures,"Hello, I don't have much programming experience (learnt basic C++ 4 years ago and some MATLAB for courses) and would love some ideas for how to achieve this. Apologies for not having the right lingo to describe what I am trying to do.
+
+I am hoping to make a program that takes in numbers through buttons and text boxes, and then computes equations, and outputs text, numbers, (graphs are optional but I prefer to have that capability).
+
+Here are some requirements:
+
+* Be able to display pictures, and optionally computed graphs
+* Be able to make multiple ""pages""
+* Non-editable after publishing, preferably no source code that can be extracted
+* Be distributable but I should be able to set up a passcode for whenever someone downloads it
+* Needs to be usable completely offline (airplane mode)
+
+Here are some ideas I explored and am not sure if I am on the right track:
+
+* I can make an .exe file with some kind of GUI
+* I have a student version of MATLAB that includes an app designer plugin
+* I am willing to learn a new language to do this if needed
+
+I'd love to hear your ideas and please point me to some resources I can start learning about. Thanks a lot!",1,7,CyberSecParanoid,learnprogramming,4260262,2025-10-26 05:21:03,https://www.reddit.com/r/learnprogramming/comments/1ogcfi8/trying_to_make_a_calculator_with_pictures/,False,False,False,False,1,"['> Needs to be usable completely offline (airplane mode)\xa0\n\n\nWhy, and how, could a calculator app **NOT** be able to run offline?']"
+1og7knd,Is Karel a good intro to JavaScript?,"I recently wondered about buying CodeHS, because I heard that they have this grid world unit called Karel, which is told to be a GREAT intro. However, if I want to follow the course, I'd need to buy it. Is it worth it?",1,4,Hot_Needleworker8289,learnprogramming,4260262,2025-10-26 00:55:05,https://www.reddit.com/r/learnprogramming/comments/1og7knd/is_karel_a_good_intro_to_javascript/,False,False,False,False,1,"[""If Karel's good enough for me, it's good enough for anyone. 😁\n\nCan't speak about the course though.\n\nAn alternative to Karel (though coming at it from a very different direction) would be Scratch, or Snap. They all have similar aims: introduce you to the basic concepts of programming without bogging you down too much in syntax or details, or the many many idiosyncracies of Javascript.""]"
+1og6w1u,FreeCodeCamp for full-stack. Is it worth it?,"I'm an undergraduate freshman with some Python and html + css experience back from high school projects. In my class everybody is now constantly locked in for their current projects and hackathons that gives me FOMO, so I decided to learn some new stuff to keep up and start doing something on my own, and eventually chose fcc full-stack course. Do you guys think it's a good course to start with? Does it have theory AND practice or it's just like a textbook only with information? ",1,3,Limp-Rope2477,learnprogramming,4260262,2025-10-26 00:20:26,https://www.reddit.com/r/learnprogramming/comments/1og6w1u/freecodecamp_for_fullstack_is_it_worth_it/,False,False,False,False,0,"['It’s good way to learn practical web skills.\n\nMost of the CS theory you’ll learn in college.', ""It's a good course, so is The Odin Project, I think more seem to recommend TOP but both will teach you what you need to know to get started."", 'Take The Odin Project it is way much better than FreeCodeCamp, and after Odin the other one I would recommend FulStack Open, but this one you need more Js knwledge than Odin because Oding will teach you that']"
+1og34tf,where are some good netcode courses (for multiplayer gamedev)?,"I want to find complete course how to implement responsive-feeling client/server game ~~or application in general, but the focus is on responsiveness instead of correctness/security.~~
+
+i want to understand low level details on how this stuff works.
+
+I'm inspired my minecraft and tankionline multiplayer games :D",1,0,dirty-sock-coder-64,learnprogramming,4260262,2025-10-25 21:25:56,https://www.reddit.com/r/learnprogramming/comments/1og34tf/where_are_some_good_netcode_courses_for/,False,False,False,False,0,[]
+1og2rpg,"so much terminology, please help","there’s is literally so much of everything, It’s so overwhelming 
+
+I went from a simple google search of proxy and went through a rabbit hole that went from proxy to l1nux to l1nux distributions to deb-ian to package manager to package format to archive file to computer file to data to relational database 
+
+and literally every single term in their respective wiki page has countless other terms in it tha you’re “supposed” to understand. 
+
+How does one even begin to understand everything?",1,6,Important-Bus-5921,learnprogramming,4260262,2025-10-25 21:10:28,https://www.reddit.com/r/learnprogramming/comments/1og2rpg/so_much_terminology_please_help/,False,False,False,False,0,"[""You're not supposed to understand everything. You just need to learn what you need to do the thing you want to do, the rest you can learn later."", 'It\'s simple: you don\'t.\n\nNot even the best programmer (by whatever metric you want to use as the metric to determine who is the best programmer is) knows all the terminologies. They might know a lot of terminologies by more often than not because they use it a lot. Like, you can\'t ask a math professor what ""phonk"" or ""brainrot"" is. They are very intelligent (this is my assumption), but that doesn\'t mean they know everything.\n\nThe first step to learning something is to accept that you don\'t know something.\n\nHype moment and aura farming.\n\nSkibidi Brainrot.', ""It's as easy as driving a car.  Gas, brake, turn.  Add some chemical know-how to chose your gas grade.  And the ethanol.  ugh what a waste to burn it instead of drinking it. Fluid dynamics for when it rains.  Some aerodynamics for gas efficiency.  Might as well electrical systems since we're headed that way.  Always know when to flip the bird when someone cuts you off and when to just breathe."", ""Don't try to learn everything at once. In formal education they present one topic at a time. And it does take time, because the body of knowledge is huge. Noone knows everything; people specialize in different things"", 'Start with PCEP, a free and structured Python course for absolute beginners: https://edube.org/study/pe1\n\nRegarding Linux, read the Linux Essentials material: https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-en.pdf']"
+1og20y0,FPGA Class - In need of assistance,"Hello. I am new to Reddit and this is my first ever post. Sorry for the weird default name and stuff.
+
+I made this account due to falling behind quite a bit in my second-ever class that is centered around FPGAs and my first ever class centered around Hardware Description Languages (Verilog, VHDL, SysVerilog).
+
+I have tried to get help in this course from the course staff; however, the help they have provided is minimal. I keep getting redirected to resources that I have already tried to help me get back on track. This is the last place I thought I could reach out to for assistance.
+
+**Specifically**, I am behind on labs for this class. For each of my projects in this course, there always seems to be something wrong with them. I try debugging using RTL simulations, and while the information provided in incredibly useful, I really can't narrow down to what specifically is causing the issue in my code let alone implement a solution such that my Hardware Descriptions properly describe the hardware that I am building.
+
+This has been exacerbated by unavoidable personal life events related to death, illness, and housing. I have deprioritized other classes and have put myself in jeopardy in many of my other classes just so I could try to salvage this class as I find the material to be extremely interesting. With all of this in mind, my TA has deprioritized those who are behind (me) in favor of those who are closest to lab completion of current labs. While I was given an extra time, it feels like I was given a hot potato or a ticking time bomb more than anything after I have learned of this context that initially I knew nothing about up until around 1-2 weeks ago.
+
+**Currently,** I am working on one highly important, late lab. I’m at risk of losing credit for a lot of labs if I don’t finish soon. What I am working on is a structural ALU implemented via HDL's in Quartus. I have since  proceeded to work on my Verilog version as it is what I expect to be able to complete before the end of this weekend given my other coursework that I now must catchup on.
+
+In the image below, I have included a screenshot of what my RTL simulation over places where my function select is producing erroneous results (SHRA, SHRL, RRC, LD operations)
+
+[SHRA, SHRL, RRC, LD](https://preview.redd.it/kvlumtszcbxf1.png?width=1870&format=png&auto=webp&s=46a178adc2432987cb532ca2f0a8a35a07ce0182)
+
+Currently, my arithmetic unit, logic unit, and const unit all seem to work (all green, seems to all be okay in RTL).
+
+[MY SR\_UNIT](https://preview.redd.it/c9a5h7zwdbxf1.png?width=1798&format=png&auto=webp&s=b33e3fe2f7fd8bab86a37d055cf0bd6f4f32db98)
+
+What I know is incorrect is my SR unit, as this unit is not properly producing the results I intended it to (SHRL, SHRA, RRC). I noticed that the numbered versions work perfectly; however, the shrl, shra, and rrc are not being assigned. This is in spite of me assigning them using the ternary operator \`\`\`(thing) ? (iftrue) : (iffalse)\`\`\`
+
+[Results MUX && CNVZ MUX](https://preview.redd.it/gnc0ckn9ebxf1.png?width=1794&format=png&auto=webp&s=db20ebfcb3091dae2002ca88ca8d74f3940b79f0)
+
+These components behave well most of the time. I suspect that when SR\_UNIT properly works, these will all fall into place alongside it.
+
+[Top Level](https://preview.redd.it/a6pnkzmgebxf1.png?width=1806&format=png&auto=webp&s=828a09a3b44b6916f24cc83c6af70fcab85b3bac)
+
+Mostly works excluding the stuff mentioned earlier about the operation codes/func\_sel. The main issue here is CIN, which I believe I am not assigning a value in the top level. I have been confused on what I am actually supposed to do here with this cin anyways. The main reason I have it is because the given testbench requires it, and since all my SHIFT/ROTATE operations require a CIN & a COUT at some level.
+
+I did not notice that my LD function (1011) was non-functional, and I need to look back to see where it would likely be stored in my code.
+
+[STD Warn](https://preview.redd.it/volflbyjgbxf1.png?width=491&format=png&auto=webp&s=d223f143552ec80a4c94d9e647e895dd0ced39a7)
+
+[STD Warn](https://preview.redd.it/a5y6iijlgbxf1.png?width=1573&format=png&auto=webp&s=e39d69fc5c8b5fa47f5e598a1fe38a76d45ba5a7)
+
+[STD Warn](https://preview.redd.it/we8tu0emgbxf1.png?width=535&format=png&auto=webp&s=4aa4430114fce468da7095eddf52be8260a424c3)
+
+[Critical Warnings](https://preview.redd.it/5inu92zqgbxf1.png?width=600&format=png&auto=webp&s=c574a3558b07be61352568353f7c23d865ce7da3)
+
+Also, here are my errors (I find Verilog error messages to be very helpful in comparison to VHDL).
+
+Any advice would be greatly appreciated. Thank you for the assistance!",1,1,Historical_Pick_8993,learnprogramming,4260262,2025-10-25 20:38:52,https://www.reddit.com/r/learnprogramming/comments/1og20y0/fpga_class_in_need_of_assistance/,False,False,False,False,1,"['You have my sympathy OP, good luck on the labs 🍀']"
+1ofy7mw,c++ starter mini code (need feedback),"Hi guys,  
+I'm gradually learning C++ along with everything else I'm learning.  
+and today my challenge was coding a mini-code for withdraw/deposite  
+to make sure i understand functionality of cpp and it's scopes
+
+but i wonder am i coding clean syntax or this is a mess:  
+(take a break and look at this easy code :))
+
+    #include <iostream>
+    
+    
+    
+    // database
+    const std::string PIN = ""1111"";
+    double BALANCE = 999.0;
+    
+    
+    
+    bool _authentication();
+    double _getBalance();
+    void showBalance();
+    void withdraw();
+    void deposit();
+    
+    
+    
+    int main()
+    {
+        bool entered;
+        char task;
+    
+    
+        std::cout << ""- - - ATM - - -\n"";
+        entered = _authentication();
+    
+    
+        while (entered)
+        {
+            std::cout << ""- - - - - - - - - - -\n"";
+            std::cout << ""[ Q to quit - B to check balance - W to withdraw - D to deposite ]\n"";
+            std::cout << ""what are you up to: "";
+            std::cin >> task;
+            std::cin.ignore(); // to ignore \n
+    
+    
+            if (task == 'Q' or task == 'q') {std::cout << ""<quiting account>\n""; entered = !entered;}
+            if (task == 'B' or task == 'b') {showBalance(); std::cout << ""- - - - - - - - - - -\n"";}
+            if (task == 'W' or task == 'w') {withdraw(); std::cout << ""- - - - - - - - - - -\n"";}
+            if (task == 'D' or task == 'd') {deposit(); std::cout << ""- - - - - - - - - - -\n"";}
+        }
+    
+    
+        return 0;
+    }
+    
+    
+    
+    double _getBalance() {return BALANCE;}
+    
+    
+    
+    bool _authentication()
+    {
+        std::string userEnteredPin;
+        bool isDigit = false;
+    
+    
+        do{
+            std::cout << ""Enter your Pin Code: "";
+            std::getline(std::cin,userEnteredPin);
+            
+            // foreach loop
+            // for (data_type var : container)
+            for (char c : userEnteredPin){
+                if (!std::isdigit(c)) { isDigit = false; break; }
+                else{ isDigit = true;}
+            }
+    
+    
+            if ((userEnteredPin.length() > 4) or (userEnteredPin.length() < 4)) {std::cout << ""pin must be 4 digits!\n"";}
+            else if ((userEnteredPin.length() == 0) or isDigit == false) {std::cout << ""you must enter only digits!\n"";}
+            else if (userEnteredPin != ::PIN) {std::cout << ""pin is not correct, try again...\n"";}
+        } while (userEnteredPin != ::PIN);
+    
+    
+        std::cout << ""<entered to account>\n"";
+        
+        return true;
+    }
+    
+    
+    
+    void showBalance()
+    {   
+        int inaccessible_amount = 50;
+        double user_balance = _getBalance();
+        std::cout << ""- - - - - - - - - - - - - - - - - - - - -\n"";
+        std::cout << ""your balance is: "" << user_balance << ""$\n"";
+        std::cout << ""accessible balance: "" << user_balance - inaccessible_amount << ""$\n"";
+        std::cout << ""- - - - - - - - - - - - - - - - - - - - -\n"";
+    
+    
+    }
+    
+    
+    
+    void withdraw()
+    {
+        int inaccessible_amount = 50;
+        double accessible_amount = _getBalance() - inaccessible_amount;
+        std::string user_request;
+        double uInput;
+        bool input_digit;
+    
+    
+        std::cout << ""- - - - - - - - - - - - - - - - - - - - -\n"";
+        std::cout << ""- Withdraw  - - - - - - - - - - - - - - -\n"";
+        std::cout << ""- - - - - - - - - - - - - - - - - - - - -\n"";
+        
+        std::cout << ""you have access to "" << accessible_amount << ""$\n"";
+        std::cout << ""how much would you like to withdraw: "";
+        do{
+            std::cout<< ""\n(Enter digit) "";
+            std::getline(std::cin, user_request);
+            for (char c : user_request){
+                
+                if (!std::isdigit(c)) { input_digit = false; break; }
+                else{ input_digit = true;}
+            
+            }
+        } while (!input_digit);
+        uInput = std::stod(user_request);
+    
+    
+        if (uInput <= accessible_amount) {
+            std::cout << ""<withdrawing "" << uInput << ""$>\n"";
+            ::BALANCE -= uInput;
+            std::cout << ""your current BALANCE: "" << _getBalance() - inaccessible_amount << ""$>\n"";
+        }
+        else if (uInput > accessible_amount) {
+            std::cout << ""!! you have requested more than accessible amount! - "" <<  accessible_amount << ""$\n"";
+            std::cout << ""<back to menu>\n"";
+        }
+        else {
+            std::cout << ""!! invalid input ("" << uInput << "")\n"";
+            std::cout << ""<back to menu>\n"";
+        }
+    }
+    
+    
+    void deposit()
+    {
+        int least_amount = 10;
+        int max_amount = 1000;
+        std::string user_request;
+        double uInput;
+        bool input_digit;
+    
+    
+        std::cout << ""- - - - - - - - - - - - - - - - - - - - -\n"";
+        std::cout << ""- Deposit - - - - - - - - - - - - - - - -\n"";
+        std::cout << ""- - - - - - - - - - - - - - - - - - - - -\n"";
+    
+    
+        std::cout << ""you have to at lease deposit "" << least_amount << "" dollars\n"";
+        std::cout << ""also you can't deposite more than "" << max_amount << "" dollars at once.\n"";
+        std::cout << ""how much would you like to deposit: "";
+        do{
+            std::cout<< ""\n(Enter digit) "";
+            std::getline(std::cin, user_request);
+            for (char c : user_request){
+                
+                if (!std::isdigit(c)) { input_digit = false; break; }
+                else{ input_digit = true;}
+            
+            }
+        } while (!input_digit);
+        // after getting digit input
+        uInput = std::stod(user_request);
+    
+    
+    
+        if ((uInput >= least_amount) and (uInput < max_amount)){
+            std::cout << ""<depositing "" << uInput << ""$>\n"";
+            ::BALANCE += uInput;
+            std::cout << ""your current BALANCE: "" << _getBalance() << ""$>\n"";
+        }
+        else if (uInput < least_amount){
+            std::cout << ""!! you must deposit at least "" << least_amount << ""dollars!\n"";
+            std::cout << ""<back to menu>\n"";
+        }
+        else if (uInput >= max_amount){
+            std::cout << ""!! you can't deposit more than "" << max_amount << ""dollars at once!\n"";
+            std::cout << ""<back to menu>\n"";      
+        }
+        else {
+            std::cout << ""!! invalid input ("" << uInput << "")\n"";
+            std::cout << ""<back to menu>\n"";
+        }
+    }
+
+",1,3,HosseinTwoK,learnprogramming,4260262,2025-10-25 18:02:13,https://www.reddit.com/r/learnprogramming/comments/1ofy7mw/c_starter_mini_code_need_feedback/,False,False,False,False,1,"[""First thing - use a code formatter. Clang-format is popular. Save the formatter configuration to your project so that even if the formatter changes, the formatting itself remains consistent within the project. (Clang-format changes it's formatting defaults with every update. It's annoying as shit.) Let's not argue whether the asterisk goes here or there, whether the bracket goes on the same line or the next...\n\nSecond - this program ostensibly works, so there's not much to argue about there. Who cares about cleanliness?\n\nThird - is this good code? Not remotely. You've got a lot of learning to go through, it's clear you're very early in your introductory material. I'll warn you that the materials you're learning from are teaching you grammar and syntax - they're NOT teaching you how to USE the language. You still have to learn algorithms and data structures, the theory of computation, types, and idioms and paradigms. Then for whatever problem you want to solve, you have to learn that domain. For example, if you want to make video games, to start - you have to learn linear algebra - the math of 2D and 3D.\n\nSo I don't really know what to tell you other than keep going. A lot of what I would knock will simply go away once you learn more language concepts.\n\nTips:\n\nThe most important part of C++ is the type system. Types are everything. C++ is famous for its type safety, but if you don't use it, you don't get the benefit. In C++, an `int` is an `int`, but a `weight` is not a `height`, even if you implement it in terms of `int`. It takes a while to get good at types. You can define your own User Defined Types - they are `struct`, `class`, `union`, and `enum`. The standard library is full of user defined types, because `std::vector` is not defined by the language itself as a primitive, like `int`, or implementation type, like GCC's `__int128`. Even something like a vector isn't something you should be using directly, but be building your own types in terms of.\n\nTypes will let you solve for a lot of problems. For example, IO is all about types with custom stream operators; I post about this often in r/cpp_questions.\n\nTypes will prevent aliasing, because:\n\n    void fn(int &, int &);\n\nYou don't know which parameter is which, and the compiler can't know if the parameters are aliased or not - so the function has to be implemented sub-optimally, with memory fences and writebacks to ensure correctness.\n\n    void fn(weight &, height &);\n\nThe types are preserved in the ABI, and the rule is two different types cannot coexist in the same place at the same time; these parameters CAN'T be aliased, so the compiler is free to generate more optimal code. Type safety isn't just about catching bugs, compilers are theorem provers, and that allows them to optimize. Compilers optimize most around types.\n\nTypes will help you push more of your code into compile-time instead of runtime. For example - you have code that checks the deposit amount is between the min and the max, but you have to test for that at runtime. If instead you had types:\n\n    using deposit = std::variant<std::monostate, valid, below_min, above_max>;\n\nYou have types that can prove correctness at compile-time. Instead of the `deposit` function printing all that output, these types know how to print themselves, their own messages at deposit. In this way, your function can express WHAT to do, and your implementation details can express HOW.\n\nJust as primitive types exist for you to build more expressive, more elaborate, more abstract, more composite types, so too do we have control structures as primitives you are to build your algorithms out of. I haven't written a `for` loop in over 10 years, and neither should you. Algorithms name your loops and raise your expressiveness.\n\nYour functions are huge. All the major software houses and independent researchers have done the work and have found again and again that the best programmers in the world can't keep track of over 100 LOC. If you can't see the top of your function when looking at the bottom, it's probably too long. You can describe `deposit` as a series of sub-steps. Those sub-steps can be named... Just like... A function...\n\nContinued..."", 'Rather than this code:\n\n    bool entered;\n    char task;\n    \n    std::cout << ""- - - ATM - - -\\n"";\n    entered = _authentication();\n    ...\n\nI would prefer to write that code as follows only because it reduces the total line count:\n\n    char task;\n    \n    std::cout << ""- - - ATM - - -\\n"";\n    bool entered = _authentication();\n    ...\n\nBut naturally that is nothing more than a personal preference of a particular coding style.']"
+1ofumj6,Pareto principal in coding,"The Pareto principal or the 80/20 rule seems exist in everything. I'm wondering if it existing coding? I know it definitely does for me. 
+
+I can quickly get 80 to 90% of a feature or even project set up and going. But then I spend multiples of that time trying to get the finishing touches to work. 
+
+I feel like I can get it most of the way there but then when to try to polish it One thing breaks another or I have to redo a bunch of code. 
+
+How has everyone else's experienced been on this. All I can say is praise version control ",1,5,uvuguy,learnprogramming,4260262,2025-10-25 15:38:14,https://www.reddit.com/r/learnprogramming/comments/1ofumj6/pareto_principal_in_coding/,False,False,False,False,0,"['As Tom Cargill of Bell Labs once put it:\n\n\nThe first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.', ""There's also something like 80% of the time your program spends in 20% of your code (the ratio is probably even higher). You want to tune performance on that section of code that runs the slowest, but to find it, you need to locate it."", 'It’s “principle” (meaning a scientific theorem, a fundamental truth or proposition).\n\n“Principal” exists but the meaning is different (usually the most important person or part, like the principal of a school or the principal of a loan vs the interest).', 'Yeah. My teacher was like 10% code (business logic) and 90% bulletproofing to account for idiots (and malice).\xa0']"
+1ogh477,"Where, what, and how should I learn NLTK and spaCy for NLP? Any roadmap or advice?","Hey everyone 👋
+
+I’m currently learning NLP (Natural Language Processing) and want to build a small chatbot project in Python. I’ve heard that both NLTK and spaCy are important for text processing, but I’m a bit confused about where to start and how to structure my learning.
+
+Could someone please share a roadmap or learning order for mastering NLTK and spaCy? Like:
+
+What concepts should I learn first?
+
+Which library should I focus on more (NLTK or spaCy)?
+
+Any good tutorials, YouTube channels, or course recommendations?
+
+Should I also learn Hugging Face transformers later on, or is that overkill for now?
+
+
+My current background:
+
+Comfortable with Python  and data structures
+
+Learning Pandas and NumPy
+
+Goal: Build an NLP chatbot (text-based, maybe later with a simple UI)
+
+
+I’d love a step-by-step roadmap or advice from people who’ve already gone through this. 🙏
+
+Thanks in advance!",0,2,king_of-north,learnprogramming,4260262,2025-10-26 10:20:22,https://www.reddit.com/r/learnprogramming/comments/1ogh477/where_what_and_how_should_i_learn_nltk_and_spacy/,False,False,False,False,0,"['Move by:\n\n[https://course.spacy.io/en/](https://course.spacy.io/en/)\n\nYou will grap basic. NLTK is more science projects, but Spacy is more for real life product. You may need after that go deeper inside grammar structure from linguistics to be aware about how words are related between self. Without that it will be very hard creating something more complicated.']"
+1ogfj9n,Is giving my GitHub essential when applying for internships via email?,"Im in second year of university studying maths and computer science, also minoring in physics. I’m applying for a few internships in another country (Austria) for when I go on uni exchange next year. I don’t really have a GitHub.. it’s currently empty. Is it essential to give a link to my GitHub in application emails or is LinkedIn and CV etc enough initially?",0,1,Massive-Buy-9468,learnprogramming,4260262,2025-10-26 08:39:51,https://www.reddit.com/r/learnprogramming/comments/1ogfj9n/is_giving_my_github_essential_when_applying_for/,False,False,False,False,0,"[""No, it's not necessary. There's no point in sending a link to GitHub that's empty, that will look really bad.\n\nHowever, it won't make your application a very strong one. Probably some of the other students competing for the same internship have made some projects outside of class that they want to show off.""]"
+1ogihz6,Need help choosing a solid topic for my School project (wanna make it practical too),"Hey folks,  
+I’m in a group for some course, and we’re at the stage of submitting our inception report. It’s mostly documentation (scope, requirements, risks, WBS, etc.), but I want to choose a topic that’s not just theoretical — something I can later turn into a real, practical project with angluar.js and asp.net.
+
+I was initially interested in ideas that mix management systems (for the main part) with a small machine learning feature — like 70% management features, 30% smart prediction or analytics.
+
+For example, one idea I liked was a Project Management Dashboard for organizations handling multiple projects at once.  
+There’d be:
+
+* Project managers overseeing progress,
+* Team leads handling task-level stuff,
+* Developers logging updates,
+* And the system could give “smart insights” like warning about potential delays or resource bottlenecks.
+
+I also brainstormed another concept around pregnancy and hospital management, where doctors are assigned to patients, incidents are logged, and the system provides insights to specialists — but I’m not sure if that’s too niche or already done to death. And i really don't think there is a gap in this area...
+
+So yeah — I’m looking for topic suggestions that:
+
+* Are realistic enough to plan and document like a full project,
+* Could later be built as a real system,
+* Maybe have a small data-driven or ML twist,
+* And don’t sound like the same old “student project template.”
+
+What kind of ideas would you guys suggest that strike that balance between practical, interesting, and portfolio-worthy?",0,0,Infinite_Main_9491,learnprogramming,4260262,2025-10-26 11:40:59,https://www.reddit.com/r/learnprogramming/comments/1ogihz6/need_help_choosing_a_solid_topic_for_my_school/,False,False,False,False,0,[]
+1ogids1,Is learncpp curriculum structure good for learning C++?,"here is the link: [https://www.learncpp.com/](https://www.learncpp.com/)
+
+If you have any better options, please share them, and thank you in advance!",0,0,LocalField1281,learnprogramming,4260262,2025-10-26 11:34:33,https://www.reddit.com/r/learnprogramming/comments/1ogids1/is_learncpp_curriculum_structure_good_for/,False,False,False,False,0,[]
+1ofy5op,Does anyone know how I can study for these kinds of questions?,"\#include <iostream>  
+using namespace std;  
+int main() {  
+int a = 2, b = 3, c = 4;  
+a += b++ + ++c;  
+if (a > c && b < c) {  
+c = c + a;  
+} else {
+
+b = b + c;  
+}  
+if ((--c > a) || (b++ == 3)) {  
+a = a + 1;  
+} else {  
+a = a - 1;  
+}  
+if ((a == 8) && (++b > 3)) {  
+c -= b;  
+} else {  
+c += b;  
+}  
+cout << a << "" "" << b << "" "" << c << ""\\n"";  
+return 0;  
+}
+
+we were supposed to find the output for it.   
+  
+There were multiple of these kinds of questions on my first exam and I have a second exam coming up on nov 6th and I've been kind of nervous because I got a 71 on the first exam because of these kinds of questions and I just don't know how to prepare for them at all especially when the new exam is going to cover harder stuff. I can do the questions in the online book we've been given to study with but they don't get anywhere as hard as these questions.",0,16,RevolutionaryMonk970,learnprogramming,4260262,2025-10-25 18:00:15,https://www.reddit.com/r/learnprogramming/comments/1ofy5op/does_anyone_know_how_i_can_study_for_these_kinds/,False,False,False,False,0,"['It seems like it’s testing basic mathematical operators and control flow statements. It’s really just a math problem with some logic thrown in. Pretend you’re the computer running this program…go line by line and substitute real values for each variable and when you get to something like an `if`-statement evaluate that and determine which branch to follow.\n\nI would assume you’re not expected to do this all in your head (not impossible but annoying) so just write the steps out on paper like you would solving an equation in math class.', 'This stuff does suck, but it ensures you know how the rules of C++ work. Take it one line at a time. Write down the values of a, b, and c at each step.\n\n    a += b++ + ++c;\n\nThis is equivalent to\n\n   a = a + (b++ + ++c);\n\nWhat does `b++` do? It increments `b` and, just as important, evaluates to the *old* value of `b`. As `b` was initialized to `3`, `b++` evaluates to `3` and `b` is now `4`. So what does `++c` do? What is `b++ + ++c`? What does that make `a`?\n\nNext line.\n\nAnd.\n\nSo.\n\nOn.', 'These questions are designed to test if you know how the language works.\n\nTrying to study for ""this kind of question"" is missing the point: study for all the kinds of questions in this stye by studying the language.\n\nLearn how your tool works, and then you can solve any question on the tool.\n\nDo you understand what variables are? do you know how code executes, line-by-line (ish)? do you know how if statements work and boolean operators (&& and ||)? Do you know the difference between x++ and ++x in C++? If so, you should be able to answer these kinds of questions.', '""What would happen if I added this code to a production system?"" \n\n\\[X\\] I will be immediately fired  \n\\[   \\] Irrelevant  \n\\[.  \\] Irrelevant  \n\\[.  \\] Irrelevant', '> a += b++ + ++c;\n>\xa0 ((--c > a) || (b++ == 3))\xa0\xa0\n\n\n\n\nYeah, never do this. It\'s deliberately being obtuse . While your teacher may have a ""correct"" answer, it may not actually be defined in different languages or even in different complies for the same language . Like the `b++==3` may or may not be evaluated depending if the language uses shortcutting.\xa0']"

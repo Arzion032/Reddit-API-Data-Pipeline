@@ -1,8 +1,6 @@
 import praw, sys, pandas as pd, numpy as np
 from praw import Reddit
 
-from utils.contants import POST_FIELDS
-
 def reddit_conn(client_id, client_secret, user_agent)-> Reddit:
   
     try:
@@ -54,6 +52,7 @@ def extract_posts(instance: Reddit, subreddit: str, time_filter: str, limit=None
             'edited': post.edited,
             'spoiler': post.spoiler,
             'stickied': post.stickied,
+            'upvote_ratio': post.upvote_ratio,
             'comments': top_comments
         }
 

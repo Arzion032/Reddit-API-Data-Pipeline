@@ -3,4 +3,4 @@ pandas
 numpy
 configparser
 s3fs
-
+apache-airflow-providers-amazon
