@@ -1,0 +1,342 @@
+id,title,selftext,score,num_comments,author,subreddit,subreddit_subscribers,created_utc,url,over_18,edited,spoiler,stickied,upvote_ratio,comments
+1oh2m07,💻 DSA vs Development — What actually matters more for a coder’s career?,"I’m on both sides — I practice DSA and work on development.
+But honestly, I feel DSA is important only up to an intermediate level — enough to build problem-solving logic.
+After that, spending months on LeetCode just for patterns feels like overkill.
+
+Once your fundamentals click, real-world development teaches you teamwork, architecture, and scalability — things DSA alone can’t.
+
+What do you all think?
+👉 Should beginners still grind DSA for months before touching dev?
+Or balance both from day one?",29,15,shrinivas-2003,learnprogramming,4260470,2025-10-27 02:06:59,https://www.reddit.com/r/learnprogramming/comments/1oh2m07/dsa_vs_development_what_actually_matters_more_for/,False,False,False,False,0,"['Getting the job, DSA. Doing the job, Development. \n\nBut DSA is important and you should know the basics. big o, sorting, binary search, dfs, bfs, graphs, matrices,  etc and you can do DSA and development at the same time.', ""If you don't have a job, then do DSA. There's no guarantee that the kind of development you do in your personal projects will be the kind of job offer that you'll get in the future. DSA won't make you a good developer, but you need DSA in order to get in the door.\n\nAfter you get a job, then stop with DSA and focus on development. Maybe you'll want to stay in the same domain, maybe you'll want to try a different domain, maybe you'll want to go up the big tech ladder, maybe you'll want to pursue WLB. Its impossible to know until you get some experience."", ""I think you hit the nail on the head in that where DSA really shines is building your problem solving skills. And like just getting comfortable writing code that isn't just like cut and paste stuff from tutorials, of course!\n\nI don't expect every new developer to have every algorithm ever published memorized. But I *do* expect anyone competent could, for instance, be given the outline of an algorithm and implement it in code pretty easily and you'd be surprised how many people can *not* do that."", 'In my almost 15 years of experience , only one time I had to deal with complicated DSA (prims, DFS, BFS). Other than that, is only used in interviews. 95% of the work is not DSA or its very basic at best. Its what frustrates me about leetcode interviews, which are so easily gamed, cheated, and in normal setting i can just use ChatGPT to get an outline of the DSA and optimal solutions.', 'I think DSA in one way or another cultivates problem solving mentality and thinking about how to write code in a cleaner manner. The process of taking down requirements, thinking about trade-offs and improvising for a better solution is like a starting point. \n\nThe same approach can be often helpful in building products. You may or may not use that knowledge directly to build fault tolerant systems but the skills you gained on how to think about a problem and judging trade offs is somewhat transferable when building projects/products.\n\nSo both go hand in hand one way or another. But this is just a recent discovery for my own experience. I cannot generalize this. So yeah, this is my opinion (which may change as I learn more and gain more experience) \n\nAgain DSA is not directly helpful in developing things for the most part. There are other skills that come into the picture but it is helpful in some way.']"
+1ogwelb,I feel stuck,"I have basically memorized all the intro to <programming language> courses fully for java (since my school forces me to use java), C (because im personally interested in low level programming), C++ and C# (since its almost exactly the same as java), but the thing is i dont know where to go next.
+
+Right now i have a school project where i have to build a quiz app in java swing, the problem is that they dont teach shit in class and i want to get beyond a C.
+
+I guess its just really overwhelming to have something like java swing thrown at me to use when i dont know how it functions on a lower level. Like i get im supposed to make a jframe and add ui elements to it, but there's a disconnect happening between the coding concepts im learning and what im actually doing when building the app.
+
+Also reading tons of documentation is very time consuming and migrane inducing. In the past ive built a very simple 3d simulation using opengl in C++ and while i did get praised a lot like i was some genuis by my proffessor, i dont even fully understand the rendering pipeline or what each and every function call i made does.
+
+Basically what im trying to say is: i fully understand the building blocks (ifs, loops, variables, functions, OOP concepts...) but i cant actually connect that to what im doing when making an app that actually does something.
+
+Also when i have an idea for an program i wanna make, i find it really hard to break it down into managable subproblems and get overwhelmed.
+
+So im stuck where i am right now and dont know how i should go about improving my problem solving skills at all.
+
+Sorry for for how badly this post is written, i have a hard time putting the problems i have into words.",21,10,MarsupialPitiful7334,learnprogramming,4260469,2025-10-26 21:23:53,https://www.reddit.com/r/learnprogramming/comments/1ogwelb/i_feel_stuck/,False,False,False,False,0,"["">I have basically memorized\xa0...\n\nYou will not achieve much of anything if your focus is just on memorizing details.\n\nThe only way to learn to program is read some programming topic and then spend time trying to use that information to write working code. If you don't do that coding step, nothing will stick and you will not progress.\n\nAnd you should be spending 20% of your time reading, and the remaining 80% of your time trying to write working code.\n\n>I guess its just really overwhelming to have something like java swing thrown at me to use when i dont know how it functions on a lower level.\n\nThat is because you are trying to memorize technical documentation, and that is an impossible task.\n\nWhat you should do is start with the simplest Java Swing application and get it running. Then go over all that code spending more time understanding what the code actually does.\n\nNext add a simple feature to that application, and once again make sure you understand how the new code works. Rinse and repeat."", 'Go through [this problem set](https://adriann.github.io/programming_problems.html) in whatever language you want to improve your skills in, and follow the ""reps"" mindset:\n\nJust like how you wouldn\'t go to the gym and do an exercise just once before moving on to a different exercise, apply the same mindset here. Once you complete a small task, start over from a completely blank slate (not a half-blank slate) and do it again. Then, do it again. Then, again in an hour, then a few hours, then the next day, and so on. Each time, you\'ll run into different bugs and roadblocks, but each time, you\'ll find that it\'s slightly easier than it was last time.', 'Learning a language is one thing, but using a UI framework requires that you learn that, too, and that’s another layer on top of the language. It’s not rocket science, but just understanding the language doesn’t mean that you’ll automatically understand how to use the framework.\n\nYou don’t need to know everything there is about Swing. You don’t need to spend hours and hours reading documentation. A quiz app is quite simple — there’s not a lot of complex interaction there. Just read the introductory docs and learn about how a Swing app is structured. I’m sure there will be some simple example apps that show you how to display text and how to get user input. Those, along with maybe some file or network I/O, are the fundamentals of what you need for this assignment.\n\nGet used to classes where they don’t teach you everything you need. Learning how to find what you need in documentation is an important skill.', 'Maybe try approaching an app with TDD (test driven development) in mind, with it you write tests first and then write classes and functions to make the test pass\n\nPerhaps it will make it easier to break the problem down into smaller bits', 'Yeah, I get you knowing all the basics but not seeing how it connects when building real apps feels super confusing. That’s normal. Start small: make one working part of your quiz app first, like showing one question and checking the answer, then build up from there. Think of it as **state + events → render** change data, react to clicks, update the screen. The rest will start making sense as you go.']"
+1ohdjcr,Full-Stack Web Development using Golang,"Hi r/learnprogramming 
+
+For the past 6 months I have been working on creating a course that teaches full-stack web development in Golang, starting completely from scratch.
+
+I'm looking for people new to programming that would like to review the course (completely for free, of course) and provide feedback on the material.
+
+The aim is that someone relatively new to programming should be able to follow the course and by the end be able to build, develop and deploy their own applications using Go.
+
+(If this counts as self-promoting i'm very sorry and will delete immediately)",13,23,Mbv-Dev,learnprogramming,4260470,2025-10-27 12:50:50,https://www.reddit.com/r/learnprogramming/comments/1ohdjcr/fullstack_web_development_using_golang/,False,False,False,False,0,"['Nice - would love to test it out. Have been thinking of learning Go for a while now. Will you send a link or?', ""Hey I actually just started doing the full stack course on free code camp last week and while it's good I'm struggling to understand concepts because they use jargin I don't understand so every second sentence I'm googling what words mean and it's getting really frustrating...I'd be more than happy to try your course because I was thinking of trying somewhere new anyway"", 'This sounds like a fantastic resource! Go is a great language for web backends, but having a structured path from zero to deployment is invaluable. I hope you get some great feedback from the new devs.', 'Shweet thanks', ""Sure!  I'd love to review it""]"
+1ogzsyf,Roadmap for a career in A.I.,"Hi, which languages should I learn if I am interested in pursuing a career in A.I.? What would a realistic time frame be? 
+
+Any recommendations for free resources are highly appreciated. ",13,4,wazzuuupp,learnprogramming,4260470,2025-10-26 23:53:24,https://www.reddit.com/r/learnprogramming/comments/1ogzsyf/roadmap_for_a_career_in_ai/,False,False,False,False,0,"['At the simplest level, to build an app that uses existing AI models and uses them to build something interesting, you don\'t need very much specialized AI knowledge. You can just write code that sends a prompt to an existing LLM and then do something with it. There\'s no ""special"" language to learn - just figure out what you want to build and learn the language that\'s best for that (e.g. if you want to make an Android app, learn Kotlin).\n\nTo actually make a career out of it, you should get a 4-year degree in CS, because even though technically you don\'t need a degree, in practice it\'s almost impossible to get hired without one these days.\n\nI wouldn\'t necessarily call that an AI engineer, but some people would.\n\nA next level up would be collecting training data and training a new model. To do this you\'d need to take some more advanced math (college-level linear algebra and statistics, at a minimum) plus many more of the college CS courses would be quite relevant and important. For this type of job, many applicants will have Master\'s degrees.\n\nA level up from that would be doing AI research - coming up with new models and algorithms. That basically requires a PhD.\n\nThe languages you\'ll use will vary - probably some Python, some C++, maybe R. The languages will only be 10% of what you need to learn.', 'Getting any career in tech rn is hard, much less AI. The only “roadmap” is either getting into an elite undergrad in CS, or pursuing a PHD.', ""[AI Engineer](https://roadmap.sh/ai-engineer), more about working with LLMs -> AI Agents and Agentic Development.\n\nor\n\n[AI and Data Scientist](https://roadmap.sh/ai-data-scientist), more about working with ML and Deep Learning -> Predictions, classifications, recommender systems, etc.\n\nTime frame? Years, you're looking at years before anyone thinks you're proficient enough. Best get a Bachelor's and Master's in either Computer Science, Data Science, Math, Statistics, Computer Engineering, or Electrical Engineering."", '99% of AI is trying to figure out what the business wants to solve and how to solve it. Many don’t have any idea and a lot just do basic summarization. You’ll see lots of stories where AI isn’t taking off in large corporations. Sure if devs are using it that’s small potatoes unless you can use AI to automate some large time process or replace employees.']"
+1ogqnbd,made a dns resolver just find out big tech nameservers dosent respond to small newbies,"Just completed making dns resolver with my friend and found out big tech nameservers like netflix google Microsoft domain server dosent respond to random clients.... Ahhh this feeling after completing all and have to still rely on google and cloudfare resolver
+
+Note: when i ask nameserver for netflix.com every query returns rd =5 (refused)",9,5,gromaxgg,learnprogramming,4260469,2025-10-26 17:35:01,https://www.reddit.com/r/learnprogramming/comments/1ogqnbd/made_a_dns_resolver_just_find_out_big_tech/,False,False,False,False,0,"[""What are you trying to do?\n\nNothing is really stopping you from hosting a recursive resolver, at which point you'll hit the root servers. \n\nIf you want to forward to another public resolver, you can. Not sure what you mean they don't respond to random clients. They might filter malformed traffic and block if you're doing anything particularly weird, though."", 'Most resolvers are recursive, they can resolve your domain and then delegate to Google or another DNS']"
+1ogqb4c,Games that teach c++,"Im playing a game called something like ""the farmer was replaced"" where u code drones to farm using a language similar to python. Its neat and would be nice if something similar but for c++. Better if it introduces coding slowely. The farming game uses a tech tree to introduce coding rules",7,1,Vintage102o,learnprogramming,4260469,2025-10-26 17:22:01,https://www.reddit.com/r/learnprogramming/comments/1ogqb4c/games_that_teach_c/,False,False,False,False,1,['Once you learn the basics the most effective way to learn more is to just make stuff']
+1oh1blo,I need help...,"Hi everyone, I'm Peter. I need some programming advice. I am learning programming through school and we are currently working in the C++ programming language. Last year we worked in C. We are currently working on strings and we have yet to start optimizing the program and reducing memory consumption. I am interested in more complicated programming and I want to work in advance, but every time I try to learn something more difficult I get confused and lost. I feel like I have more things to do. My question is: Should I work according to the school program and not do anything extra or continue to try to do extra and what exactly? I also don't know what I will do when I grow up, I would like it to be something related to ai because of the progress and the need for programmers for ai, but honestly it's a bit boring, I prefer pure backend programming and let's say making games. Thanks everyone :)",5,13,No_Side4956,learnprogramming,4260469,2025-10-27 01:04:30,https://www.reddit.com/r/learnprogramming/comments/1oh1blo/i_need_help/,False,False,False,False,0,"[""Work on the school programme, but it's fine if you want to do more stuff in your spare time too.\n\nWork on what interests you, if you like the idea of making games, try making some simple games. It's a steep learning curve, but making games was pretty much the de facto standard way to learn when I was a kid in the 1980s."", 'Follow the school program, if something interest you, explore it. That can get you feel motivated to continue study.\xa0', ""Don't think of building softwares yet. Focus on small goals, mainly data structures. Understand linkedlist then try implementing that in c or c++. Both are low level languages."", 'Do these C++ course in addition to your studies:\n\nhttps://edube.org/study/cppe1\n\nhttps://edube.org/study/cppe2\n\nhttps://edube.org/study/cpp', 'In my opinion you only have a hope of being a good programmer if you spend a few years building and rebuilding simple games. What you want to do should be in addition to what you have to do, but both avenues should inspire plenty of research. Learn by old example.']"
+1ohdvqv,How to study and revise properly while learning to become software engineer?,"Hey everyone!  
+I’m currently in my second year of a master’s in computer science, and I have about three years of experience in backend development. As my studies are coming to an end, I’ve started preparing for jobs and interviews.
+
+But honestly, I’ve realized I’m not ready yet. I’ve forgotten a lot of the basics—especially DSA—so I’m starting from scratch. The problem is, there’s just so much to cover. I want to become a machine learning engineer, so I need to work through both DSA topics like trees, heaps, stacks, and graphs, and ML topics like supervised learning, LLMs, and data analysis.
+
+The issue is—I don’t know how to structure my preparation. How do I study and actually *remember* all this for interviews? How do I plan revisions without getting overwhelmed? I have six months to get a job, and I really want to make the most of it.",3,4,Kindly_Lobster_6958,learnprogramming,4260469,2025-10-27 13:05:45,https://www.reddit.com/r/learnprogramming/comments/1ohdvqv/how_to_study_and_revise_properly_while_learning/,False,False,False,False,0,"['Study the same way that helped you learn the topics for a test. One recommendation for studying is using a pomodoro timer. Look up the science behind it, but the TLDR is that having micro breaks and study sessions helps our brains remember more!!!']"
+1ogpyli,Recommend a good book or topic that could help me rediscover my passion for software development,"I am a backend .net web developer with 6 years of experience. I am very self taught and have almost no theoric training, I never read a book about programming or IT in general. I worked for 3 employers.
+
+The first one was great, they really made me passionate about software in general and gave me the space to learn and freedom to make my choices.  
+  
+The second one gave me work for 10% of my time, the rest i spent watching random youtube videos, i got lazy and unmotivated.
+
+  
+The third one was a consultancy company and i worked for some very big clients, every project was basically predefined in terms of code structure, architecture and i really wasn't making any decision, everything was laid down by solution architects. I was basically a bricklayer of software (with all due respect to real bricklayers, don't get me wrong)
+
+Can you please suggest me a book or topic to read and learn about that is:
+
+\- Somewhat stimulating
+
+\- Useful in the modern world of development
+
+\- Can teach me something that you just don't learn in your day to day practice
+
+  
+I don't mind learning about topics completely unrelated to my current field 
+
+If you have any suggestion about my situation in general you're more than welcome to let me know",4,12,PR_freak,learnprogramming,4260470,2025-10-26 17:07:49,https://www.reddit.com/r/learnprogramming/comments/1ogpyli/recommend_a_good_book_or_topic_that_could_help_me/,False,False,False,False,0,"['+ ""Think Like A Programmer"" by V. Anton Spraul\n+ ""The Pragmatic Programmer"" by Andrew Hunt and David Thomas\n+ ""Structure and Interpretation of Computer Programs"" (SICP) by Ableton, Sussman, Sussman\n+ ""Code: The Hidden Language of Computer Hardware and Software"" by Charles Petzold', 'I\'ve heard the book ""Designing Data-Intensive Applications"" is good.', 'Check out this big list of projects:\n\nhttps://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file\n\nIf you find the idea of languages or compilers interesting, you might like https://craftinginterpreters.com/ (buried in the link above). The writing style is approachable and accessible and often humorous. The book is freely available online in HTML form, is well-formatted, and makes good use of diagrams and pictures. If you find the idea of languages sort of mystifying, but always wanted to understand better how code actually gets interpreted or compiled and run, then this may be a big eye-opener for you and can teach you some great foundational concepts.', 'Graphics programming.']"
+1ohfcak,Simplifying fractions,"Its my first month of learning cpp!
+Today got stuck in a problem where at the end of it I have to simplify a fraction n/d.
+I have to use Euclid’s algorithm so i can find their gcd and then divide both numbers. The problem with that is by using Euclid’s algorithm n and d change value so I can't do that. Is there a way to return n and d to their previous value so i can divide then with the gcd? ",3,1,Unable-Information78,learnprogramming,4260470,2025-10-27 14:06:39,https://www.reddit.com/r/learnprogramming/comments/1ohfcak/simplifying_fractions/,False,False,False,False,1,['Easiest thing to do is to create variables to work with instead of modifying the original variables.']
+1ohedcg,What's a good option these days for kids to learn programming?,"I have a friend with a 9 year old and she was asking me for recommendations because her son wants to learn programming but *doesn't* want to do it using these ""block"" visual programming languages like Scratch or Snap. I guess he's seen that in school, but he wants to move on to learning to actually code.
+
+Of course I'd recommend something like ""make a little game in Python"", but it occurred to me that even with help it might get frustrating and/or underwhelming.
+
+What I'm afraid of is that I could help him for like 2 or 3 sessions and we end up with a working version of ""Pong"" let's say.  Get the paddles moving, get the ball bouncing, etc. I'm sure it'd be fun, but I'm worried that he'd see the results, and compare it with, like, AAA game titles and just be totally disappointed. How could I organize a really successful session where he's happy with what we do? Maybe something like programming a simple NPC in an RPG game or something like that? Is there any pre-made game system with programmable ""characters""?
+
+Another idea I had was one of these robotics kits like Lego or Vex, they both seem to support Python in addition to Scratch, but they are quite expensive -- still it's maybe an option, maybe someone can report their experience with using it for teaching?",4,16,radarsat1,learnprogramming,4260470,2025-10-27 13:26:43,https://www.reddit.com/r/learnprogramming/comments/1ohedcg/whats_a_good_option_these_days_for_kids_to_learn/,False,False,False,False,0,"['I could recommend ""The farmer was replaced"" on steam. You control a drone to harvest crops, by writing basic python code. By lerning the basics you will unlock more Funktions z.B.(variables, dictionaries, etc.). It could be a very fun way to start in programming and he could also see in real time on the drone what his code is doing.', ""I'm learning Python this year and was extremely satisfied and excited when I did the assignment where I drew a line intersecting a circle, and output the two points where it intersected. Coolest thing in the world. I bet your kid would be very proud of himself for making Pong. Just make sure they are the one doing it, not you. That isn't going to happen after 2-3 sessions and that's okay.\n\nA text-based RPG where they wrote the story/dialogue/etc would also be cool, yeah."", ""When I was first learning to program, I started with basic embedded stuff with my dad on arduino or something I don't remember. it was fun to see a piece of text make something happen in real life, for eg. blinking led strip that we then put up in my room. back then I didn't understand programming as in variables/storage and such but rather as a chain of commands: while true, blink the led, wait, repeat. arduino is good because while it's C/C++, it's so abstracted away that it kind of feels like a scripting language,but for a kid you still need someone to do the electrical part (my dad did)."", 'The farmer was replaced is a genuinely nice way to learn python', ""I like Pico-8.\n\n\nI also like the games human resource machine, and 7 billion humans. It's still blocks, but it's also real computer science algorithms.\xa0""]"
+1oh3wdq,Nervous about Object Oriented Analysis and Design class,"Hi all, I've just joined this sub because I'm a student in my final year in college and am nervous about one of my courses that will be starting tomorrow. My courses are completely online and asynchronous, which is great. But the resources provided are not always the greatest and expect completely green students to take in and have a full understanding of concepts that are more suited for those who have years of experience. The course is IT 315: Object Oriented Analysis and Design. I'm pretty nervous about it, as a lot of students have said it's the most difficult course they've taken throughout their studies. My understanding of programming/coding is extremely rudimentary at best, ranging from the MySpace days of editing HTML to a basic SQL class I took a few months back. That's about it. 
+
+Our textbook for the course is Systems Analysis & Design: An Object-Oriented Approach with UML, 6th ed. I also just purchased a book called Head First Object Oriented Analysis & Design by Brett McLaughlin, which I have heard is great for a visual representation of the basics. Aside from actual books, does anyone have any online tutorials or videos that may be helpful for getting started here? From the very beginning of understanding the underlying concepts. The simpler, the better. I don't even know what UML is, other than that it stands for Unified Modeling Language. No idea what that means! Obviously Google will be my best friend for this class, but if anyone here has trusted resources that they've found helpful, I would definitely appreciate the guidance. TIA
+
+Note: I've already searched past threads on this and other subs for more information and resources. They weren't very helpful as most threads only had one or two replies.",3,8,FreedomFeelsGood23,learnprogramming,4260470,2025-10-27 03:12:00,https://www.reddit.com/r/learnprogramming/comments/1oh3wdq/nervous_about_object_oriented_analysis_and_design/,False,False,False,False,1,"["">The simpler, the better. I don't even know what UML is, other than that it stands for Unified Modeling Language. No idea what that means!\n\nUnified Modeling Language (UML) is just a standardized way to visualize system designs. When UML is combined with OOD, it provides a way to visualize an Object-Oriented Design.\n\nUML in this context is nothing more than a way to draw a diagram describing the design."", ""Sounds like a history class. UML is 30 years old and in decline since the mid 2000s.  \n\nJust struggle through it.  I don't think you'll find many directly relevant modern sources to help""]"
+1ogsppg,"Looking for feedback on whether my first small project idea is feasible, and what the best language for it might be.","Hello (programming) world!
+
+I'm a 30 year old who has always wanted to learn a bit of programming on the side.  Here and there I've sat down for a week or two and worked through some beginner python resources, but I've always struggled to stick with the learning process.
+
+Based on the advice I've seen, I think the biggest reason for this is that I've never been able to identify a particular project that I wanted to create.
+
+Now, I think I have an idea that I isn't too complicated--but I'm hoping to get some feedback regarding whether or not it's feasible and whether Python is the best choice.
+
+**Project Idea**
+
+I would like to create a program that could constantly scan a given subreddit, determine whether or not a post meets certain criteria, and if it does, send me a push notification with a link to the post.
+
+Fox example, I am a fan of the Boston Celtics.  So let's take r/bostonceltics as a potential example.
+
+I would like to be able to tell me program to send me a notification if:
+
+There is a new post on r/bostonceltics AND that post
+
+\- Has the name ""Derek"" or ""Derek White"" in the title
+
+\- Is a text post without a picture or link
+
+\- Has 2 or fewer comments
+
+\- Does not contain ""Brad"" or ""Brad Stevens"" in description.
+
+I would of course also like to be able to change these parameters and have multiple queries at once.
+
+  
+To be clear, I don't want to create a bot to respond or create reddit spam--only be notified so I can then check out the post myself.
+
+
+
+**1. Is this a feasible idea in scope for a beginner to work towards?**
+
+**2. What are the likely roadblocks?**
+
+**3. What is the best programming language?**
+
+I read the subreddit FAQ and the other subreddit resources, and from what I can tell Python might be a decent choice for this, but I'd like to get some more experienced opinions before I fall down this rabbit hole.
+
+Thank you so much for the help.",3,9,Someone_Care,learnprogramming,4260470,2025-10-26 18:55:32,https://www.reddit.com/r/learnprogramming/comments/1ogsppg/looking_for_feedback_on_whether_my_first_small/,False,False,False,False,1,"['The reddit API is paid. You will have to spend money just to look at reddit. Alternatively you need some sort of automaton that will """"physically"""" scroll the reddit website on your pc or phone and look at all the posts, basically interact with the website raw like a human user.', ""In the days before reddit priced their API, this would have been a no-brainer. Python, Praw and you're good to go.\n\nNow, you have to be a lot more careful as things can get pretty expensive pretty soon.\n\nYet, if you're careful, still a good starter project and still the same advice: Python + PRaw"", ""Your idea isn't too complicated at all, but it depends on what you want to do with it. You'll have to use a web crawler, likely beautiful soup & some LLM to parse the page, unless you want to try and parse the html yourself first, and then use the LLM or just normal python code to figure out if it meets your criteria. Sending push notifications will be your biggest challenge, but that's not too difficult either... just take things step by step and by the time you get to the point that you need the push notifications you'll be confident enough to knock it out.  \nAlso, shameless plug... if you're active on socials and want to help out a homeless dev, I'm releasing [flusterapp.com](http://flusterapp.com) right now, trying to make myself a little less homeless."", 'Yes and a pretty easy project at that using reddit API and a server to run your code.', 'you could do this with Beautiful Soup\n\n[Beautiful Soup (HTML parser) - Wikipedia](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser))']"
+1ohf8wl,How do I document my class?,"Let's say I have my file header, class header and function headers, and follow the one responsibility principle. However, this can be hard to navigate for large classes with say 20 functions for example.
+
+How can i add documentation for a group of functions? For example if I wanted to say that these particular section contains helper functions, these set of variables are for AssetLoading and these set of variables are for AssetStorage etc.
+
+  
+Right now I am using ""//=="" to show it's a different comment from the typical function headers, although it still feels messy.
+
+Is there a more structured or recommended way? Should I just make it more obvious like ""//\*\*\*\*\*//  code //\*\*\*\*\*//""",2,1,LilBluey,learnprogramming,4260470,2025-10-27 14:02:42,https://www.reddit.com/r/learnprogramming/comments/1ohf8wl/how_do_i_document_my_class/,False,False,False,False,0,"['If you\'re using vscode, there are some nice extensions that make documenting comments a bit better. I like ""Better Comments"" personally. Allows you to make more emphasis on particular comments, add TODOs, etc.']"
+1ohesjj,Book/Material recommendations to improve coding skills,"
+Hello devs,
+I'm working as a java developer for about 2 years, and I'm part of a team of around 5-6 devs.  
+  
+The project is nearing the end, and although it's way above my current capabilities to have a concise judgement of the whole project, but I still feel like the code could have been written better.  
+  
+I've been discussing with my seniors too about the shortcomings of the system, about the bread and butter of the system like designing functions and the overall flow and structure of the program, any recommendations on books, materials to write code of better quality?
+  
+I've heard a lot about books such as ""clean code by Robert martin"" and ""code complete by Steve mcconnell""  
+  
+Thanks",2,0,ladyboy-rider,learnprogramming,4260470,2025-10-27 13:44:20,https://www.reddit.com/r/learnprogramming/comments/1ohesjj/bookmaterial_recommendations_to_improve_coding/,False,False,False,False,1,[]
+1ohdoxa,I keep building the same CRUD app in different languages instead of learning new concepts,"For the past year, I've built:
+
+* Todo list in Python/Flask
+* Todo list in Node.js/Express
+* Todo list in Java/Spring
+* Todo list in Go
+
+I'm comfortable with basic CRUD, but I feel stuck in a loop. Every time I try to learn something new (like WebSockets, microservices, or machine learning), I get overwhelmed and just build another todo app. How do I break out of this ""comfort stack"" cycle? What's a practical next project that forces me to learn new concepts without being completely overwhelming?",2,5,Shucca,learnprogramming,4260470,2025-10-27 12:57:38,https://www.reddit.com/r/learnprogramming/comments/1ohdoxa/i_keep_building_the_same_crud_app_in_different/,False,False,False,False,1,"['Everything will be overwhelming.\xa0\n\n\nDon\'t learn how to very slowly move up from ToDo, but instead, how to find comfort in your discomfort.\xa0\n\n\nFalling back on familiar concepts to help learn new concepts is a great idea, but what you\'re doing now isn\'t learning new concepts. It\'s switching your tools to revisit a concept you\'re comfortable with.\xa0\n\n\nYour issue isn\'t needing a new language or framework, but to continue down a singular path, even when it gets difficult.\xa0That will expose your weaknesses. Only then can you see them for what they are and improve upon them.\xa0\n\n\n\n\n\n\nI\'m a beginner, so I don\'t have any meaningful advice regarding what to do next, though.\xa0\n\n\n.\n\n\nPerhaps search up ""github (insert text here)"" repos that can help you get more project experience. Things like ""project based learning, how to build x, app ideas, beginner projects, intermediate projects.""\n\n\nAs you go through them, think of how you\'d do things differently and do it. Think of an idea or two you can add, and attempt it. Think of how you\'d add a new feature once you\'re done and get to starting. Don\'t copy line by line, but actually learn as you\'re interacting with them. if you can\'t do anything but copy line by line, then pause at certain points and see if you can recreate everything from scratch up to that point. If you can\'t remember, keep going through it until you can memorize it and understand why things are happening the way they are. Then, see if you can make small changes at this point.\n\n\nGet familiar with how they break down these big and difficult topics, then try to do so yourself with your own ideas.\xa0\n\n\nThe moment you hit a roadblock trying to break it down, don\'t run away from it. Instead, confront it. What\'s the issue? Is it still too hard to code when you broke it down? You can\'t think of any other way to break it down or even start to break an idea down?\n\n\nThat\'s a sign you need to research how others break down their ideas.\xa0\n\n\nUsually, when that wall is hit, it\'s a sign of a lack of knowledge on the subject. You can watch videos, read articles, check out docs, or follow a tutorial or lesson on that specific thing. Then, when you know enough about it, break it down more. When you break those things down but hit an early wall, repeat the process.\xa0\n\n\nDo this enough times until you get to a stage where you can build something yourself (or can follow a tutorial to build that sub idea). You should have a bunch of very broken down ideas that you can build up again, layer by layer.\xa0\n\n\n.\n\n\nDuring this, feel free to explore different book recommendations (there are github repos you can search online for that, too). Try to keep to one language if you can for everything.\n\n\n.\n\n\nIf all of this is still too much for you, perhaps try going through The Odin Project if you haven\'t. You may find some information/resources that you haven\'t considered.\xa0\n\n\nIt ultimately wants to get you to the point you\'re at now, but with clarity on many of your doubts.\xa0', 'Follow this series . Its atleast a step ahead of basic CRUD \n\nhttps://m.youtube.com/playlist?list=PL4tLXdEa5XIWrhuhgJA1pdh2PDMrV7nMM', 'Now do C++', 'Just take small steps. You could try to make an enhanced todo list with more functionality and separate your logic into microservices if you still want to do a to do list.', 'How do you go about building these to-do lists?']"
+1oh4lw8,Truck driver turned web dev enthusiast,"Hey everyone,
+
+So here’s a bit of a random story... I’m a truck driver.. but recently I discovered that I might actually have a thing for web development. It all started when I was chatting with a friend who wanted a website for his small business... I told him that everything is online and that he can do it without paying an IT company...Then I thought, why not take the challenge myself? Which I did....
+
+Long story short, I watched a YouTube tutorial, bought a domain + hosting, updated the name servers, installed WordPress, bought a ThemeForest theme, and used elementor to build him a site. Took me about a week..... He was mind-blown when I showed him the final result 🤣🤣
+Just after that, something clicked.. I actually enjoyed doing all that. So I started learning HTML and CSS on freeCodeCamp, and honestly, I’m finding it fun and kind of addictive....
+
+Now I’m wondering if I should take this seriously and maybe change careers down the road. But I need some guidance from people who’ve been there or know the field...
+
+Should I go for frontend, backend, or full stack?
+
+What’s the best way to learn and practice at the same time?
+
+Any must to use resources or roadmaps for someone starting fresh plz ?
+
+Any advice or feedback would be super appreciated. 🙏",2,3,Capital-Pool-1402,learnprogramming,4260469,2025-10-27 03:49:28,https://www.reddit.com/r/learnprogramming/comments/1oh4lw8/truck_driver_turned_web_dev_enthusiast/,False,False,False,False,0,"["">What’s the best way to learn and practice at the same time?\n\nI think you have already found the perfect way to practice, which is find information that is of interest to you and then take that information to create something for yourself. \n\nWhen starting out, this is the perfect way to learn.\n\n>Any must to use resources or roadmaps for someone starting fresh plz ?\n\nI would not waste too much time looking for a perfect roadmap, instead just continue with what you are doing.\n\nFor example, now that you are learning HTML and CSS.\n\nI would also take a look at learning some JavaScript and jQuery.\n\nLook into using one or two of the CSS frameworks like CSS Flexbox or Bootstrap etc.\n\nAnd for that learning process, do exactly what you have already done. Find some information on these topics and then try to turn that information into working code. \n\nThe things you create don't need to be big projects. Simple things will do, but it is important that you fully understand everything you create. That understanding is what is difficult, as you may have to spend time researching the bits that you don't understand.\n\nBut if you do this for month, you should find you are suddenly getting confident in these topics.\n\nAt that point, once you have that confidence, that is would be the perfect time to start looking for more advanced topics to learn. \n\nPS: Since you are getting into HTML make sure you watch a few videos using this YouTube search topic: **browser dev tools**."", ""Try out asking AI to make a few websites and see if you still think there's a future in humans doing it""]"
+1ogvs8e,Need Help Determining North on Photos,"I am a graduate student and part of my research involves analyzing hemiphotos (taken with a fisheye lens) for leaf area index with a program called HemiView. However, for that program to work properly, I need to know where North was on the picture. When I took my photos, I marked north with a pencil to make it easier for later. But part of the study involves using photos taken by a different student, who did not mark North on any of their photos. I do not have the time to retake these photos as they were taken in a different country. There is also no metadata that tells me which way the photo was taken. Is there a way to use R or another coding program to determine where North is in these pictures? Please no AI solutions, thank you! This was also posted on r/learnpython ",2,3,General_Reneral,learnprogramming,4260470,2025-10-26 20:58:20,https://www.reddit.com/r/learnprogramming/comments/1ogvs8e/need_help_determining_north_on_photos/,False,False,False,False,1,"[""Can you tell which way is north by looking at it? Are there clues? If so, you might be able to write a program to follow those same clues and figure it out.\n\nIf you can't? A computer program won't be able to either. Computers aren't magic.""]"
+1ohhjss,Issues with VS ( compiler ),"Hey, I just switched from Java to C/C++, and I’m having some trouble with Visual Studio. I can’t run any code because the compiler path isn’t found, even though I do have gcc installed
+",1,1,PickleSilver2478,learnprogramming,4260470,2025-10-27 15:30:53,https://www.reddit.com/r/learnprogramming/comments/1ohhjss/issues_with_vs_compiler/,False,False,False,False,1,"['Uninstall Visual Studio CODE, and install the actual Visual Studio that comes with its own compiler, and all your troubles will go away.']"
+1ohgns1,How viable is freecodecamp?,"im currently trying to make some good of all the time i spend on my computer by learning coding and the related things, while searching how to learn the basics i found the freecodecamp website and i wanted to know if its actually good for learning stuff like the basics or things that i wouldnt learn somewhere else",1,1,Vexpal,learnprogramming,4260470,2025-10-27 14:58:05,https://www.reddit.com/r/learnprogramming/comments/1ohgns1/how_viable_is_freecodecamp/,False,False,False,False,1,"[""It's a good tool to help you learn but it does also hold your hand a lot. Use it to get a feel for things but then try to use their examples to build your own projects and try to do most of it from memory.\n\nThey also have daily challenges that I find really neat""]"
+1ohfh9c,"Don't know whether I should focus on one skillset, or branch out a little.","I have been learning programming seriously for about 4 years now, including 2 years studying an online degree, and I have been messing around on and off with coding for a lot longer. I am now starting to think seriously about a change in career and pursuing a job as a software engineer, although one problem I have is that I haven't identified an area I want to commit to yet (there's no lack of interest, I just have trouble choosing).
+
+I have been mainly programming web-based applications using Java (Spring) and JavaScript, and am thinking that backend development seems like the best choice in terms of balancing the things I am interested in with industry demand. 
+
+One thing that I have wanted to try learning is C++, mostly out of curiosity but I also want to try making my own computer vision related project, just something to learn the fundamentals, however I am wary that a lot of people say to focus on one thing until you are really good at it, and although I am competent with both languages I have been working with so far, I would still say I have a lot to learn. 
+
+My questions are whether this might be spreading myself too thin at the moment,  or whether it would look fine on a resume to have projects in very different areas. Also, I am generally wondering what the demand for C++ software development is? I have seen a few jobs that ask for it, and they sound like genuinely interesting and exciting companies/roles, but I have a feeling it might be a pretty niche corner of the industry. 
+
+Apologies if the questions seem naive, I am just recently coming to the decision that I want to pursue something which has been my hobby for a while, and I know the state of the industry is such at the moment that many people are struggling to find jobs, so I want to find the best way to use my time. I also know that there probably isn't a right answer, but I am keen to hear people's opinions.",1,1,niallantony,learnprogramming,4260470,2025-10-27 14:12:06,https://www.reddit.com/r/learnprogramming/comments/1ohfh9c/dont_know_whether_i_should_focus_on_one_skillset/,False,False,False,False,1,"[""I think because of the tough job market, its better to master a particular set of skills that would then match to a resume. For example, lets say the job was for a Software Engineer working in NextJs. Because there are so many people that are applying, they would most likely take someone who has experience in NextJs over someone who doesn't because they can. The market used to be the other way around and you'd take whoever and teach them your stack, but I feel like that's just not the time right now!""]"
+1ohf57r,How do I approach a competitive programming question without BLANKING TF OUT?!,"I know, I know, the only way to get good at competitive programming is to DO competitive programming, and that's pretty valid, but 90% I just blank out and have NO IDEA what to do. All the ""break it down"", ""think about I/O"", ""pseudocode"" techniques don't work, it's like I can't come up with ANYTHING.
+
+And it's not that I haven't studied the concept/theory. I know what binary search is, I know how to write the code for it, BUT HOW DOES IT EVEN FIT HERE? Yeah, it's been like 30 mins of me staring at one problem and not writing ANY code or coming up with anything
+
+Here is the problem link btw -> [https://www.codechef.com/problems/WARRIORCHEF?tab=statement](https://www.codechef.com/problems/WARRIORCHEF?tab=statement)
+
+So, can someone please help me out here (not for solving the question, for solving the fact that I can't do shi even after hours and hours)?",1,3,Arunia_,learnprogramming,4260470,2025-10-27 13:58:46,https://www.reddit.com/r/learnprogramming/comments/1ohf57r/how_do_i_approach_a_competitive_programming/,False,False,False,False,1,"[""> I know what binary search is, I know how to write the code for it, BUT HOW DOES IT EVEN FIT HERE?\n\n\nMaybe it doesn't?\xa0\n\n\n> and not writing ANY code\xa0\xa0\n\n\n\n\nNothing at all? Not even a wrong answer? Not even parse the input?\xa0\n\n\n\n\nPractice easier problems.\xa0""]"
+1ohb131,What to focus my attention on?,"Hi. I am self-taght and have been working as data analyst for big retail in my country for a 1.5 years. Just recently got and accepted an offer as an sql developer.
+
+Apart from learning sql and python, which were directly connetcted to my job, i've completed discrete math, DSA and calculus courses because want to fill at least basic CompSci knowledge.
+
+But i am not sure what to learn, focus next. I know this depends on my goals, and i guess i would continue my carreer as sql developer/database admin, maybe data engineer because i have managed to break in this realm and have experience here. But i wouldn't be totally against picking up back-end developemnt as well.
+
+I was considering learning about networking and web protocols, and maybe operating systems. But these topics seem enormous and i am not sure I really need them. SHould i learn about more advanced algorithms? More math? new languages, say java?
+
+Any suggestions would be appreciated, especially from people with simmiliar paths",1,0,elephant_ua,learnprogramming,4260470,2025-10-27 10:41:14,https://www.reddit.com/r/learnprogramming/comments/1ohb131/what_to_focus_my_attention_on/,False,False,False,False,1,[]
+1ohanki,Help with IBM Flask app KeyError,"Hi! I have just started learning to code in python and I’m having an issue with running my flask app. I keep getting a KeyError however I am not sure what I am doing wrong or why.
+
+It keeps referencing one of the key’s from the output of a formatted response however from when I started writing the code for the app and unit tested there were no issues. 
+
+It can easily find the location as its quoting lines for me to look at but when I check other people’s repos they have the same code reference for the formatted text output. 
+
+Has anyone done this and can help?
+
+UPDATE: I have put a more detailed description with screenshots on this thread, please if you can take a look!
+
+https://www.reddit.com/r/flask/comments/1ohgl8h/ibm_flask_app_development_keyerror/",1,2,Inner_Hospital2317,learnprogramming,4260470,2025-10-27 10:19:04,https://www.reddit.com/r/learnprogramming/comments/1ohanki/help_with_ibm_flask_app_keyerror/,False,False,False,False,1,"[""Just saying it's a `KeyError` is way too vague for anyone to help you.\n\nThat error happens any time you try to retrieve a nonexistent key from a dict. There are two ways that can happen: either the key you're using is wrong, or the key is right but the contents of the dict are wrong.\n\nTo fix the problem, you need to investigate which of those is the case, and then keep investigating until you find the root cause. For instance, logging the contents of the relevant dict would be a good starting point.\n\nIf you want people to be able to help you with that investigation, then you need to share the **complete** source code and the **complete** error message, in as much details as possible. Also include **exactly** what you did to trigger the error.\n\nYou will be more likely to get help if you can reduce the code to a minimal runnable example that demonstrates the problem."", 'I’ve just joined on here, can I send my repo link? As to be honest with you I’m not sure how to explain it as I can’t post pictures in here…']"
+1oh8rhd,Where has this program been accredited?,Where has this program been accredited? The Meta Full Stack Developer: Front-End & Back-End from Scratch Specialisation,1,2,Limp_Bad_8024,learnprogramming,4260470,2025-10-27 08:13:47,https://www.reddit.com/r/learnprogramming/comments/1oh8rhd/where_has_this_program_been_accredited/,False,False,False,False,1,"['What accreditation does it claim? I wouldn’t assume it *is* accredited otherwise. If you are talking about the course at Coursera, I’ll point out that it is taught by staff from Meta, so I doubt there is much incentive to convince anyone outside of Meta of its worth.\xa0']"
+1oh8qkr,Backend,"Hey, everyone!
+
+I am pretty new in programming. I want to be a backend developer. I was thinking of javascript + typescript + node js path, but, i see people criticizing js and node js saying that it's not efficient and it's less in demand.
+
+I'd love to hear any advice on backend developer path.  
+
+I've covered basics of javascript. If js is the best way for backend, I don't want waste my next months. 
+
+Thank you!",1,5,Cool-Climate9908,learnprogramming,4260470,2025-10-27 08:12:04,https://www.reddit.com/r/learnprogramming/comments/1oh8qkr/backend/,False,False,False,False,1,"[""There is demand for Node.js, but bear in mind it's very popular with beginners, and that is reflected in how many people are going to be applying for the same jobs.\n\nLook at the job ads in your area, what are employers asking for? What does it seem they're having trouble hiring for?"", 'As a beginner you should prioritize the learning curve rather than the efficiency bro, you are not making an backend for a 100 thousand user, and node is a damn good start for that,and if you can manage to learn ts and js it would be easy to switch up too dude']"
+1oh6vjy,Confused on how I have my compiler/coding environment setup for visual studio code,"I've been programming since a little before I've started my degree, and we never really got a solid lesson on VSC, and I am now a junior. I've been using VSC for around a year now and I know this sounds really bad, but there are two things I think I overlooked. This is a ***very*** late night thought. I've been able to get all my code to run, I just want to make sure I am doing it properly.
+
+
+
+So the things I dont think I have set up are my c/c++ environment, and knowing the importance of a debugger. I mostly write in C and C++ and just press ""compile and run"" for my code, and it works. Is that how I am supposed to do it? In some tutorials online, it says a drop down menu should appear when trying to run, but nothing for me. I click the side bar and I get: c/c++ compile and run, run code, c/c++ debug. With these, am I still able to run my code properly?
+
+  
+And for debuggers, idk much about that. I mostly write for my arduino using platformio and their built in stuff. I have never really found much of a use for a debugger in my situations. Is it entirely necessary that I need to use a debugger?",1,6,SwigOfRavioli349,learnprogramming,4260470,2025-10-27 06:04:20,https://www.reddit.com/r/learnprogramming/comments/1oh6vjy/confused_on_how_i_have_my_compilercoding/,False,False,False,False,1,"[""Don't use VSCode for C++, use VS (without Code). VS is one of the best C++ IDE ever made and is free for personal use."", ""If your code is working then you don't need a debugger""]"
+1oh5wxy,Tips for maintaining focus and overcoming distractions?,"Hey everyone! I'd like to know — what helps you concentrate and stay productive? What routines or methods have you personally found useful to maintain focus, avoid interruptions, and handle restlessness or attention challenges when it's hard to get work done?
+
+
+
+Please share your experiences and tips for fighting procrastination and improving concentration!",1,1,cuberfy,learnprogramming,4260470,2025-10-27 05:04:30,https://www.reddit.com/r/learnprogramming/comments/1oh5wxy/tips_for_maintaining_focus_and_overcoming/,False,False,False,False,1,['Being genuinely interested has always done the trick for me']
+1oh4vvp,I'm Bsc student interested in Bioinformatics -need some Guidance where to start,"Hi everyone!
+
+I'm currently pursuing my BSc (biology background) and recently got really interested in Bioinformatics. I want to start learning it from scratch, but I have no proper guidance.
+
+Can someone please guide me on how to start (what topics, tools, or coding languages I should focus on first)? I'll be learning mostly from YouTube and free resources for now.
+
+Thanks a lot in advance for any advice or roadmap!",1,0,Every-Panda-1017,learnprogramming,4260470,2025-10-27 04:04:28,https://www.reddit.com/r/learnprogramming/comments/1oh4vvp/im_bsc_student_interested_in_bioinformatics_need/,False,False,False,False,1,[]
+1oh21vb,Trying to create a daemon in C. Not sure what libraries to get or where to find its calls,"Bear with me here because I haven't sat down and coded in like 10 years. I have a mouse that is fairly esoteric, apparently. It doesn't have a driver on Linux and piper doesn't support it. What I need is fairly basic so I figured I could write my own daemon and call it done. I need mouse button 8 to output CTL and mouse button 9 to output shift.
+
+I'm having trouble finding what I need to listen to inputs from my mouse. Any ideas?",1,2,AbriefDelay,learnprogramming,4260470,2025-10-27 01:40:03,https://www.reddit.com/r/learnprogramming/comments/1oh21vb/trying_to_create_a_daemon_in_c_not_sure_what/,False,False,False,False,1,"[""Wait let's back up here. What's the goal? You want extra buttons on your mouse to be interpreted as keyboard presses on Linux?\n\nDoes it not work with Linux at all, or just the extra buttons do nothing?\n\nIf it works, just the buttons do nothing, I'd use something like `evtest` to view the device events.. on my system I do `evtest /dev/input/event4` to see mouse input but I don't know if it's the same for every system. If it does output something, you can probably just find the event code for the button press.. like [something from here](https://elixir.bootlin.com/linux/v6.17.5/source/include/uapi/linux/input-event-codes.h), and then use a tool to remap device events to whatever you want (BTN_8 to KEY_LEFTCTRL or whatever) like `evremap` or `evsieve`\n\nIf it doesn't work at all, then follow something like this: https://www.linux.it/~rubini/docs/input/input.html and check out tools like usbview, usbmon and wireshark.""]"
+1ogrxoo,Need help to understand Celery and RabbitMQ,"Hi there. I'm trying to build a distributed system using event-driven architecture written on C++ for my diploma. My mentor said that I should found out what is Celery and message broker like RabbitMQ. As far as I understand, Celery is a distributed task queue, which means the only thing that it should do is dispatching tasks/jobs to others servers and get the result back. RabbitMQ is a message queue, and nothing more. What I do not understand is why should we use Celery written in Python for the first place. This area is all new for me and I even can't find something similar to Celery written in C++. 
+What do I miss or it's just me understanding things completely wrong? ",1,3,Mike_Paradox,learnprogramming,4260470,2025-10-26 18:24:52,https://www.reddit.com/r/learnprogramming/comments/1ogrxoo/need_help_to_understand_celery_and_rabbitmq/,False,False,False,False,0,"['Sounds like you have the basic idea, Celery is just a popular distributed task queue. \n\nNothing is preventing you from implementing one using Redis, Postgres, or whatever other backing system you want.']"
+1oh7rkl,"Create  a pop-up with 3 buttons for add,delete,view whenever icon is hover (JavaFx)","fxml file
+
+     <ImageView 
+    fitHeight
+    =""30"" 
+    fitWidth
+    =""30"" 
+    pickOnBounds
+    =""true"" 
+    preserveRatio
+    =""true"" 
+    onMouseClicked
+    =""#addCity"">
+                     <image>
+                     <Image 
+    url
+    =""@images/heart.png"" />
+                    </image>
+                    </ImageView>
+
+Controller
+
+    @
+    FXML
+        void 
+    addCity
+    (
+    MouseEvent
+     event) {
+    
+    
+            
+    Button
+     add = new 
+    Button
+    (""Add"");
+            
+    Button
+     view = new 
+    Button
+    (""View"");
+            
+    Button
+     delete = new 
+    Button
+    (""Delete"");
+            
+    VBox
+     box = new 
+    VBox
+    (add, view, delete);
+            
+    Popup
+     popup = new 
+    Popup
+    ();
+            popup.
+    getContent
+    ().
+    add
+    (box);
+    
+    
+    
+       
+    
+    
+        } 
+
+  
+how can i accomplish this task",0,0,South-Sound5481,learnprogramming,4260470,2025-10-27 07:04:04,https://www.reddit.com/r/learnprogramming/comments/1oh7rkl/create_a_popup_with_3_buttons_for_adddeleteview/,False,False,False,False,0,[]
+1ogzc25,Overwhelmed,"Is it common to feel overwhelmed as a junior dev?
+I recently applied to, and successfully got, a new job and start next month.
+I have previously worked in development with a company, primarily doing frontend work and occasionally a small amount of backend, which was fine.
+Then, I decided to start my own full stack project and even just setting up the database makes me feel so dumb and like I've learnt nothing.
+I fear going into this new position, like I might bomb on the first day.
+
+Anyways, is it common to feel overwhelmed like this?? I'm pushing through, but just feel so uneducated.",0,3,uwu1004,learnprogramming,4260470,2025-10-26 23:31:31,https://www.reddit.com/r/learnprogramming/comments/1ogzc25/overwhelmed/,False,False,False,False,0,"['Building a full stack application by yourself is much different than programming as a job.\n\n\nAt your job you will have coworkers who you can ask questions of, and if it\'s a decent environment they\'ll be happy to help in your skill development and will have a knowledge base you can learn from.\n\n\nYour work will probably be a lot mor well defined and manageable than ""figure out how to build a full stack app""', ""Before you start, refresh your programming memory by going over the code you have written. \n\nTake a small paper notebook and pen with you on your first day. Make plenty of notes. \n\nAlso, do be scared to ask questions.\n\nYou'll be fine."", 'Yes. Look up imposter syndrome.']"
+1oguviq,"What's Your routine, and how do you manage so many resources?","* If this topic is too similar to others, please let me know.
+
+After being a procrastinator, like many of us, I took courage and started studying python. It bugs me, though, that there are so many resources available today that I don't know what to keep.
+
+And mostly, I'm not used to setting up a daily routine for studying: while doing well with structure in high school, structuring on my own feels hard and ""groundless"".
+
+So I'd like to ask what are yours daily or weekly routine? Maybe hearing other's processes can help beginners like me.
+
+And also how do you manage not getting overwhelmed by so many resources? It can be as simple as picking one and going, or choosing the best given a personal reality.
+
+Me, right now, am using Mimo and Sololearn as pocket treats and I'm reading and annotating Automatize the boring stuff with Python. I find that Android apps sometimes are obscure with theory, and sometimes complement each other, but I'm afraid to get burned out of it. The book though is much clearer, but don't have practice.
+
+I think that the apps complement the book nicely, but I'm also wanting to watch MIT's course later.
+
+It's a conceptual question that could fit any self-learning sub, but it is nice to have pointers from fellow programming learners.
+
+A justification: I didn't feel like the FAQ had a close enough question. This is about meta-cognition, specifically about programming.",0,7,savage_northener,learnprogramming,4260470,2025-10-26 20:21:45,https://www.reddit.com/r/learnprogramming/comments/1oguviq/whats_your_routine_and_how_do_you_manage_so_many/,False,False,False,False,0,"[""I'd suggest harvards free courses: CS50 (intro to CS, Python, Web dev)"", 'Back in my day I had to drive to the book store, spend way too much money on a book, read it and work through examples. And if there was a typo I had to figure it out on my own. Not much to be overwhelmed by.\n\nYou could try it if you want. I still actually love learning by working through books.', 'Just develop applications that you want to use yourself. When you get stuck research the area you need to make progress.', 'My daily study routine is usually just working on a project or following a tutorial or reading a book. And what I do to not get overwhelmed by so many learning resources is by learning through projects instead of through tutorials and courses. Whatever I want to learn, I just do a very quick research, learn the syntax, read some documentation and then jump into a project and build something little by little and learn more as I go. If you stick to learning through experience, you will not need to depend on a course being good at teaching, because you\'ll be mainly learning through the experience of building something from 0 to 100. Project-based learning is the best way to not overwhelmed or burned out or go through tutorial hell.\n\nIf you want to learn Python, sure yeah have your little resources here and there, but then you should also have a project in mind. You should be building something or at least wanting to build something. Don\'t depend on just a course or tutorial or app to teach you, no you can learn by yourself if you just build something from scratch.\n\nYou don\'t need so many resources, you need practice, you need to build problem solving skills, you need to learn how to write code idiomatically. For example, right now I\'m learning Go and yes I have some resources, for example right now I\'m reading ""Learning Go"" by Jon Bodner and ""100 Go Mistakes"" but I don\'t just use that to learn, I\'m also building an HTTP server, and then I\'ll build an API client for the terminal, and then I\'ll build a video game about my cute cat. I think that learning through projects is so much better than juggling 5 different learning resources and getting burned out. Programming is about problem solving, so to learn programming you have to solve problems, and projects are PERFECT for that. The best way to learn programming, is through hands-on experience.']"
+1ogru0w,Confused about which Python or AI course to take next,"I’m an aspiring AI engineer. I already know a bit of Python syntax and also do some practice with Python. But now I’m confused about which course I should take next to move forward. Any suggestions would be really helpful!
+",0,3,Grindduee016,learnprogramming,4260470,2025-10-26 18:20:57,https://www.reddit.com/r/learnprogramming/comments/1ogru0w/confused_about_which_python_or_ai_course_to_take/,False,False,False,False,0,['go with python']
+1ohatsn,Which language is better for back-end?,"I want to build a social media platform (platform for a lot of people), and I don't know which language I should choose for the back-end. I know JavaScript (node.js) and C#. Which one is better for this task? ",0,7,Mecha_Druid,learnprogramming,4260470,2025-10-27 10:29:24,https://www.reddit.com/r/learnprogramming/comments/1ohatsn/which_language_is_better_for_backend/,False,False,False,False,0,"['C# or JavaScript? \n\nNo question, C#.', ""If it's going to be small - JS.\nIf you want it to grow - C#"", ""Language wise, C#. But the best language is the one you're proficient with."", 'C# ✅', ""Both work fine, man. If you already know JavaScript, just go with Node.js as it's fast to build and easy to find help online.  \n  \nC# is more serious and stable long-term, but slower to move.  \n  \nDoesn't really matter at first because the hard part isn't the language, it's scaling, databases, and user stuff. Just pick what you know best and start building.""]"
