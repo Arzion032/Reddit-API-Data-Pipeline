@@ -10,7 +10,6 @@ from dags.utils.constants import *
 GLUE_JOB_NAME = 'reddit_glue_job_2025'
 GLUE_CRAWLER_NAME = 'reddit_crawler_2025'
 
-# 💡 Move dynamic runtime values inside @task — not at DAG parse time
 DEFAULT_ARGS = {
     "owner": "Melvin Sarabia",
     "start_date": datetime(2025, 10, 18),
@@ -68,6 +67,7 @@ def reddit_pipeline():
         
         job_run_id = response["JobRunId"]
 
+        # Get the Job Run completion status
         while True:
             status_response = glue.get_job_run(JobName=GLUE_JOB_NAME, RunId=job_run_id)
             state = status_response["JobRun"]["JobRunState"]
@@ -77,8 +77,9 @@ def reddit_pipeline():
             if state in ["SUCCEEDED", "FAILED", "STOPPED"]:
                 break
 
-            time.sleep(45)  # check every 30 seconds
+            time.sleep(45)  
 
+        # Get the logs if not succeeded
         if state != "SUCCEEDED":
             error_message = job_run.get("ErrorMessage", "No error message returned by Glue.")
             print(f"Glue job failed with state: {state}")
@@ -92,7 +93,6 @@ def reddit_pipeline():
     def run_glue_crawler():
         from botocore.exceptions import ClientError
         
-        """Run Glue crawler after job completes"""
         session = boto3.Session(
             aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_ACCESS_KEY,
@@ -102,13 +102,13 @@ def reddit_pipeline():
 
         try:
             response = glue_client.start_crawler(Name=GLUE_CRAWLER_NAME)
-            print(f"✅ Crawler '{GLUE_CRAWLER_NAME}' started successfully.")
+            print(f"Crawler '{GLUE_CRAWLER_NAME}' started successfully.")
             return response
         except ClientError as e:
             if e.response['Error']['Code'] == 'CrawlerRunningException':
-                print(f"⚠️ Crawler '{GLUE_CRAWLER_NAME}' is already running.")
+                print(f"Crawler '{GLUE_CRAWLER_NAME}' is already running.")
             else:
-                print(f"❌ Failed to start crawler: {e}")
+                print(f"Failed to start crawler: {e}")
             raise
 
     extracted_file = extract_task()
