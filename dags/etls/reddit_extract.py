@@ -15,17 +15,7 @@ def reddit_conn(client_id, client_secret, user_agent)-> Reddit:
         sys.exit(1)
         
 def extract_posts(instance: Reddit, subreddit: str, time_filter: str, limit=None):
-    """_summary_
 
-    Args:
-        instance (Reddit): _description_
-        subreddit (str): _description_
-        time_filter (str): _description_
-        limit (_type_, optional): _description_. Defaults to None.
-
-    Returns:
-        _type_: _description_
-    """
     subreddit_instance = instance.subreddit(subreddit)
     posts = subreddit_instance.top(time_filter=time_filter, limit=limit)
 
