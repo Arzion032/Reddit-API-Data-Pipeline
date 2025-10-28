@@ -42,36 +42,39 @@ This project demonstrates a production-ready data pipeline that:
 
 ```
 Reddit_Api_Data_Pipeline/
-├── docker-compose.yaml          # Airflow services configuration
-├── Dockerfile                   # Custom Airflow image
-├── .env                         # Environment variables (not committed)
-├── .gitignore                   # Git ignore rules
-├── requirements.txt             # Python dependencies
-├── README.md                    # Project documentation
 │
-├── config/
-│   ├── airflow.cfg             # Airflow configuration
-│   └── config.conf             # Pipeline configuration
+├── dags/                          
+│   ├── main_dag.py                 
+│   │
+│   ├── etls/                       
+│   │   ├── reddit_extract.py       
+│   │   └── aws_etls.py             
+│   │
+│   ├── pipelines/                  
+│   │   ├── extract_reddit.py       
+│   │   └── aws_s3_pipeline.py      
+│   │
+│   ├── utils/                      
+│   │   └── constants.py            
+│   │
+│   └── data/                       
+│       ├── input/   
+|       └── output/                 
 │
-├── dags/
-│   ├── main_dag.py             # Main DAG definition
-│   │
-│   ├── etls/
-│   │   ├── reddit_extract.py   # Reddit extraction logic
-│   │   └── aws_etls.py         # AWS transformation logic
-│   │
-│   ├── pipelines/
-│   │   ├── aws_s3_pipeline.py  # S3 upload pipeline
-│   │   └── extract_reddit.py   # Reddit extraction pipeline
-│   │
-│   ├── utils/
-│   │   └── constants.py        # Global constants
-│   │
-│   └── data/
-│       └── input/              # Local input data (if any)
+├── config/                         
+│   ├── airflow.cfg                 
+│   └── config.conf                 
 │
-├── plugins/                     # Custom Airflow plugins
-└── logs/                        # Airflow logs
+├── docker-compose.yaml             
+├── Dockerfile                      
+├── .env                            
+├── requirements.txt                
+│
+├── plugins/                        
+├── logs/                           
+│
+├── README.md                       
+└── .gitignore                      
 ```
 
 ## 🔄 Airflow DAG Tasks
@@ -117,7 +120,7 @@ s3://<your-bucket-name>/
 | `over_18` | Boolean | NSFW content flag |
 | `upvote_ratio` | Float | Ratio of upvotes to total votes |
 | `comments` | Array/String | Top 5 comments on the post |
-| `e-s-s` | String | Example of merged column from transformations |
+| `e-s-s` | String | Example of merged columns from transformations |
 
 ## 🚀 Getting Started
 
