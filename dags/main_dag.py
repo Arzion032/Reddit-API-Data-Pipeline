@@ -5,7 +5,7 @@ from pipelines.extract_reddit import extract_reddit
 from pipelines.aws_s3_pipeline import upload_to_s3_pipeline
 from airflow.providers.amazon.aws.operators.glue import GlueJobOperator
 from airflow.providers.amazon.aws.hooks.glue_crawler import GlueCrawlerHook
-from utils.contants import *
+from dags.utils.constants import *
 
 GLUE_JOB_NAME = 'reddit_glue_job_2025'
 GLUE_CRAWLER_NAME = 'reddit_crawler_2025'
