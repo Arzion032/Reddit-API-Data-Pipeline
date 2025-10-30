@@ -66,7 +66,8 @@ Reddit_Api_Data_Pipeline/
 │   └── config.conf                 
 │
 ├── docker-compose.yaml             
-├── Dockerfile                      
+├── Dockerfile
+├── my_glue_script.py     # My AWS Glue Script       
 ├── .env                            
 ├── requirements.txt                
 │
