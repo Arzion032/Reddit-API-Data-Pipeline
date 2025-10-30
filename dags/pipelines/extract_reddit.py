@@ -1,4 +1,4 @@
-from utils.contants import *
+from utils.constants import *
 from etls.reddit_extract import extract_posts, reddit_conn, transform_data, load_data_to_csv
 import pandas as pd
 

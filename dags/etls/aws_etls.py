@@ -1,5 +1,5 @@
 import s3fs
-from utils.contants import AWS_ACCESS_KEY_ID, AWS_ACCESS_KEY
+from utils.constants import AWS_ACCESS_KEY_ID, AWS_ACCESS_KEY
 
 def s3_conn():
     try:

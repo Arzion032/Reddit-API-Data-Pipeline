@@ -140,18 +140,9 @@ s3://<your-bucket-name>/
 
 2. **Configure environment variables**
    
-   Create a `.env` file in the project root:
-   ```env
-   # Reddit API Credentials
-   REDDIT_CLIENT_ID=<your_reddit_client_id>
-   REDDIT_SECRET=<your_reddit_secret>
-   REDDIT_USER_AGENT=<your_user_agent>
-
-   # AWS Credentials
-   AWS_ACCESS_KEY_ID=<your_aws_access_key>
-   AWS_SECRET_ACCESS_KEY=<your_aws_secret_key>
-   AWS_REGION=<aws_region>
-   S3_BUCKET_NAME=<your_s3_bucket_name>
+   Create a `config.conf` file inside the config folder under the dags folder:
+   ```
+   see the file for sample env
    ```
 
 3. **Start Airflow services**
@@ -182,18 +173,16 @@ Edit `config/config.conf` to customize:
 
 ## 📊 Querying Data with Athena
 
-Once the pipeline completes, query your data in Athena:
+Once the pipeline completes, you can query your data in Athena:
 
 ```sql
 SELECT 
-    title,
-    score,
-    num_comments,
-    author,
-    DATE(from_unixtime(created_utc)) as post_date
-FROM reddit_learnprogramming_analytics
-WHERE score > 100
-ORDER BY score DESC
+   id,
+   title,
+   selftext,
+   comment
+FROM "reddit_db2025"."analytics" 
+WHERE date = '2025-10-30' 
 LIMIT 10;
 ```
 

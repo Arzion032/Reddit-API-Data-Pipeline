@@ -1,0 +1,546 @@
+id,title,selftext,score,num_comments,author,subreddit,subreddit_subscribers,created_utc,url,over_18,edited,spoiler,stickied,upvote_ratio,comments
+1oi9i97,Should I just give up on programming / IT ?,"My story: I graduated in 2022 as a CSE (3.5 years long bachelor's degree) but I was unable to get a job. I come from a rural area so I quickly gave up on searching and settled elsewhere. I worked various jobs in the last 3 years. I didn't like any of them. It seems like I just can't find my place.
+
+Sometimes I think about moving to the city and working as a programmer but the reality is nobody would want to hire me. I was unhirable in 2022, and it's gotten much worse since 2022.
+
+I knew getting a degree alone was not going to be enough to hired, and I knew side projects (github portfolio) and internship were important. I knew that since like 2019 or 2020 (I was still a student) but university was super overwhelming to me. I felt burnt out during university. I had no time and energy to build a portfolio.
+
+Now I have a full time job (a job that I don't like) and I am doing a weekend university that is related to my current job so I don't have much time. I will have more time when I finish this bullshit university.
+
+But the thing is, I just do not see myself getting hired even if I code 15-20 hours every week for a year as a hobby. The market seems so oversaturated and it seems that if you don't have a cool internship coming out of university, your career is done. Also, many people are claiming that the need for developers will decrease in the near future due to AI.",25,47,Known-Promotion-5236,learnprogramming,4260784,2025-10-28 13:34:22,https://www.reddit.com/r/learnprogramming/comments/1oi9i97/should_i_just_give_up_on_programming_it/,False,False,False,False,0,"['If LLMs have any effect on programming the need for good developers will only rise because of all the brainrot.', ""Context first regarding your concern about the job: The need for Devs will only rise.  Sure AI is good, but it's still a tool. Good programmers are always going to be needed, as we have the most important skillset on this generation. Adapting to fast pace technology.\n\nThing is you stress things too much. You're young, so much to offer to the world.\n\nMy suggestion would be, do what you think you like doing and do it everyday. If you get hired, cool. If not, then you're doing what you like. Not a problem."", 'There are technical jobs outside of the traditional ones that might be worth exploring before giving up. While traditional tech is oversaturated (especially many jobs on LinkedIn which get 100s of resumes), it might be worth looking at pharmaceutical/civic/political tech especially if you have interest in any of those areas. Sometimes there are smaller job boards more focused on those areas and maybe others where you might have better luck assuming you haven’t been down this road already. \n\nI was unemployed with several years of experience for several years and ended up working in pharmaceuticals. I was able to automate things (usually side projects to my main job role) that they didn’t even think of because most folks didn’t have the skills. I emphasized those things on my technical resume which helped in finding other jobs. I ended up in political tech which has been much more satisfying and fulfilling than my time in traditional tech even if it pays less. These days I program in 4 different languages and get way more say in the design and ensuring the quality of the product than I ever did at past traditional tech companies and people value what I do much more.', 'Are you approaching coding as a job or approaching coding as a tool to do your job? This same question can be asked of front end designers, even advertisers/marketers.\n\nWhen you approach coding as a trade then your skills will be isolated to that trade. When you look at coding as another skill you have to do any job it becomes a “value add” for a potential employer. \n\nIt is similar to how a degree in liberal arts isn’t about how well you can speak to classic literature or art history. It is a degree that *should* show that you know how to do research and writing. \n\n\nI got my BA in design and minored in marketing. I’ve been doing automation programming (mostly GUI based) for almost 20yrs. I use some elements of my degree when I write change orders, tech notes, and the rare times I need to write a scope of work, or design a UI. Similarly most of the code I deal with is just XML but on occasion I do need to dive into a Crestron module. Right now I’m writing Zoho scrips for a sales intake form for our sales teams. \n\nThat’s all to say that there isn’t any direct path from school to work. Work to live don’t live to work. But keep an eye out for opportunities that look interesting, even if it’s not 100% your dream job. \n\nYou got this!', 'If you can get an additional degree, either a major or minor to help sell yourself as having a niche SME (like finance or accounting), that’ll definitely give you a leg up.\n\nI got the accounting degree (super easy degree path btw), and then later got into finance systems after compiling some data engineering/analyst related course certs (through Oracle and MS Fabric) and automating/heavily optimizing most of my staff accountant tasks. \n\nWith any job you need to be able to sell to an employer what you can do for them. Even if you’re in a cost center, you should be able to articulate what value you can build for them. \n\nIn my experience, singular degrees only get you through the “what you can do” portion. The additional qualifier that you pair with your major really helps with “for you” bit that will ultimately land you the job.']"
+1oiajqj,Tips for Retaining DSA Knowledge?,"Hi everyone,
+
+I’ve been studying Data Structures and Algorithms (DSA) and I feel like I understand the concepts and how they work, but I quickly forget them over time. I practice exercises, but after a few months, much of what I learned fades away, even though I don’t have this problem with other topics.
+
+I’m curious to know how other people managed to learn DSA effectively. Did you follow any specific study patterns, techniques, or routines that helped you retain the knowledge long-term?
+
+For context, I’m currently following Abdul Bari’s Udemy course.
+
+Any advice would be greatly appreciated!",8,5,MerlinDaWizzard,learnprogramming,4260784,2025-10-28 14:15:33,https://www.reddit.com/r/learnprogramming/comments/1oiajqj/tips_for_retaining_dsa_knowledge/,False,False,False,False,0,"['Honestly, it\'s just practice. Solve some problems that require you to think algorithmically (Advent of Code is one of my favorites) and practice DSA with those questions and you\'ll be good. The key to learning DSA, in my opinion, is not just how to write an algorithm it in a programing language, but understanding the underlying concept. So, if you know how a hash table works, if you know how to explain binary search in detail, if you can visualize the call stack when doing recursive binary search or merge sort, then I think you\'re good to go and you shouldn\'t worry if you forget syntax. If you forget the underlying concept, then I think you should just try to practice more by yourself and force yourself to think. So, if you get an exercise that says ""sort this array using bubble sort"", then instead of just using the memorized bubble sort implementation that you have in your head and then going to your code editor, instead open up a notion document or a google docs and write pseudocode or go to excalidraw and draw some diagrams to visualize bubble sort with 0 code so that you can make sure that before you implement it in your programming language of choice that you actually understand the concept and you\'re not just using the memorized implementation of bubble sort that you saw in a course. That\'s usually what I like to do, make sure I can analyze and explain the concept BEFORE I implement it in code.', 'Solve the problems yourself.\n\nIf you\'re like watching/reading a course and just replicating their solutions the knowledge will always slide off of you.\n\nIf you sit there working at a problem for a few hours before you figure out the solution yourself, you\'ll probably never forget it and even if you do you\'ll have developed the problem solving muscles needed to solve it much faster in the future.\n\nFor like really optimal solutions you\'re unlikely to derive those by yourself, but if you\'ve worked out the more basic solutions from scratch the optimizations will be much easier to remember.\n\nLike, honestly, I suspect a lot of people who are a few years from college don\'t remember off the top of their head how to do a breadth first search of a graph. But I\'d expect anyone who is a competent programmer to be able to sit for a second, think about what they need to do and what order they need to do it in, and then go and start working it out. Even if you never went to college and never learned about graphs, if you\'re decently smart and have had graphs explained to you, it shouldn\'t take you long to figure out an approach that works.\n\nMost DSA questions are really two parts - ""What approach will solve this problem?"" and then ""How do I implement that?"" And both come from practice.', 'use it or lose it', 'Just practice single questions daily because learning can be done quickly but mindset takes time . And DSA is all about mindset when you will have that kind of mindset you will feel what kind of confidence comes to you .']"
+1ohzx3n,I want to delve deeper into programming,"I want to understand how to do everything and know the reality of the area, I see a lot about studying and learning about it, but outside of this virtual part I see a bit of the harsh reality that would be like ""how are you going to get a job?"" among other things like ""do you know what to do?"", I would like to know from people who have already been through this, how can I delve deeper into the area and within a year go from a beginner in code to a junior, at the moment I'm learning the full stack area because on the internet that's what they recommended to look for, if possible I want to know tips and opinions from people who can help me and help those who have this question.",8,13,VictorMaximo,learnprogramming,4260784,2025-10-28 04:08:26,https://www.reddit.com/r/learnprogramming/comments/1ohzx3n/i_want_to_delve_deeper_into_programming/,False,False,False,False,0,"['Build stuff. Break it. Fix it. Repeat. Pick one stack and stick with it. After a few small projects, start applying for internships or freelance gigs. Real work teaches faster than tutorials.', 'Code an actual project. Build something that can actually be used. Hands on keyboard. That’s how you get deep into it. Build something that isn’t a trivial tutorial snippet.\n\nDon’t know how? Good. Which parts seem confusing? You’ve identified where to grow. Break the problem into small steps, pick one, and start. Learn what you need as you go.', 'The best thing you can do right now is to pick one small project that actually interests you and build it all the way through, even if it’s messy. That’s what helps connect the theory with reality. Once you finish one or two of those, you’ll have a better sense of what parts you enjoy and can double down on. Also, hanging out in dev Discords or open-source communities helps a ton for seeing how “real” codebases work and getting feedback.', 'Taking it from a beginner as to a junior would realistically take more than a year, although it’s achievable there is a lot of learning involved and it takes time.\nBecoming a full stack developer means you would need to get familiar with a tech stack that includes both front end and back end and in today’s standard even more, a little bit of devops as well.\n\nAnd diving deeper into programming means you’ll have to really understand not just the tech stack you’ll be working with but how do computers work ( computer architecture ), how do they communicate ( networking ) and much more.\n\nThe process of learning that is long let alone the process of preparing for an interview knowing DSA and actually finding and applying to jobs and going through that process which alone could take up to a year for most people the way i see it now.', 'we are on the same boat']"
+1ohv7z8,Internship Troubles,"Hello!
+
+I've been interning at a company for around 5 months now and I'm having a tough time honestly. I was hoping I could get some thoughts from people who've been where I have and pushed through it.
+
+When I started, the company made it clear that they expected nothing from me, which I found a bit strange and it made me feel like my work didn't matter from the start. I was given my first project and I completed it in a month, I told my supervisor this and his reaction seemed more annoyed than pleased, and he said he would have to find something else for me to do if I don't slow down. He also explained that I had completed it much quicker than they expected (~3/4 months ahead of schedule). This made me feel great at the time; looking back, I fear they were just underestimating me.
+
+I tried to take some initiative. I taught myself to write cleaner code, did some reading, tried to push the idea behind my first project further and add some extra features while I had no other projects or tasks lined up.
+
+I eventually asked my supervisor for some more work and he put me onto doing bug fixes. I was happy at the time because it was helping me learn much more about the codebase, about the products they sell and I was making a difference, but 3 months later and there still wasn't any more projects lined up. I spoke to a couple of my friends also away on internships and they seem to be busy, with multiple projects waiting and with deadlines. It hurts even more when I see other members of staff working on projects I feel I would me more than capable of assisting them with and when I offer to help, they turn me away.
+
+There have been monthly stand-ups where they joke about forgetting I'm there, I haven't had a single code review in the 5 months and when I ask management, they say they've been very busy. This makes me feel even more demoralized because if they're busy, why can't they get me to help?
+
+Additionally, I just feel like I don't deserve to be there and like I'm expendable. My manager constantly jokes about how stupid people from my university are and I do try and laugh it off but it keeps making me feel even worse about being there. I even recall cases where they've been annoyed about me asking for help!
+
+I've contemplated trying to leave in favour of another intenrship, but I don't think it's possible to find another at this time in the year and I can't imagine me leaving 8 months early would look good on my resume. I feel trapped and like I'm not improving at all.
+
+Have any of you been in an internship like this?
+
+I would appreciate all your thoughts and opinions on this as I'm really struggling. 
+",9,7,BigBad225,learnprogramming,4260784,2025-10-28 00:19:45,https://www.reddit.com/r/learnprogramming/comments/1ohv7z8/internship_troubles/,False,False,False,False,0,"[""Maybe they expected you to take more care and effort into the original project and that broke some trust.  Maybe they are just idiots.  In the end it doesn't matter unless you want to work at this company long term.  It all looks the same on your resume.  It's just time spent, a line item"", 'Want to work for me? I am working on a cool product and i have a working prototype! I promise i will be a better MANAGER and a friend!! 😂\nBut on a serious note if you want to try something that you have never tried, let me know! I am not kidding I have a really cool product.']"
+1ohydut,Leetcode choosing a language,"I have seen many people recommending python for the obvious reason that it is closer to pseudo code therefore easier to implement.
+
+What if I am currently learning C++ and one of my goals while doing leetcode is also to practice the knowledge I acquire about that specific language as opposed to just improving my problem solving skills?
+Should I just use C++ or is it still better to use python?
+I would love to hear some opinions on the matter.",8,21,CodewithApe,learnprogramming,4260784,2025-10-28 02:48:34,https://www.reddit.com/r/learnprogramming/comments/1ohydut/leetcode_choosing_a_language/,False,False,False,False,0,"['If you’re trying to learn a language pick that language.\xa0', ""\n\nLC in Python saves time, and time isn't something you want to waste in an interview, right?\xa0\n\n\nYou can waste as much time as you want to learn it, though, so try solutions in both languages to reinforce learning. See for yourself whether the speed and simplicity is worth it. Fortunately for you, DSA is language agnostic.\xa0\n\n\nIt didn't take me long at all to figure out Python and I'm a beginner (I actually wanted to continue learning with C++ too).\n\n\n\n[Here's a Python cheat-sheet](https://github.com/peterlamar/python-cp-cheatsheet)\n\n\nNeetcode explains everything well in Python."", 'I\'m currently doing it in c++, but there\'s a creator named the Primeagen that said ""I never do something I don\'t know how to do in a language I don\'t know how to use"", so I\'m kinda being foolish using leetcode to learn c++. I just learned the swap() builtin function for matrix work, could have saved me a lot of time and energy if I had known that was a thing.', ""Do both, you'll learn more.  Time spent writing code is the best thing you can do"", 'Whatever langauge you already know']"
+1oi54ny,Drag & drop vs code for UI design,"Remember when you could design UIs by dragging controls with your mouse?Fast prototype etc...
+Now everything seems to be code-based.
+
+Do you prefer:
+- **Visual design** (WYSIWYG, drag & drop)
+- **Code-based** (writing UI in code/markup)
+
+Why did the industry shift away from visual designers? Are there any modern tools that still offer great visual design experiences? Which approach leads to better maintainability?
+
+Looking for perspectives from designers and developers.",5,10,sbhnP,learnprogramming,4260784,2025-10-28 09:52:46,https://www.reddit.com/r/learnprogramming/comments/1oi54ny/drag_drop_vs_code_for_ui_design/,False,False,False,False,1,"['Code-based won because it scales better for teams and version control. Drag and drop is faster for prototyping but becomes a mess in production. Honestly best workflow is hybrid, study what works on Screensdesign, mobbin or real apps first, rough prototype in figma if needed, then code it properly with a component library.  \n  \nVisual builders are fine for simple stuff but fall apart with complex interactions or when you need precise control. code gives you flexibility visual tools cant match.  \n  \nMaintainability goes to code hands down. trying to debug or modify drag and drop spaghetti is hell', ""Visual design has the advantage of being easy on account of lack of detailed control.\n\nTextual design gives much greater control and can be made more efficient through, e.g. methods, functions, which leads to less repetitive and better maintainable code.\n\nIf you see the gibberish code that visual designers often produce, you will learn to value textual creation.\n\nVisual designers hardly ever optimized vs. textual design can heavily optimize.\n\nIf you need 10 similar elements, what is better? Dropping and manually sizing, aligning, etc. each individual element, or using a loop that places each element and directly adjusts the attributes? \n\nI've learnt to value textual GUI creation with Java Swing. Much faster, much easier, much cleaner code. I tried all IDEs with graphical GUI builders and the only one that produced half-way readable and maintainable code was Eclipse Window Builder pro. Both, Netbeans and IntelliJ produced unmaintainable code that broke on the faintest change."", ""I remember that. I like Qt Creator and Godot for letting me drag stuff around. But I do not like to work on other people's projects in those things.\n\nThere are a few fundamental tradeoffs here:\n\nThe code is the truth. Whatever the wysiwyg editor makes must translate to code. Whatever the code says must be presentable by the wysiwyg editor. This usually breaks down as soon as you do something with the code that the wysiwyg editor can not handle, like some custom widget for example. To make that work you have to write extra code just to make the wysiwyg editor compatible with your code again.\n\nOn the flip side a lot of the frontend code has structure that the wysiwyg editor can not show. DOM has a box model that doesn't allow you to simply drag/drop a button anywhere. The only way to do that is to position it with absolute. You wouldn't do that because it breaks responsiveness with different view-ports. Instead you would work with padding, margins, grid layouts etc to get the desired effect - but the wysiwyg cannot show that. It can only hint at that.\n\nThis in turn usually leads to people who're used only to the wysiwyg editor to forget about the underlying structure. There's plenty of precedent for that. LaTeX for example is about code representing structured text and styles to render headlines differently than normal text, Microsoft Word simply allows you to make text large and bold to emulate a heading. But the loss of structure also means you can't do the other stuff LaTeX can do like creating content listings and reducing page breaks immediately after headings. Designers who create mockups in Figma _can_ do really great work, or they can simply slap some shapes there and call it a day. But since the code will be the truth eventually, someone has to translate those shapes into the structure anyway.\n\nLastly, the people who work with code all day have a different problem than the people who rely mainly on wysiwyg editors. Graphical user interfaces are about discoverability of features and a quick preview of the final product. Material pipelines in Blender for example work very well as boxes connected with wires. \n\nCode has about information density, and is easier to work with. No graphical tool can fit as much information on a screen as well written text. Copy and pasting text works between tons of editors, but copy and pasting graphical elements only works in the same tool. You can check text into version control and get diffs or even move detection, that doesn't work for graphical elements unless it compiles to text first.""]"
+1oi1y99,I am a little confused about api and front end and bck end connection,"I just learned core java i am looking on learning java framework but when I think about making project i am confused how front end is connected with back end 
+
+Is api used to make connections in front and back end or is it used to connect backend with server or both 
+
+If api is not used in front end to connect with back end then how is it connected 
+
+
+Is api a language or what ,how does thise connect two different languages 
+
+Should i learn about api first or spring / spring boot
+And please recommend me some reasources 
+
+
+
+
+",4,4,jay90019,learnprogramming,4260784,2025-10-28 06:13:33,https://www.reddit.com/r/learnprogramming/comments/1oi1y99/i_am_a_little_confused_about_api_and_front_end/,False,False,False,False,0,"[""API stands for application programming interface. It is where two programs meet and connect in some way. One program normally exposes an API, while another program uses it. \n\nIn the case of web development, the server usually exposes a REST-API, which is a series of endpoints you can make requests to over the internet, and get an answer. Requests look like this: \n\nGET https://www.domain.tld/api/user/17 \n\nto get a user with the id 17, or\n\nPOST https://www.domain.tld/api/post/5/comment\n\nto create a new comment under post number 5. The data for the new comment would be transferred in the body. You should read up on REST APIs in general. \n\nWhat I've written above are just examples, and it would be the servers/backends job to expose the API endpoints relevant to your application."", ""You need to spend some time learning how the internet and specifically HTTP works before you'll be able to understand that.\n\nHere's a basic primer: [https://launchschool.com/books/http/read/introduction](https://launchschool.com/books/http/read/introduction)""]"
+1oifme5,Question about loop,"So I had a problem where the question was:
+
+Getting user input you get a sequential number for ex: 123
+And you need to get the sum of the numbers without turning the input into a string or anything else. 
+
+Well I saw that with every increasing digit the sum of the numbers increases by n+1 
+
+So  12 = 3, 123= 6 , 1234 = 10 so the sums increase by 3,4,5 and so on 
+And I couldn’t for the life of me figure out how to write that in a loop form 
+
+So just wondering you have any tips¿ ",2,11,Needsomhelp11,learnprogramming,4260784,2025-10-28 17:25:23,https://www.reddit.com/r/learnprogramming/comments/1oifme5/question_about_loop/,False,False,False,False,0,"['Do you know what ""modulo"" is (or have you seen the `%` operator)? If the answer to this is ""yes"", then I think the solution to the problem will use the idea that `123 % 10 == 3`.', '\nI would suggest looking into modulus, use it to get the digit in the 1s place, then figure out how to get the next digit and so on', 'I’m curious about the way the question is worded. If it means that the user-inputted number will always start with 1 and always increase by 1 until the final number, then you’re on the right track with n+1 but don’t really need a loop at all. Just look up Triangle Numbers.\n\nBut is it possible the input doesn’t follow that interpretation of a “sequential number” and could be 234? Or 1679? If so, that formula won’t help you and you likely do need a loop. Since they’re not allowing you to cast to a string you need a mathematical solution. One that loops through each “place” (1s place, 10s place etc) and gets each value to sum together.\n\nIMO the question as you’ve described it above is a little ambiguous but I’m not sure if that’s how it was presented to you verbatim or not.', ""Elementary mathematics.\n\n1. You can extract the rightmost digit by taking your number modulo (remainder of integer division, like you learnt in primary school) 10\n2. You can shift all digits one position to the right through integer division by 10 (again, primary school mathematics)\n3. Wrap everything in a loop that runs while you still have digits to shift right (think about what the end condition would be - it's a simple comparison)\n4. Sum the rightmost digits inside the loop."", ""You don't want to assume any amount of inputs would follow a specific pattern unless told. For this one you would have to take advantage of integer division and the modulus operator to get the sum. \n\nHint: you'll most likely find the sum in the reverse order you think""]"
+1oi7s46,How to master developing a complete prod grade enterprise app,"I'm full stack dev in java+angular. Apart from core java and spring there are many things,
+1. Like batch processing, cache management, spring security, etc
+2. Microservices
+3. Db like postgresql (completely, not just some ddl, dml queries)
+4. When to go for microservice/monolithic or modulithic arch
+5. Docker and kubernates
+6. All the process of ci/cd
+7. Cloud like aws
+8. API design
+9. Event driven like kafka
+(10. Anything else in missing)
+
+I'm good at the core concepts of java, springboot but how do I master learning further as a dev. I can manage to add or modify some new features, debug bugs and fix them. But if someone asks me if I  have complete tech knowledge of the app I'm working on or if I can develop a web app from the scratch, I struggle.
+The tutorials I find are mostly mid or beginner level or sometimes they are complex and I get lost.
+As senior devs how have you guys managed to learn and master those tech.",4,3,Fresh_Mud4037,learnprogramming,4260784,2025-10-28 12:18:02,https://www.reddit.com/r/learnprogramming/comments/1oi7s46/how_to_master_developing_a_complete_prod_grade/,False,False,False,False,0,"['I mean, this just sounds like a random selection of buzzwords to me. You should always start with the question: What are my requirements? \n\nOtherwise, if you just spam ""corporate tech stack"" things, you will end up like this: [https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition) (yes, the joke is 10 years old, and still relevant today)\n\nJust as comments to your list: \n\n1. all of this seems okay and important, for most java/spring backends\n2. Why? I mean, microservices CAN be great, but they always increase complexity, both to develop and to deploy. If you can\'t give enough good reasons as to why you need microservices, a monolith might be better. \n3. I don\'t know what you mean by ""completely""? It is probably not necessary to learn postgresql ""completely"" (that would take a loooong time), because in all seriousness: your app will most likely not need 100% of all possible performance out of your database. Even if everything you write is 10x slower than possible, it will still be more than fast enough in reality. \n4. Monolith is simpler, Microservices scale differently and can do a clean separation of concerns. Monolith should be your default!\n5. afaik you can just deploy docker images to kubernetes, no? My understanding is, that kubernetes is just a more fancy way of managing deployed images, and stuff, but I am not very experienced in deployment. \n6. Again, why do you need this? Ci/Cd sounds good on paper, but especially the CD part adds a lot of complexity to your deployment phase. If you can\'t articulate, why, default to a normal, manual deployment whenever you think a release is ready. \n7. Cloud is just an invisible server. You can get a VPS for very cheap, which doesn\'t run the risk of increasing your cloud bill into the stratosphere, if you use too many CPU cycles. Start there. As with CI/CD and Kubernetes, this is really not a developer issue. It\'s a deployment and DevOps issue. At small scales, you can do it yourself, but you really don\'t need a lot of complexity, and when you are working at a company, there will be a separate position for this. \n8. This is legitimately the most important point on your list for a developer, and there is no single correct answer. As with all design decisions, there are a lot of possible tradeoffs. While I don\'t have a good book for that handy, I would suggest reading up on your favourite API Design (REST for example), because much ink has probably been spilled about that topic. Also: experience. Just build some APIs and see what works, and what gives you more issues in the long run, when you try to refactor a new feature for example. \n9. So, this is complicated: Most backend system have a proper event system / observer pattern thing going, like flask or axum both have pretty good signals internally. As long as you build a monolith, this is really good and should definitaly be used. Kafka is just a way to send signals over multiple microservices, which CAN be useful, or it can just add more unnecessary complexity! As with everything else that adds complexity, start with the assumption, that you should not use kafka, unless you can articulate why you need it!', ""Work hard on procedural based programming cause it's where your leetcode knowledge aligns with the production knowledge then you can switch to oops later .""]"
+1oi63qy,What are some good software to make diagrams in?,"Just some software or tools to make flowcharts, diagrams and the like that gives you an overview of your program. Currently using Miro but I don’t love how they diagrams stuff work so far ",3,3,Environmental_Gap_65,learnprogramming,4260784,2025-10-28 10:50:40,https://www.reddit.com/r/learnprogramming/comments/1oi63qy/what_are_some_good_software_to_make_diagrams_in/,False,False,False,False,1,"[""If you want to have your diagrams drawn in more or less automatic way, note Mermaid.js, PlantUML and other formats supported by kroki.io (for example). Though since it's generated from declarations, it might look not so pretty."", 'PlantUML if you work in the command line', 'Not familiar with too many, but I used to do a lot in LucidChart! They used to have a generous free tier. Not sure if they do anymore but they have great chart building for software use cases!']"
+1oimlb2,What should i learn,"I am in higschool one year before graduation,
+
+I know the basics of python, c and c#, but i don't know what to do next, currently i am trying gamedev (in godot), but is that what i should be doing? I feel like I am improving in making games but is that useful in a job?
+
+I am pretty lost on what i should be learning to have a chance in the industry at all.
+
+And in school i haven't really learnt anything new so far atleast not in programming ",2,8,s51m0n55,learnprogramming,4260784,2025-10-28 21:49:46,https://www.reddit.com/r/learnprogramming/comments/1oimlb2/what_should_i_learn/,False,False,False,False,0,"['spend a lot of time on math, core language should be python as a noob stick with it, it has the most value to you atm. Once you ready to get into low level programming pick up c in more detail, then rust or go. And lastly pick up JS/TS node is great ..outside of that spend time understanding data flow, I/o etc. much of which will turn up in the previous items I mentioned.   \n  \nAs you continue on your journey start by making a sample ""something"" EG a basic app that uses multiple parts of the system, piping data in/out, static content, dynamic content. etc. etc. so that you have a familiarity with using all parts of the proverbial dev body.', 'just heads ups- finding a job in game dev without contacts is pratically impossible', 'focus on doing well in college']"
+1oijsa2,DSA vs CP vs Web Dev — What should I focus on during my 2.5-month break?,"I’m in my 3rd semester and I’m planning to start either DSA, Competitive Programming, or Web Development. I’ll have around 2½ months of holidays, so I want to use this time productively. Which one should I focus on at this stage? Any guidance would be appreciated. Thank you!",2,4,Himura05,learnprogramming,4260784,2025-10-28 20:02:07,https://www.reddit.com/r/learnprogramming/comments/1oijsa2/dsa_vs_cp_vs_web_dev_what_should_i_focus_on/,False,False,False,False,0,"[""Competitive programming is almost useless in the real life. It won't get you a job. It won't contribute to improving your real life problem solving skills. It won't build you a portfolio. You won't even use it in your daily work. So, forget that.\n\nIt will be DSA vs web application development for you. Well, both are needed. And you'll need DSA also in web application development. You can learn both on the go. Have a DSA lesson and then try to make something practical with it by using web application development skills. And I do not talk about simple web pages where you need just HTML, CSS and some Javascript. I talk about web services.\n\nBut if combining both is way over your head then pick DSA first."", ""You didn't say what you've already learned so far.\n\nWeb development is the most immediately useful. You can start building webpages right away as you learn. If you haven't done a lot of coding before, that's my vote.\n\nDSA is foundational, it's one of the most important things you'll learn in school. If you've already written lots of code including some projects of your own, starting DSA could be great. If you haven't written much code, learn web development first. The more code you've written, the easier it will be to learn DSA.\n\nCompetitive programming is not relevant for building anything useful or for getting a job. If it does interest you just for fun, master DSA first before trying it."", 'I know everyone said that competitive programming is useless in real life, but if you mean competition like leetcode/codewars/etc, well those are often tests you need to pass during job interviews, over even before they grant an interview.']"
+1oiixlv,App blocking app,"I need to create a app to block other apps, that is, overlay specific apps with smt (screen, bypassing box...) so the user can't use it.
+
+I have no previos experience on android dev (or anything ngl) and would like some tips
+
+Especially on which language i should use, i was thinking kotlin and jatpack compose but im not sure, my teacher says its a trash language (he teaches it) 
+
+Apreciate any other tips too, just dont tell me to use AI please.
+Mb for the english",2,7,mi9142281,learnprogramming,4260784,2025-10-28 19:29:58,https://www.reddit.com/r/learnprogramming/comments/1oiixlv/app_blocking_app/,False,False,False,False,0,"['Can you be more specific? What do you mean by ""block other apps""? Do you want to suppress the notifications of other apps? Do you want to hide them?\n\nThe very best thing a new programmer can learn is how to ask a question well.', 'On the language:\n\nKotlin with Jetpack Compose is the standard for developing android apps, approved by google.\n\nUse that. And when you know both, you can have a look at kotlin multiplatform with compose multiplatform and write apps not only for android, but also iOS, desktop (JVM) and web (web assembly).', 'tip: every language is trash']"
+1oigzfi,C++ or other language??,Currently iam studying in college 1st year iam learning C++ and studying oops topic. just to know that will C++  be on domain in programming world after 4 to 5 years or should I learn diffrent language (Python etc) after Completing it. Need Guidance to build future in programming world. ,2,4,LiveCorner180,learnprogramming,4260784,2025-10-28 18:15:33,https://www.reddit.com/r/learnprogramming/comments/1oigzfi/c_or_other_language/,False,False,False,False,0,"['As a college graduate - I don\'t care what language you learned in college.\n\nIntroductory materials only teach you the grammar and syntax. You\'re not learning how to USE the language, and they\'re not teaching you problem solving skills. Your programming classes give you some context for your other classes - computation theory, DSA, applied mathematics... It also gives you some exposure - this is the job, staring at a screen, walls of text, arbitrary decisions, bastard bugs. Is this something you want to do all day, every day, for the next 45 years?\n\nWhen you graduate, your education didn\'t finish, it only just begun. You don\'t pop out an expert. The end of college is only the beginning of the rest of your life. WE KNOW you don\'t know shit. THAT is why we hire junior developers - not because you\'re cheap, not because we couldn\'t afford a senior, but because juniors tend to multiply the force of a senior, because we can mold you into what you need to be successful here.\n\nI\'ll bet when you\'re done with this semester you couldn\'t actually tell me what OOP even is or adequately demonstrate it. It\'s not a judgement on you - all programming and college courses are saturated with dogmas and traditions. They call it an OOP course but don\'t actually teach it, typically because your professors don\'t actually know, either.\n\nSo when you graduate, your programming experience isn\'t terribly relevant. C++, Python... What I need to know is how you think, if you can learn and adapt. Can I mold you into the person I need here to solve our problems? Ostensibly, the answer is ""yes"", so the major difference between you and another candidate is not what you ""know"", but the aptitude you both demonstrate. Obviously I\'m going to hire the one with the greater potential, insofar as my hiring process can deduce. We don\'t have great tools for this - your GPA is SOMETHING but only tells a particular kind of story. It can mean you can learn a lot and make connections, or it can mean you can memorize the material long enough to ace a test. So GPA alone isn\'t enough. Your personality also counts for something - can I see myself working with you for the next 5 years? Are you going to mesh well with the personality of the team? You don\'t have to be smarter than the other guy to be the better fit.\n\nOnce you get hired here, we\'ll teach you what you need to know to be successful. So don\'t sweat it. If you\'re hired, it means you\'re good enough, you\'ve got the right stuff, and that we want to build you up and see you succeed. We know that\'s going to take time.\n\nWatch out for puppy mills - places that want junior graduates to also paradoxically have 3-5 years experience. That\'s not junior, that\'s not entry level. Also, if a company doesn\'t hire you - they\'re doing you a favor. Often it\'s because it\'s not a good fit - and that there is a TWO-WAY street. You DO NOT want to work for a place you don\'t fit in, that kind of misery WILL take years off your life.\n\nSo focus on your fundamentals, your problem solving skills, and your joy of the craft. A good GPA won\'t hurt, either. Very quickly, the programming language fades away, and becomes a tool, a means to an end - you won\'t even see the code anymore. What you\'ll see is the problem before you, and your solution will be sculpted and painted - the epitome of elegance.', 'Depends what u want to do specifically alot, but cpp is used in alot of programming fields plus teaches you memory management which is good', 'Other language C++ is cool, but me personally, I’d choose something else.']"
+1oigi6s,How to refer docs,Hi I face one problem that whenever I try to code some complex projects I build the logics but I cant able to handle the coding part I get stuck there because I feel difficulty to refer docs some professional guy please tell me how to handle that stuff of getting the things out of the docs or if you guys use google how can we use that to get the information out of there . ,2,2,No-Instruction-7104,learnprogramming,4260784,2025-10-28 17:57:59,https://www.reddit.com/r/learnprogramming/comments/1oigi6s/how_to_refer_docs/,False,False,False,False,1,"['That highly depends on where you get stuck.\n\n If you get stuck at a specific API/library/framework and it isn\'t something as big as for example react in the web space searching the table of contents of the docs and/or sections via keywords often works very well (you could use something as fuzzy find extensions for an better search results in page). \n\nIf it\'s something more generic or something many people already done googling it is mostly a good solution, look for dev forum in the specific field where you have questions, also stackoverflow can help and another source especially if you want an high-level overview blog post can help a lot (platforms like dev.io and medium have many good blogs).\n\nIn the age of ai you could ask chatgpt, etc. I normally would keep the questions to ai rather generic and specific so I don\'t get to long code snippets that I have to consider rather carefully. Do not execute commands or use code you do not understand.\n\nFor example:\n""I have to access a file in my local fs, what options do I have without external libs in cpp. Make an example for each option."" and maybe I ask for some specifics to to solutions I like and integrate it myself.\n\nIf you could provide some examples I could help furtherm', 'Based on your lack of punctuation, I feel you need to really learn your syntax']"
+1oi5dkn,"Monkey See, Monkey Do",This is the title I gave to my problem with learning to code. I want to learn because I like the idea of making my own development projects and eventually move to freelancing. I have dived to tutorials and tried to make my own stuff but I always feel that I am getting surface level understanding. How do I learn better and deeper? How do I learn to think like a developer or maybe in the future a system designer? I don't want to keep copying even if I am building my own project. ,2,2,theconfusedarab,learnprogramming,4260784,2025-10-28 10:08:20,https://www.reddit.com/r/learnprogramming/comments/1oi5dkn/monkey_see_monkey_do/,False,False,False,False,0,"['> How do I learn to think like a developer or maybe in the future a system designer?\n\nBy *developing*. Sorry, but that\'s the secret.\n\nStop following tutorials and start *creating* your own projects.\n\nStart with small and simple ones and gradually grow in size, scope, and complexity.\n\nYou absolutely have to do your own stuff and not just copy tutorial projects.\n\nMaybe use tutorial projects as *inspiration*, but do not look at the entire process. Make your own stuff.\n\nStart by determining the functionality. Write it down. Determine the requirements. Write them down.\n\nDrill deeper. Write everything down. Break down each functionality. \n\nYou will only get deeper understanding if *you* do all the work, not if a tutorial gives you everything to only copy (even if ""copying"" is stretched to you typing out the code).\n\nSome generally recommendable books:\n\n+ ""Think Like A Programmer"" by V. Anton Spraul\n+ ""The Pragmatic Programmer"" by Andrew Hunt and David Thomas\n+ ""Structure and Interpretation of Computer Programs"" (SICP) by Ableton, Sussman, Sussman\n+ ""Code: The Hidden Language of Computer Hardware and Software"" by Charles Petzold', 'Do your own projects at the same time you participate in 1 or 2 open source projects. \nYou need to have a good baseline and people to point and correct your mistakes.\n\nBonus: when you have understood the open source project structure your crafting skills will be very good 😊']"
+1oi49gz,Doing software engineering alongside medicine,"I used to be a competitive programmer back in high school and studying CS was my dream, but in my country IT is terrible and Im now studying medicine. However, I recently came across coursera and they give certificates to add to my CV. Do you think these courses can help me pursue a professional programming career? Or should I just stick to medicine?",2,8,Internal_Analysis_75,learnprogramming,4260784,2025-10-28 08:54:22,https://www.reddit.com/r/learnprogramming/comments/1oi49gz/doing_software_engineering_alongside_medicine/,False,False,False,False,1,['Finish your Medicine Degree. It will help you design Medical related software']
+1oi190s,Can I get into a software role without focusing on DSA? I genuinely love development.,"I’m a student of 2nd year from a 2nd gen IIT. I ​​enjoy building websites, backend systems — but I’ve never enjoyed DSA or competitive programming much.
+
+I keep hearing that DSA is “mandatory” for getting a software job, especially at big companies, and that’s been stressing me out a bit.
+
+But what I truly love is development — working on real projects an​d solving practical problems.
+
+
+
+So I wanted to ask people who are already working in tech:
+
+Is it really possible to land a good software/development role without being great at DSA?
+
+What kind of roles or companies actually value project-based skills more?
+
+How can I shape my learning path if I want to focus mainly on development?",2,24,Vast_Maize_5152,learnprogramming,4260784,2025-10-28 05:28:09,https://www.reddit.com/r/learnprogramming/comments/1oi190s/can_i_get_into_a_software_role_without_focusing/,False,False,False,False,0,"[""I think you should draw a distinction between DSA, leetcode, and competitive programming.\n\nEveryone should be comfortable with DSA. It's just part of the job.\n\nIt's true that there are some jobs where DSA problems come up less often - but it's inevitable if you ever build anything that scales. The only way to avoid DSA forever is if you only build stuff like tiny one-off websites that never get a lot of users.\n\nI think of it like pilots learning to land a plane in zero visibility, or doctors learning about rare illnesses. It's not that you use this knowledge every day - it's so that when it does come up, you need to be prepared.\n\n95% of my job is exactly what you say you like - building websites, backend systems, and so on. Most of the time DSA isn't relevant.\n\nBut that 5% of the time when it is, I'm really glad I know it. I know what to do when we discover one part of the code is getting too slow, or when we need to walk all of the nodes in a nested data structure.\n\nIn the real world, nobody cares if you have every possible case memorized. It's fine to Google it. But you need to understand the fundamentals so that you know what to look up and you know how to use the solution when you find it.\n\nIt's true that leetcode problems in interviews can be annoying and many companies do it extremely poorly. Most of us just treat that as a necessary evil. Some people just avoid those interviews and there are companies that do technical assessments of coders without ever asking leetcode problems.\n\nCompetitive programming shouldn't even be mentioned, it's extremely niche. 99% of working programmers have no interest in it."", 'It’s just part of the process, in order to be efficient and know how to write good code you must know DSA, I mean you could get away with it maybe in frontend but when you get down to actually developing real systems it’s essential.', 'No', ""You can be a good programmer without being a competitive programmer and with only a basic DSA education. You need at least some stuff, like knowing when to use a dictionary and when to use an array. Understanding graphs is good, too. Most real problems won't require more advanced algorithms (although some might!).\n\nThat said, many programming interviews make heavy use of DSA, so being at least conversant with them is a big advantage over people who with a less prestigious education, which tends to skip over DSA stuff. For that reason, I recommend at least a bit more focus on DSA than you might otherwise prefer. You don't have to memorize the CLRS, but being able to come up with a slightly custom graph traversal on the fly could help you land your dream job."", 'Its an odd question, it\'s like asking ""can I be a doctor without learning about anatomy""? Clearly no, it\'s the bones of how you build things']"
+1ohwdu6,Recommended online courses for Python (Django) and JS?,Heya! Looking to get recommendations on online courses to refresh my knowledge.,2,2,byte-boxer,learnprogramming,4260784,2025-10-28 01:13:06,https://www.reddit.com/r/learnprogramming/comments/1ohwdu6/recommended_online_courses_for_python_django_and/,False,False,False,False,1,"[""I don't know much about Python, but for JS I highly recommend The Odin Project. It's free, it teaches full stack JS and the teaching method is more practice and project-based with a lot of documentation to read and videos to watch. In my experience, very good. I also recommend freeCodeCamp, they almost always have a video for anything you want to learn for free on their YouTube channel. You should also check out the [FAQ ](https://www.reddit.com/r/learnprogramming/wiki/faq)in this sub for more information on other courses."", 'The Django docs, specially the tutorial is really good']"
+1oip315,Any advice for how to really get data structures?,"I get the concepts, can even apply some of them like linked lists, I understand how everything’s moving. But If you layed out the psuedocode for it I could not produce the code needed. Okay for a node sure. But for a method like cloning, or second prime numbers for a hash table I seriously do not get it, no matter how hard I try to remember. I have an exam for hash tables and binary trees in 2 weeks, so ideally I’d like to get it in that time, but it’s very hard for me to find my weak points",1,2,Ok-Addendum6727,learnprogramming,4260784,2025-10-28 23:31:20,https://www.reddit.com/r/learnprogramming/comments/1oip315/any_advice_for_how_to_really_get_data_structures/,False,False,False,False,0,"[""How are your coding skills outside of data structures? Are you able to write small programs, build small apps, stuff like that? If your program has a bug do you know how to find it with print statements and also with a debugger?\n\n>If you layed out the psuedocode for it I could not produce the code needed\n\nThat statement makes it sound like your problem isn't with data structures, it's that you don't know how to code. But maybe I misunderstood."", ""Is the problem that (A) you don't understand the code? Or (B) you understand the code, but you can't remember/write it?""]"
+1oionzy,"Hey everyone, how do I learn DSA in python? as of now I just know surface level linked lists and binary trees. What is the best resource and roadmap to learn? cuz having a lot of resources just makes it more confusing, Ik it can be subjective but recommendations appreciated!","I wanna start doing leetcode problems but as I said I only know basic level linked lists and binary trees as of now, so I wanna know a proper path/roadmap and good resources to go ahead, thank you",1,0,Crystalagent47,learnprogramming,4260784,2025-10-28 23:14:19,https://www.reddit.com/r/learnprogramming/comments/1oionzy/hey_everyone_how_do_i_learn_dsa_in_python_as_of/,False,False,False,False,1,[]
+1oio2pg,need feedback on my mini-project (Pygame-CE),"hey guys im a beginner trying to figure out about game dev,  
+i started pygame cuz i'm familiar with python and these are my first steps into game dev  
+
+
+  
+This is a **mini Pygame project** I recently completed as a practice exercise. The project focuses on **sprite animations, player movement, collision detection, and simple game mechanics**.
+
+I’d love to get **feedback on the code and it's optimization** to improve my skills and learn best practices in game development.  
+  
+[https://github.com/HosseinTwoK/Don-t-lose-your-innocence](https://github.com/HosseinTwoK/Don-t-lose-your-innocence)",1,0,HosseinTwoK,learnprogramming,4260784,2025-10-28 22:49:40,https://www.reddit.com/r/learnprogramming/comments/1oio2pg/need_feedback_on_my_miniproject_pygamece/,False,False,False,False,1,[]
+1oilios,How to improve code skills with real world problems in a straightforward way?,"Hi all,
+
+I’m looking for recommendations on the best way to study and improve my code skills, especially by working on real-world scenarios.
+
+Leetcode is great for practicing algorithms and logic, but I’m hoping to find something that focus more on real world scenarios (working with APIs, handling Exceptions, Req/res cycles, when to use Promises, use different Node methods, etc etc).
+
+I know that building side projects is a good way to do that, but I’m thinking if there is something more straightforward. With side projects you “lose time” dealing with many other things, so I thought that it might exists some platform (like Leetcode) with practical problems
+
+I’ve been a Node dev for around 4 years but I always felt that my coding skills are too poor, specially now that I’ve been using too much AI.
+
+Does anyone have suggestions that could help me to get better at real world code problems?",1,0,c410l4gr3c4,learnprogramming,4260784,2025-10-28 21:07:44,https://www.reddit.com/r/learnprogramming/comments/1oilios/how_to_improve_code_skills_with_real_world/,False,False,False,False,1,[]
+1oijpqc,Python - Get specific attribute from multiple instances,"Is it possible to get a certain attribute from each instance in a list?
+
+Say, for example, I had a class made to store four numbers as attributes, and made two instances of them. These two instances are stored together in a list.
+
+Instance 1 stores [1, 2, 3, 4]
+Instance 2 stores [5, 6, 7, 8]
+
+Is there a way to pull specifically the first number or entry of each instance (in this case, 1 and 5, respectively)?
+
+This was the simplest way I could think of phrasing the above, and I apologize if it’s confusing. I’m working on an inventory feature for a visual novel, and I want the code to be able to output the names of all items (which are instances) in a list so the player can easily tell what they have. That’s why I’m trying to figure this out.
+
+I also apologize if I misused any lingo. I took a year of AP CompSci but I’m quite rusty and the class was VERY surface level, so I may call something the wrong name.
+
+Any help is very much appreciated!",1,3,greater_agrippa,learnprogramming,4260784,2025-10-28 19:59:47,https://www.reddit.com/r/learnprogramming/comments/1oijpqc/python_get_specific_attribute_from_multiple/,False,False,False,False,1,"['Would you know how to do it if your custom class were just a list?\n\nWhat would you do if you had a list of lists and wanted to pull the first element out of each inner list?\n\nIf you can figure that out, think how it would work with instances of a class.', 'This can be done very easily with a `for` loop.\n\nA `for` loop is used when you have a sequence of values (technically, an iterable), and **for** each element in the sequence, you want to run some code.\n\nIn your case, you have a list of instances, which is a kind of sequence. And **for** each instance in the list, you want to extract the first element and put it into another list. So that\'s the code that you put inside the loop body.\n\nIn the special case where what you want to do is to construct a new list, there\'s also the special ""list comprehension"" syntax which is more concise. But you should understand basic `for` loops first.']"
+1oif3i9,Need recommendations for software eng channels (not exam focused ones),"I’m looking for yutube channels that explain software engineering concepts in depth not that  overly hyped ones like (5 minutes engineering). I want channels that focus on why and how things are used in real companies, not just theory or exam-level content.
+
+Basically, something that helps me understand how actual SE is used in tech. Any suggestions?",1,4,Electronic-Boot-3996,learnprogramming,4260784,2025-10-28 17:06:03,https://www.reddit.com/r/learnprogramming/comments/1oif3i9/need_recommendations_for_software_eng_channels/,False,False,False,False,1,"['That’s a tough one. Every team uses different stacks and they all have their own conventions and standards (or lack there of). That makes it pretty tough to generalize *how* it’s used in the industry beyond what’s already in tutorials and starter guides.\n\nNot to mention, there’s the cross-team component (requirement gathering/refinement, sprints, the back and forth with business and devs that previously worked on the component). YouTuber/influencers simply can’t replicate that on their own.\n\nIdk man, maybe I am wrong and something like that does exist out there, but I wouldn’t bet on it.']"
+1oicecy,Complete beginner trying to create a learning model that can give suggestions and attempt to predict for fantasy basketball,"hi so im completely new to coding, and ive been recently inspired by a video made by someone on youtube where they delved into creating a prediciton model for the 2025 australian open for tennis and managed to get into 85% accuracy. this sparked my curiosity. since, ive been attempting to learn what and how i need to create a model for myself that can help give me suggestions on players to acquire in free agency, review my team, use and actively gather live data, use old data from websites like basketball reference, etc etc. in short be a prediciton model to give suggestions on what to do. any and all pointers would be greatly appreciated and if this project does go well might consider studing some type of programming or coding.",1,1,Financial_Touch_1069,learnprogramming,4260784,2025-10-28 15:26:37,https://www.reddit.com/r/learnprogramming/comments/1oicecy/complete_beginner_trying_to_create_a_learning/,False,False,False,False,1,['quick note i know im probably leaving a lot of info out so if anything you may need to suggest something let me know please']
+1oi5mia,Trouble with CSS,"Good morning, everyone!
+Guys, I'm learning front-end, but I'm having a lot of trouble with CSS. I've already taken courses, watched several videos on YouTube (even those 1-hour long lessons) and took notes, but I always end up forgetting everything.
+Whenever I go to practice, I have to keep going back to the videos, and even then I can't retain the content.
+Anyone have any tips?",1,2,rwelld,learnprogramming,4260784,2025-10-28 10:23:12,https://www.reddit.com/r/learnprogramming/comments/1oi5mia/trouble_with_css/,False,False,False,False,1,"['Have you tried using documentation and written guides instead? There are a plethora of them available, not the least of which to get you started is W3Schools.\n\nhttps://www.w3schools.com/css/', ""You have to practice as you go! Don't just write down notes, try everything as you learn it.\n\nOpen up your html and css files, try things, and see what happens.\n\nTake the time to experiment. Make sure that you see what happens if you change things.\n\nFor example, if they teach you to use margin: 3px, try changing it to margin: 300px to see what happens.\n\nFinally, focus on learning the concepts, rather than memorizing. Nobody cares if you forget the exact name of a CSS property, you can look that up in 10 seconds. The important thing is to learn how to use CSS to achieve the results you want.\n\nConsider pulling up a CSS cheat sheet like this: [https://htmlcheatsheet.com/css/](https://htmlcheatsheet.com/css/) \\- so you don't need to keep going back to the video. Have all of the syntax at your fingertips. Then all you have to do is practice using it.""]"
+1oi57fk,Big O Algorithm Comparison Table (Simple),"Found this, thought it could be of help to aspiring devs or junior devs.
+
+
+| Big O          | Name        | Example                    | Performance|
+| -------------- | ----------- | -------------------------- | -----------|
+| **O(1)**       | Constant    | Accessing an array index   |  Fastest   |
+| **O(log n)**   | Logarithmic | Binary search              |  Very fast |
+| **O(n)**       | Linear      | Scanning a list            |  Good      |
+| **O(n log n)** | Log-linear  | Merge Sort                 |  Efficient |
+| **O(n²)**      | Quadratic   | Nested loops (Bubble Sort) |  Slow      |
+| **O(2ⁿ)**      | Exponential | Recursive brute force      |  Avoid     |
+",1,3,LeblakcSnake,learnprogramming,4260784,2025-10-28 09:57:39,https://www.reddit.com/r/learnprogramming/comments/1oi57fk/big_o_algorithm_comparison_table_simple/,False,False,False,False,0,"[""Though do also keep in mind that these behaviours omit constants, so in some cases the worse big-O option may be the better practical option, and for very small *n* the constants may be the dominant factor in actual time spent.\n\nYou can also generally trade off time and space in computing, so how much memory you have available can also affect what the best choice in a given situation is. Having a fast algorithm doesn't help if the practical result is an out-of-memory event."", 'Combinatorial explosion is missing: O(n!), Example: Traveling salesman problem, with worse performance than exponential.']"
+1oi55ar,"Building a ""Trello + Chat"" learning project - am I overscoping?","**Hi, I am a recent graduate who is struggling to land a job. I already have many projects to my name, does this project sound like a good idea ot build, the plan is to host it and build a user base.**
+
+**What I'm building:** Kanban boards + real-time team chat in one app
+
+**Features:**
+
+* Workspaces & team members
+* Boards with drag-drop cards
+* Card details (description, checklists, comments, labels, due dates)
+* Real-time WebSocket chat per board
+* u/mentions & link messages to cards
+* Notifications
+* Search & filters
+* Dark mode
+
+**Tech:** Spring Boot + React + PostgreSQL + WebSocket
+
+**Timeline:** 4-5 months
+
+**My question:** Is this too much for a personal project or actually reasonable? What would you cut?
+
+Just trying to build something real that will help me land a job.",1,1,DressSecret1702,learnprogramming,4260784,2025-10-28 09:53:53,https://www.reddit.com/r/learnprogramming/comments/1oi55ar/building_a_trello_chat_learning_project_am_i/,False,False,False,False,1,"[""Whether or not it is too much depends on your ability to manage the implementation of all of those features.\n\nI'd say that you have to define your minimum viable product first, and break all features down into tasks. Once you created your own set of tasks, you have to judge them based on how important it is, and how long you think it would take to implement. (Funny enough, a kanban board would actually help with this). \n\nIn a nutshell, you need to make a plan, and stick to said plan. If you steer off the plan, and just randomly do other tasks, you'll end up with an insane amount of tasks unfinished instead of having 2 tasks finished.""]"
+1oi4y2a,Python for non-coders,I want to start my python journey and have no previous coding experience. Is it possible for me to learn ? I want to use python in power BI as I deal with a lot of data on daily basis. Open to suggestions on how to start my journey,1,4,Automatic-Ebb-6564,learnprogramming,4260784,2025-10-28 09:41:00,https://www.reddit.com/r/learnprogramming/comments/1oi4y2a/python_for_noncoders/,False,False,False,False,0,"[""Every single person who has ever started learning programming from scratch didn't start with any kind of prior programming knowledge. So yeah of course it's possible."", 'As /u/plastikmissile said: everybody ever started from zero at some point.\n\nFor Python, do the MOOC [Python Programming 2025](https://programming-25.mooc.fi) from the University of Helsinki. Targeted at complete beginners, zero prerequisites, free, textual, extremely practice oriented, top quality and a proper first semester of ""Introduction to Computer Science"" course that not only teaches the Python programming language but also programming.']"
+1oi3w8l,Overwhelmed and behind in programming,"I’m a third-year Computer Engineering student, and I’ve been really struggling with programming. The classes are already at a high level, and I can barely keep up. Most days I wake up feeling completely overwhelmed, telling myself that I’m not good enough or that I’ll never catch up.
+
+At the same time, I don’t want to give up. I’ve started therapy and I’m trying to work on my mindset, but I also want to take real action and improve my skills. My goal is to learn consistently and become good enough to get an internship or a junior position within the next year.
+
+The hardest part is staying focused while juggling university work and self-study without burning out. How do I deal with this feeling of being behind?
+How many hours a day should I realistically study?
+What should I focus on LeetCode, small projects? Where do i start? ",1,6,Fabulous-Fan3292,learnprogramming,4260784,2025-10-28 08:28:00,https://www.reddit.com/r/learnprogramming/comments/1oi3w8l/overwhelmed_and_behind_in_programming/,False,False,False,False,0,"['university is typically structured to be a full time job, e.g. 40 hours a week. maybe you\'re faster and that\'s great, but go in with the mindset that it is 8 hours a day monday to friday.\n\nthat said you\'re experiencing a classic anxiety spiral, ""don\'t do the thing for whatever reason"", ""feel anxious because you didn\'t do the thing so you don\'t do the thing because you\'re anxious"", ""feel even more anxious because you didn\'t do the thing..."", and so forth.\n\na classic way to combat this is chunking and doing a small chunk, e.g. break down the task into such small tasks you can do a task in 10 minutes that is clearly defined. once you\'ve done ***anything*** it is really easy to keep on doing things, so you\'ll typically be motivated to do another chunk, and so forth.\n\nto add here is that if you don\'t understand something good enough to break it down into a small chunk, that itself is a chunk e.g. open course material and read about loops.\n\nfinally: people that struggle with self-motivation often find that task lists help as you can get instant gratification by checking off the things from the list after as little as one of those short tasks instead of just having the big reward when the entire work is submitted.', 'Don’t chase 10 resources, Master one at a time. Build a small project → debug → document → repeat. That cycle builds skill and confidence. For mindset: progress, not perfection. You’re already doing the right thing by reflecting and seeking help, That’s how good engineers grow.', ""> Most days I wake up feeling completely overwhelmed, telling myself that I’m not good enough or that I’ll never catch up.\n>\n> […]\n>\n> What should I focus on LeetCode, small projects? Where do i start?\n\nHonestly: Therapy. You shouldn't wake up like that. Talking to a professional sounds like the best course of action here.\n\nThere may be some coping strategies that work well for you, but if your issues wind up stemming from something like ADHD, you may need some medication. We in the online peanut gallery can't figure that out for you. Talk to a doctor."", '>  I can barely keep up\n\ndrop classes until you can keep up.']"
+1oi2p7u,"Should I focus mainly on foundation or academic studies, or should I stop overthinking those and instead just focus on growing my skills?","I’m currently in my 4th semester, taking the Algorithm course. I got 80 marks in Data Structures. I know that’s not a great score, but it was actually the 2nd highest in my section 😊 so I’m not thinking about retaking it.
+
+My university is quite far, and just commuting there and back takes a huge amount of time — if I could’ve used that time for extra studying, it would’ve made a big difference. Almost 4–5 hours get wasted every day. I even tried shifting to a place near my campus, but the bachelor environment there didn’t suit me, and I ended up studying even less.
+
+My university performance isn’t at the top, but I’m usually a bit better than the average students. Foundation courses stress me out more, especially the humanities ones. And lately, I’ve been feeling like I can’t keep going like this.
+
+So, what should I do now? Should I focus mainly on foundation or academic studies, or should I stop overthinking those and instead just focus on growing my skills?",1,2,Bugs_404,learnprogramming,4260784,2025-10-28 07:03:55,https://www.reddit.com/r/learnprogramming/comments/1oi2p7u/should_i_focus_mainly_on_foundation_or_academic/,False,False,False,False,0,"['If you stop focusing on academics, will it jeopardize your ability to pass these courses? \n\nSome people do both (academics and grow their skills).']"
+1oi0ymt,Help with starting,"Hey everyone so im just started to look into coding and I had this thought that maybe I could save some time writing invoices for sales using code and the excel sheet, but I’m not really sure where to start learning or if it’s even possible. I’m looking into learning SQL and python and any insight on what skill would be necessary for this idea or any resources to learn would be greatly appreciated.",1,1,Necessary_Angle_5415,learnprogramming,4260784,2025-10-28 05:10:09,https://www.reddit.com/r/learnprogramming/comments/1oi0ymt/help_with_starting/,False,False,False,False,1,['Choose the language with the end goal in mind: https://www.precodecamp.com/blog/choosing-the-right-programming-language-for-your-tech-career-in-2025/']
+1ohz78q,Jest Test issue,"I've written some in test using Jest and if I run the test isolated they work but when I run the entire test suite they will work soemtimes and other times it won't. The same component is being used in multiple files in the test, so I'm assuming it has something to do with that. I've tried cleaingMocks and resetModules but it doesn't work. Not sure what to do next",1,3,gdsdsk,learnprogramming,4260784,2025-10-28 03:29:43,https://www.reddit.com/r/learnprogramming/comments/1ohz78q/jest_test_issue/,False,False,False,False,1,"[""What version of jest are you using? I've been having issues with version 30, so I downgraded to version 29 and things have been working smoothly.""]"
+1oinbdl,Princeton's Intro to CS: Python,"[https://introcs.cs.princeton.edu/python/homehttps://introcs.cs.princeton.edu/python/home](https://introcs.cs.princeton.edu/python/homehttps://introcs.cs.princeton.edu/python/home)
+
+  
+I've started to learn Python 6 months ago and the exercises about loops and arrays are too difficult for me. Are these supposed be some beginner-friendly material? Am I stupid? I take notes, ask to GPT, code myself, try to understand the solutions but it is overwhelming. Does anyone else use this material? I am exhausted.",0,1,joeythelegion,learnprogramming,4260784,2025-10-28 22:18:33,https://www.reddit.com/r/learnprogramming/comments/1oinbdl/princetons_intro_to_cs_python/,False,False,False,False,0,"['It\'s normal to find the exercises challenging.\n\nKeep in mind that this is a textbook designed to accompany a college course. Most people who use it are also taking a class with lectures, with access to a T.A. or professor with office hours, other students to study with, etc. - trying to learn solely from the book, by yourself, is doing it on ""hard mode"".\n\nThat doesn\'t mean it\'s impossible, but you should expect it to be tricky. Feel free to get help here - post any specific exercise you\'re stuck on.']"
+1oilrha,How to get certified for HTML?,"Last year I had started the Responsive Web Design course to learn HTML and get a certification. Now after a fairly long break due to personal problems I'm back on the site and there is only one course called ""Certified Full Stack Developer"". 
+Is it still possible to get a certification by finishing HTML, or do you receive one certification that includes everything once you finish the course? I saw it's in Beta so how could I get certified in HTML?
+Thanks in advance for the help",0,12,Prudent_Respect_5070,learnprogramming,4260784,2025-10-28 21:17:22,https://www.reddit.com/r/learnprogramming/comments/1oilrha/how_to_get_certified_for_html/,False,False,False,False,0,"['Better go for full stack. ""HTML certificate"" sounds like a joke. I mean, when you put it in LinkedIn or on your CV, it will be worthless.', 'Being ""certified"" for html/full stack actually doesn\'t mean anything.  You get the ""certificate"" but it holds pretty much no value in the job market.  The problem is there isn\'t a ""governing body"" that maintains that certificate.\n\nPlaces like Udemy give you a cert but it\'s just cuz you ""watched"" all the content which is why they hold little to no value\n\nJust pick a course/instructor you like and do that course don\'t worry about any types of ""certificates"" in this space', 'HTML certification would be useless and make you appear as someone with no real skills. \n\nHTML is something all Senior Developers know by default.', 'An HTML certificate on a resume would be an auto reject for most people.']"
+1oihf2p,Clarification regarding prefix sum problem,"Hi, I was learning prefix sums and came across this problem: MINVOTE
+
+>There are N minions who are competing in an election of the president of the ACM (Association of Cute Minions). They are standing in a line in the order from minion 1 to minion N. For each i (1 ≤ i ≤ N), the i-th minion has an influence level of Si. 
+
+>A single minion may cast any number of votes. Minion j will vote for minion i (i ≠ j) if and only if the influence level of the j-th minion is greater than or equal to the sum of influence levels of all the minions standing between them (excluding the i-th and j-th minion).
+
+>Your task is to find the number of votes received by each minion.
+
+
+
+>**Example case 1**: N = 4, S = \[4, 3, 2, 1\]. The official explanation given is:
+
+>*The first minion will get only a vote of the second minion.*
+
+>*The second minion will get votes of the first and third minion.*
+
+>*The third minion will get votes of the first, second and fourth minion.*
+
+>*The fourth minion will get votes of the second and third minion.*
+
+But why is this? Should the first minion not get the vote of the 3rd minion as well, since S\[1\] = 4 > 3? Similarly, shouldn't the second minion get the vote of the 4th minion? The official answer for this test case is \[1, 2, 3, 2\] but my code produces \[2, 3, 2, 1\].
+
+Here's my code that I wrote for this:
+
+    #include <bits/stdc++.h>
+    typedef long long ll; 
+    using namespace std;
+    #define F first
+    #define S second
+    #define FOR(i, init, upper) for(size_t i=init; i<upper; i++)
+    
+    void solve(){
+        ll n;
+        cin >> n;
+        vector<ll> s(100010, 0), ans(100010, 0);
+        for(int i=1; i<=n; i++) cin >> s[i];
+        
+        //Note that if minion j receives the votes of minion i
+        //then they will receive the vote of all the minions between
+        //them too, by the virtue of all S[i] being positive. Thus we only
+        //need to find the first i for which the condition holds, both from the
+        //front as well as the back.
+        vector<ll> pre(10010, 0);
+        for(int i=1; i<=n; i++){
+            pre[i] = pre[i-1] + s[i];
+        }
+        for(int j=1; j<=n; j++){
+            //For each j, find the first and last i's that work
+            for(int i=1; i<j; i++){
+                if(s[j] >= pre[j-1] - pre[i]){
+                    ans[j] += (j - i);
+                    break;
+                }
+            }
+            for(int i=n; i>j; i--){
+                if(s[j] >= pre[i-1] - pre[j]){
+                    ans[j] += (i - j);
+                    break;
+                }
+            }
+        }
+        for(int i=1; i<=n; i++) cout << ans[i] << "" "";
+        cout << ""\n"";
+    }
+    
+    int main(){
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr); cout.tie(nullptr);
+        int t;
+        cin >> t;
+        while(t--){
+            solve();
+        }
+        return 0;
+    }",0,2,insipid_integrator,learnprogramming,4260784,2025-10-28 18:32:04,https://www.reddit.com/r/learnprogramming/comments/1oihf2p/clarification_regarding_prefix_sum_problem/,False,False,False,False,0,"[""> But why is this? Should the first minion not get the vote of the 3rd minion as well, since S[1] = 4 > 3?\n\nRead the description again. It says minion 3 will vote for minion 1 (i.e. minion 1 will get minion 3's vote) iff the influence level of minion 3 is greater than or equal to sum of the minions between them. So the correct comparison is S[3] = 2 >= 3 which is false.""]"
+1oierwj,How to find minimum number of days for a schedule according to a preference via graph?,"Hi everyone. I am tasked with a question as follows:
+
+We have n players and we want to hold a wrestling tournament with exactly n \* (n - 1) / 2 matches. In each day a player can only play at most one match. However, each player has a certain preference when it comes to playing others. Here is an input example:
+
+```
+4
+4 2 3
+3 4 1
+2 4 1
+1 2 3
+```
+
+In this example player 1 wants to play against 4 2 3 in order. This means that they want to play against player 4 before they play against 2 and so on. I am supposed to find a **graph** based solution which prints out the least number of days it takes to plan such a tournament or print -1 if it cannot be done.
+
+My solution has been to create a preference queue for each player. Then for each day build a preference graph where edge (u, v) exists if and only if v is the front of the preference queue of edge u. Then I use DFS to extract all cycles of length 2. These cycles represent two players who are willing to play each other and I add the pair to a linked list called 'match'. Then I dequeue the preference queue's of said pair and continue to do so until either everyone plays against the players' they want  to play against or we reach an impossible solution where no two players want to play against each other, in said case such schedule is impossible. The worst case running of this algorithm is Θ(n^3) and its best case is Θ(n^2) which unfortunately causes time limits when submitting so either the algorithm itself is not the best or it could be implemented better. 
+
+Here is the solution in python:
+
+```python
+from typing import Optional
+from collections import deque
+
+
+class SinglyListNode:
+    def __init__(self, key):
+        self.key = key
+        self.next: Optional[""SinglyListNode""] = None
+
+class SinglyLinkedList:
+    
+    def __init__(self):
+        self.head: Optional[SinglyListNode] = None
+    
+    def listPrepend(self, key):
+        node = SinglyListNode(key)
+        node.next = self.head
+        self.head = node
+    
+    def listDelete(self, node: SinglyListNode):
+        if node == self.head:
+            self.head = node.next
+        else:
+            prev = self.head
+            while prev is not None and prev.next != node:
+                prev = prev.next
+            prev.next = node.next
+    
+    def listSearch(self, key):
+        x = self.head
+        while x is not None and x.key != key:
+            x = x.next
+        return x
+
+class Vertex:
+    
+    def __init__(self, number: int):
+        self.number = number
+        self.color = None
+        self.parent = None
+        self.d = None
+        self.f = None
+
+
+class DirectedGraph:
+    
+    def __init__(self, n: int):
+        self.V = [Vertex(i) for i in range(n)]
+        self.E_n = 0
+        self.Adj = [SinglyLinkedList() for _ in range(n)]
+        # match is a linked list which stores cycles of length 2
+        self.match = SinglyLinkedList()
+        self.time = 0
+    
+    def addEdge(self, u: Vertex, v: Vertex):
+        self.Adj[u.number].listPrepend(v)
+        self.E_n += 1
+    
+    def removeEdge(self, u: Vertex, v: Vertex):
+        node = self.Adj[u.number].listSearch(v)
+        self.Adj[u.number].listDelete(node)
+        self.E_n -= 1
+    
+    def isEmpty(self) -> bool:
+        return self.E_n == 0
+
+    def DFS(self):
+        for u in self.V:
+            u.color = 'W'
+            u.parent = None
+        self.time = 0
+        self.match.head = None
+        for u in self.V:
+            if u.color == 'W':
+                self.DFS_VISIT(u)
+    
+    def DFS_VISIT(self, u: Vertex):
+        self.time += 1
+        u.d = self.time
+        u.color = 'G'
+        x = self.Adj[u.number].head
+        while x is not None:
+            v = x.key
+            if v.color == 'W':
+                v.parent = u
+                self.DFS_VISIT(v)
+            elif v.color == 'G':
+                # A cycle is now detected. Check if it is of length 2
+                # meaning that two players want to play against each other
+                # If yes, add the pair (v, u) to `match`.
+                cycle_len = u.d - v.d + 1
+                if cycle_len == 2:
+                    self.match.listPrepend((v, u))
+            x = x.next
+        self.time += 1
+        u.f = self.time
+        u.color = 'B'
+
+def wrestlingTournament(n: int, pref):
+    G = DirectedGraph(n)
+    # `P_Q` is an array of queue's storing each player's preferences
+    P_Q = [deque() for i in range(n)]
+    for (i, i_pref) in enumerate(pref):
+        for j in i_pref:
+            P_Q[i].append(G.V[j])
+    for i in range(n):
+        if len(P_Q[i]) > 0:
+            G.addEdge(G.V[i], P_Q[i][0])
+    G.DFS()
+    # the loop ends only when all matches are covered (the graph is empty)
+    # or when there is no viable schedule
+    days = 0
+    while not G.isEmpty() and G.match.head != None:
+        days += 1
+        x = G.match.head
+        # `match` is a linked list which stores pairs of vertices
+        # that create a cycle of length 2
+        while x is not None:
+            (u, v) = x.key
+            P_Q[u.number].popleft()
+            G.removeEdge(u, v)
+            P_Q[v.number].popleft()
+            G.removeEdge(v, u)
+            if len(P_Q[u.number]) > 0:
+                G.addEdge(u, P_Q[u.number][0])
+            if len(P_Q[v.number]) > 0:
+                G.addEdge(v, P_Q[v.number][0])
+            x = x.next
+        G.DFS()
+    if G.isEmpty():
+        return days
+    else:
+        return -1
+
+
+if __name__ == ""__main__"":
+    n = int(input())
+    pref = [
+        [int(x) - 1 for x in input().split()]
+        for _ in range(n)
+    ]
+    print(wrestlingTournament(n, pref))
+```
+
+Our TA says that there is a solution which always runs in Θ(n^2) and that we must utilize topological sort. However, I cannot see how topological sort can help us here. If we use topological sort on each of the preference graphs then it's essentially the same as DFS. If we use it on the full graph where each vertex is connected to every other vertex, I don't see how that can help us either. I would like some help here as I have been stuck on this question for a while.
+
+The question gives us the value of n on the first line. Then for the n following lines we will have n - 1 numbers representing the preference of each player. For instance, the given example given at the start is interpreted as:
+
+```
+n = 4
+1: 4 > 2 > 3
+2: 3 > 4 > 1
+3: 2 > 4 > 1
+4: 1 > 2 > 3
+```
+
+Remember, **solutions must be graph based**. The implementation is not really required and a detailed pseudocode will suffice.",0,0,Zestyclose_Dog5059,learnprogramming,4260784,2025-10-28 16:54:10,https://www.reddit.com/r/learnprogramming/comments/1oierwj/how_to_find_minimum_number_of_days_for_a_schedule/,False,False,False,False,0,[]
+1oi4eut,Need everyone's advice on future direction for 1.5 years experienced C++ developer,"Hi everyone,
+I’m 24 years old and currently a junior C++ developer. I work at a Vietnamese software company that outsources projects for Japan. My job is to develop C++ services for Flutter-based car apps.
+
+Recently, my previous project was cut by the Japanese client, so I got transferred to a new one. In this new project, I’m mainly handling the handover of an old C++ app built with the client’s internal framework. However, I feel that this framework isn’t very valuable in terms of transferable knowledge — the Japanese side doesn’t even use it anymore (they’ve switched to Flutter for newer models).
+
+Right now, I’m feeling pretty lost because I don’t think I’ll grow much technically if I keep working like this. I’m currently interviewing at a company that uses Golang and microservices.
+Should I switch to that direction to look for more opportunities? I’d really appreciate your advice.
+
+Finding a C++ job at the junior level in Vietnam has been quite difficult for me. Almost company requires 3yoE 🥲/senior level",0,4,Formal-Proof-5221,learnprogramming,4260784,2025-10-28 09:05:04,https://www.reddit.com/r/learnprogramming/comments/1oi4eut/need_everyones_advice_on_future_direction_for_15/,False,False,False,False,0,"['Keep doing your job and keep an eye out for other opportunities. YoE is the name of the game and there’s only one way to keep that up ;)', '+1 to Prnbro\n\nBut adding that your current boring (less hands-on code) project might still look nice on a CV when it’s done. Could look like a good chunk of “real, difficult work” to hiring managers if you pitch it right.\n\nIf you are not doing enough actual coding then maybe there is a *reasonably well defined* project you always wanted to do in your spare time? Have a go at that especially if it aligns with what software / career path you want in future!']"
+1oi3g9d,What do I need to learn for my project,"Hello I am a software engineering student who wants to get an early start on his graduation project. My idea is to create a mobile app that helps manage educational facilities (schools, universities, etc.) which is something very lacking in my country.
+
+After asking around online I learnt that such idea will need to have a GUI that is decoupled from the backend so for example any place that wants to implement this can do so with minimal changes they just need to plug in their own database. How can I and what should I learn to achieve this?
+
+I will most likely be learning dart and using flutter to create the app but idk what else I will need.  
+I will appreciate any advice or suggestions
+
+for some extra context: The teacher who is supposed to be my advisor suggested to me the worst project idea I have ever heard so I want to convince him to switch to something else so I want to make sure I understand what I am trying to do so A. i dont bite off more than I can chew B. It will be easier to convince him if i understand what are the tools that I will be using
+
+Also the idea he gave me was ""make an app that can create a timetable for lectures for a university using AI technology""",0,6,Roxas1399,learnprogramming,4260784,2025-10-28 07:57:05,https://www.reddit.com/r/learnprogramming/comments/1oi3g9d/what_do_i_need_to_learn_for_my_project/,False,False,False,False,0,"[""Ok lets have it flesh it out.\n\nDart and Flutter is one part of a tech stack, as this would basically be the frontend. For the back end, that's when you'll learn something like, for example, Java Spring Boot. There's a lot of backend frameworks, so this is something that you would research. Then you would need a database to store all your data into. Because where would the accounts of various users be stored into? An example would be PostgreSQL. Now, you would configure both the front end and back end to communicate with each other. First, locally. Then hosted within the school's network. This is basically where you would collaborate with the school's board or faculty or IT group. Of course, you would ideally pitch this idea to the school first if they approve it, then you start making the app. \n\nLastly, deployment. This one I don't really know too much about, but it's in regards to how your backend gets deployed. Or maybe your frontend as well if you plan to also create a web build of it.\n\nUnless I miss something, this is a high level explanation of what you would do for an account management system, that holds information of each user that may include their class level, class name, teacher, course, etc."", '> ""make an app that can create a timetable for lectures for a university using AI technology""\n\nWhy do you think that this was the ""worst project idea I have ever heard""?\n\nScheduling is far from a trivial task. To me, it sounds like a very reasonable project idea as well.\n\n> My idea is to create a mobile app that helps manage educational facilities (schools, universities, etc.) \n\nVery, very broad definition. *What* in detail do you want to manage?\n\nIMO, this is a monster of an application that you most likely won\'t be able to pull off.']"
+1oi2yjm,Please enlighten me,"Would it be beneficial to learn frontend alongside backend, i am following a bootcamp for backend and thinking of learning frontend via self learn, i would be more than thankful to know if i am fucking this up or not",0,5,blurryface1209,learnprogramming,4260784,2025-10-28 07:22:13,https://www.reddit.com/r/learnprogramming/comments/1oi2yjm/please_enlighten_me/,False,False,False,False,0,"[""I'm a huge opponent of newbies getting overly specialized this early. I think *all* web devs should know at least the basics of both the frontend and the backend. So yes, go ahead and learn."", 'As someone who didn’t touch frontend stuff until like 7 years into working full time as a software engineer, I would highly recommend it. Working on backend stuff, it’s a lot easier to demonstrate what you have and how it works with even a simple frontend instead of handing someone an api spec. \n\nEven if you only ever end up doing backend stuff, knowing how the frontend interacts with the APIs you create will make you a much better backend developer.', ""Learning frontend alongside backend was an amazing experience for me. There was just this satisfaction of seeing all that I've written, displayed in such a nice way on a browser. You should deffo go for it"", 'New knowledges are always beneficial, even if you never get a chance to apply them directly.']"
+1oi0gn9,Epoll Proxy design questions,"Hi there,
+
+This is my first time posting on this subreddit. If you think my question is better answered in other subreddits, please let me know.
+
+So my last project was creating a [multi threaded web server in C](https://github.com/navrajkalsi/server-c).
+
+Now for my next project, I want to take the next logical step and use **epoll**  and implement it to create a proxy in C. I have been researching and have started to code, but there is just so much to reason (at least for me) and think about with epoll when comparing to threads.
+
+The proxy will **only deal with one host (upstream)**, so I do not need to call `getaddrinfo()` which blocks. I will be storing host info before `epoll_wait()`.
+
+Today after scratching my head all day, I decided to create a diagram to help myself and ask if there are any mistakes in design and, more importantly, do I even understand epoll correctly?
+
+Please look at the linked diagram and let me know if you see any mistakes and /or bad practices, or just suggestions to make it better.
+
+One thing right of the bat, that I know will be tricky to implement, the timeout for keep-alive after response is sent to the client. Do you have any suggestions how to implement that?
+
+The diagram can be found [HERE.](https://app.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=proxy-c.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20id%3D%22ilo_-yqRA67Oo0lKhHql%22%20name%3D%22Page-1%22%3E7V3bc5u4Gv9rPJM8OMPFGPyYi9vuTE%2Bbk3Zn2%2FOSkUG2OcGIFXId71%2B%2FupqLICYxODjpPmwsIYT47t9Pn%2BjAvl49fsQgWf4HBTAaWEbwOLBvBpZleo5B%2F7CerewxLdmzwGEg%2B7KOb%2BE%2FUHaqYeswgGlhIEEoImFS7PRRHEOfFPoAxmhTHDZHUfGpCVhAreObDyK9968wIEvROzGMrP8TDBdL9eSxurICarDsSJcgQJtclz0d2NcYISJ%2BrR6vYcSop%2Bgi7vtQc3W3MAxj0uSG6e2PS%2FN%2F%2BOFucxU%2B%2Fnd54%2Fx1dzu0XTHNLxCt5RvL1ZKtIgFG6ziAbBZjYF9tliGB3xLgs6sbynXatySriLZM%2BnOOYnKNIoRpO4BzsI7o4q70tcrl%2F4KYwMdcl1z7R4hWkOAtHSKvWo64QwqSI5ubjCk7YVvmGTKayF4gJWGxmzojFv0h6fUM2o08jVQwoMIjmwiTJVqgGETTrPeqSMxszGeEEknC%2F0NCtlITwJqgIoEpBfH2B7v%2FwlHNn3I63rh5LLS2slXLghStsQ%2BfkhH5ngTgBSRPEWQsBjIqPMlSDCNAwl9FFWudP2rdOdlO6TuQ%2BwSjx%2B3ZwBpz2UwTEBe4OP57zXTyagb8hwXn19AXEn3JqIBBnCoyXnHLs7sWMbkbBgA%2FnOHF7IwKHl25of6ci7%2FsChdf1sj%2FOD%2FnE6rH018L9hcmKIru58G5WjAlhlizuH6YvragmU5RM01DV03qCHTVdDpTTFNjPGc5JSK7NWVcXELOr5TAOIwXXA38ByrdlnEGIgxBwF5wFnJC0iXGQWm46AGBuE6VlIo9YxR7QEzFLPbhucYZSlBSJH8Vd1KC0QNURjRGMbMb8zCKSl2AiltMmz5lHaT9V4xlIXVdl%2FLCKgyCCqPDTLQ0L147EjAqicC4QgJcS5cANa59CXAq3JrQHvb2lerOLgxTThemy17y%2BKQ6FiWJt%2BeUO7oYsAsYrdSVe59KF4FneXUWa6pR534ITRsefFyUEs%2FQpaTKhdtdSYljasQ%2BggN%2FuSNW%2FnW%2FI570yhE77hulszPqF50nb5XOXq%2Fo7I57Ree95HNbF1N56y0KuTNVYcCoaOB3kaGaQkiEvKvEhN0yXs4X5VB6wpf25N%2Ftlz1X685FVyK02YCQnOlh77ETEtv0LtxSUlKBF5i2dXHMtMSxX0M8j48XqOhjv1m3%2BiXWE02sp7dfP3%2F%2B4wuNzcGKyWk8SxORC%2FDQPQh%2FqbBdxP7qwkx1Z3nnLtifZZH%2Bri830atrTymXs6vSeasiTO9ObyyNLxqdge%2FDhNz7UUhfvJBbaeQu0FpOg%2FfxRLs1YvonE3%2FxcPaDv0yC0jScRSzxE%2BtJG896wIJmNK18YGsgVXI4vfx4yeW4sRTWr63RYp8%2Ff8rRFwj8ZR6N4QSmuStDYyLaKdCXFQpgbxYOgiBbuOB4HSTE1YiwcfMILFKONOiLK9ianQliKCFvTL%2FnGl%2B%2FTL99%2Bprvmd7d5Vqf%2FrzNte5uePs4tqgWWUjpLZSP37kHM7IO2hq1Y8NKgejIrLBhoyqowerMiPUrZ9jrxFVqu9%2BJO71y4mrdbTpxodOn5cUts3duvB6T3RGTAe%2Bv5MTZo3cuHNBFhkD48AAQ8NuBN5g%2FnA8UHI7h32uYshfhGHlKQk7WGLEuH62SCBI2DswZCE2dk3y7a8EIvCpxZYUw951LGAvuhJHgTp9e3VCviyFZ45hvDM22Vcxkb1Ur3wUjdTb9%2BuFckDXm0QVK4SC%2F6XCdjzmCMFV1EEcQWP7S8zXnbInhc2bt%2BOIazhUgYXJ4hUbEqzYu624%2B0ZjEMnoXlIz1jdL3AVE4TUsaxq1DFM2g05FRgk7FSjuDTh29VkKkF39%2Br7cQWuS0TlJCbduqGCr1KSyyvb6FRUrCcpTf4JB7RxaE0OiDO5LMwGLoQyporFPuKyv731VopNYjYqOSh%2F8dGB0QGImAKBXeW8VF0bYiEKJjhBisgKxAyaaSYVGGO3XPExW4sWWJ5ZQDAR6YCImRdQ8kul8hHvcIEISXWej8bBXveB9wh%2B32L7SwNbMmQ1MuAFymlbtoVzQTDBkxy8arrH%2BlFbBguj7kbHN9mTaAIKcNeUiwRiu4M26qFkVFKCrJe1GLolZM3Ia%2B3upOK0avEV8fECc7TePkfqGA41epOIKPIfmhMhX6%2B2eW0tBWlsSwxjbXuIU4pO%2FNyvEOzGvGjflld5LXXGIMtrkBCctX0vq0p%2BS3PNnOWC8mbDXVGeupzk%2BYVsrLZzCDUZHHz6ifhGn4D0epBFclLejkztXAuank85PCrBm%2B3akX%2BZRB%2FmBJlUEcGheeV8qAhnKqAxPYYcnYOqUZ0HzON%2FjaT13dE6vibKyjbjc6qrHOUidkdme03NHFJPefV5yxBop4ru7b5isov6pCzyn%2FF9Rj3Xfrgp6X6L5hK5HaFmZ6qfx0r9vj%2Bj2jpnX8plFTyP9HVr2fZQUcclHZQQJSNoYXH5TTBfaqlhEgmM2SYESQj%2Fj%2BEU%2FWl4jPuQKElwaIUZRt85AGuR9ywfaT9f%2Bisl8dPrSKIpkuQcLGrR4X7ADmxTxCG38JMLkIoB%2BmIV17zXmB%2BujbctoJv029DM%2BdVITg4%2FGFVVGHZ467isJdPTd9bh4JMeaIZ0oAWadqjOSwgOOOk02WN4xqsJa2s8vfoIt2InXiVci2WZFemp2dSHXfyYlUVdC%2BP4Ry2w6hDuPPU8Upb2eTxeldCamrH3PfbWow671acw%2FNf%2BfKN7lRl3FWKGoQ1%2FM5A7472GpRRQFym0WUnRjrWNZOCN%2Bini%2B32QXmjvAxPM0B2zCVdVedlybwGJBSZz4obJpJwvKojEdvlMGECvswgvGCu8ol5QRn8svW%2FQx2VLHz2TCycvRCQjTO5KvX6l5oN1ivTq285XfkcJB97F95qmedUuTAW%2B2hpup41d5wwjsSIuN6NQJypGoQRZDqapB3VEXrWn2LZLwTqyNXKrNft1rfQXoRKjkuoZLu%2BAiopKeHp71GJZUQtoJKjkclVHIofVF%2FYUmVwL89JezXQfuJXp%2Fa7606JRitKMZoZExOTDG8emT1YLw%2B97WdypRcVUPmQHq4Ssi2L1D7oD1k3S07qaqwpCqBMLtLIPSdGolrcKAlB2wIFsosPIyPgbCoSkotJq3G0mqhi5rItoTh9bIGVTIjCh%2FEJobQJgEt5Q7kUEuYoJifMeEjGPMIry6V2iW4V67ceyuJefkLVVWJ%2BXEhfU%2BvVimzwNiArJaYgVnAJ7mv1uXqhHPj1EZnga1dFJKLz53x1QyyfbNMzroHA7VS9hxalpN3RS1hKoRhAukOQXwe4vmWtMK1i%2FUhXtXn%2Faq0ors6ysmJfVFsYjUMwCf9yILd0lk1U9XSfqi7oVxDVLqhm7x5ohvHBwiTIbVtlDI9ThNaq%2BhjRT2KCqdS1DPp12fqTk3Vdl8Yb6RqVc%2B7MCzPcc0R%2F3%2Fp6WbDb7Y1WJZ7XNDaVAvIHzkR56X7awgU0N6CIbDsyejEDIGlMaxztEDt7apDd2KLP6vYqtq3EGfuqyK96nww54MK2ENVgPgm8IixXbYijQEJs7MQ8aS%2Btle5o%2FmS8yQvj1G9pmfildr2BSTWi6rmGGalmpslispm4EQzsXLhQOZj96ViXmdqpuN%2Bu3PLnPwpWMG9ZST79oZbQuGO%2FlE4BnESqtNozXyNWHgRalGfudnBEKwCh4EPbxpCMO1Rw430Dh3Eq%2Byk96TkRcH1%2FTH2tJn9W0giwsz%2BSSl7%2Bi8%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
+
+Thank you for your time!",0,3,NavrajKalsi,learnprogramming,4260784,2025-10-28 04:39:56,https://www.reddit.com/r/learnprogramming/comments/1oi0gn9/epoll_proxy_design_questions/,False,False,False,False,0,"['> One thing right of the bat, that I know will be tricky to implement, the timeout for keep-alive after response is sent to the client. Do you have any suggestions how to implement that?\n\nWhenever you want to wait you put the deadline and some kind of identifier into a list and when you call `epoll_wait()` you use the smallest deadline in the list to calculate the timeout. Whenever `epoll_wait()` returns you remove all expired deadlines from the list and use the attached identifier to do your timeout action.']"
+1oidg16,i don't know what to do next,"I’m a software engineer who earned my degree last year at age 30. I started studying later in life due to personal reasons, and lately finding a job has been really tough. I’ve gone through many interviews but keep getting rejected.
+
+I’m thinking about getting some certifications or taking courses to strengthen my skills and perform better in interviews and technical tests. Does anyone have advice on which certifications or areas would be most valuable to focus on?
+
+Sometimes I feel like my age is working against me, and it’s discouraging that most junior roles still require 2+ years of experience. I’d really appreciate any tips or suggestions from people who have gone through something similar.",0,5,nickolas7712,learnprogramming,4260784,2025-10-28 16:05:24,https://www.reddit.com/r/learnprogramming/comments/1oidg16/i_dont_know_what_to_do_next/,False,False,False,False,0,"['What field and roles in that field are you trying to apply to? \nWhat would you say is your area of expertise ? ( Meaning what language are you really strong and comfortable with? ).', 'Unfortunately it’s a very tough market right now.\n\nDo you have a sense of how your interviews went? Did you struggle in any particular areas? Soft skills, design, etc?\n\nWhat do you think are some of your weaker areas?\n\nHow much experience total do you have?']"
+1oi3euz,What is xAPI,Can someone dummy this down for me?  ,0,2,Own_Competition_3219,learnprogramming,4260784,2025-10-28 07:54:21,https://www.reddit.com/r/learnprogramming/comments/1oi3euz/what_is_xapi/,False,False,False,False,0,"['Have you read the [wikipedia page?](https://en.wikipedia.org/wiki/Experience_API) if so what specifically confuses you if not start there.', 'AI would explain that perfectly.']"
+1oio5bp,Building your own AI,Has anyone here bought the pieces and built their own AI?  I’ve read there are some pre build algorithms you can start from instead of starting from scratch.  Has anyone done something like this?,0,5,No-Mathematician3453,learnprogramming,4260784,2025-10-28 22:52:40,https://www.reddit.com/r/learnprogramming/comments/1oio5bp/building_your_own_ai/,False,False,False,False,0,"['No, it hasn’t been done before.', 'Yes building AI is easy, you can do stuff like image classification yourself. \n\nHowever building an LLM is not possible to do yourself.']"
+1oi6bkp,I want to make a game engine but i want it to be actually good,"So i really like graphics programming with opengl amd i wanna make a game engine like a proper one and i want to be able to render AAA quality graphics but i know thats pretty much impossible for a solo dev, any ideas on how i can make an engine and a game that will make use of it if im absolutely insistant on making it look good?",0,32,MarsupialPitiful7334,learnprogramming,4260784,2025-10-28 11:02:56,https://www.reddit.com/r/learnprogramming/comments/1oi6bkp/i_want_to_make_a_game_engine_but_i_want_it_to_be/,False,False,False,False,0,"['It is absolutely possible, if you are experienced in graphics programming and have about 5 years to spare. There are a lot of open source libraries you can leverage to get a leg up, an ECS system or a physics system for example. \n\nStart by choosing a language (C++ and rust, but also zig and other low level languages are possible) and look at other projects that already exist in the open sourc space. For C++, look at Godot. For rust, look at bevy. \n\nAAA graphics really comes from three things: \n\nA good rendering engine, good shaders and good lighting/level design. You can really only do so much, no engine can magically make things look good.', ""I use Vulkan for an ongoing hobby project, but beware that after over a year of picking in my spare time I only have model and animation import, skinclusters, skybox, and pbr working. Barely even started looking at shadows etc, etc so I have pbr character aimlessly walking around an env without any shadowing (haha).  That took quite alot of work, but it was perfectly doable.\n\nDon't get ahead of yourself. Make a little engine and learn from it. If you do have an idea for a simple game then go for it, but making Ghost of Yotei from scratch isn't going to happen."", 'The most fastest aaa engines for aaa games are sucker punch and decima. So , you can investigate what they use. But I am sure you are not able do it alone , you have to be crazy good at programming and have a full stuck team', 'do you have 5 years? If not use godot', ""What's yours experience in programming?""]"
+1oi5yf3,when you should not use ai,"I used to think: as long as you don’t just ask gpt to write code for you/actually trying to understand its output, you’ll be fine. Like, before you had to google for ready-code/solutions and now we can do the same thing, just with ai.
+
+But now I’m starting to think… there’s something more to it. 
+
+Before, there were no safety nets. If you didn’t do the work yourself, the task simply couldn’t be done. Now it feels more like a game: you can try a few times, and if it doesn’t work, no worries - AI will handle it.  
+Lazy to search through documentation? Just ask gpt.
+
+I'm building some projects and sometimes can use ai for it. Not just write code for me, tell me how to do smthg, but if i couldn't do something for a long time, I can ask it. And in the end.. it looks that I didn't get the idea of it (maybe in this case, you should just try to rewrite your code, okay)
+
+So my question is:  
+What kinds of things is it okay to ask ai for help with, and what kinds of things should you definitely avoid using it for? Maybe your own thoughts/rules",0,17,snikmas,learnprogramming,4260784,2025-10-28 10:42:27,https://www.reddit.com/r/learnprogramming/comments/1oi5yf3/when_you_should_not_use_ai/,False,False,False,False,0,"['\nAI is not a safety net. It can only give you something that looks like an answer. You can always use AI, just don’t trust what it says.', 'You should use it when you know exactly what you want to do and it saves time.\n\nIf it’s producing stuff you don’t understand you should not use it.', ""Ai should only ever be supplemental. If its used to solve the entire issue taking the time to break down the solution so that you can implement it yourself should be very important. It's also best to see if there are ways to optimize the code. Sure some function may always work iteratively but when you scale it basically turns nto a massive resource and cpu time sink. Understand how to optimize or more effectively execute the solution is definitely important. \nSee what the Ai did and recognize best practice solutions for the sections of code you had the Ai write."", ""I have tried using AI, and it has some severe limitations: \n\nI have built projects with mainstream technologies (Python/Flask + HTML/Tailwind) and with less mainstream technologies (rust/leptos/axum) \n\nthe quality of the code suggestions dramatically decreases when leaving the mainstream tech-stacks or trying to do something complex. \n\nThe only thing I still use AI for is line-completion (sometimes), and as a supplemental search engine: If I can't find something by hand in the normal docs, I often use AI to look for something online that is too complex to find with a simple search; mostly examples of someone doing something very specific with an exact tech stack, to use an as example."", ""Ai is really good at the basics. When it comes to more advanced or niche stuff it really struggles. It's bad at using APIs, especially the less popular ones. I've often found ChatGPT confidently spouting complete bullshit when asking how to use a particular API. It will just invent functions that don't exist.""]"

@@ -1,0 +1,932 @@
+id,title,selftext,score,num_comments,author,subreddit,subreddit_subscribers,created_utc,url,over_18,edited,spoiler,stickied,upvote_ratio,comments
+1oj1nr8,I got stuck faster than expected,"Hey everyone, I’m a CS major on my sophomore year, and I’ve been a victim of this rising phenomenon where students rely extremely on Ai tools to generate code and do assignments therefore outsourcing their brains and ending up with no foundation. 
+So I decided to build something, and http server in c++ (the language I understand best), but I don’t know where to start, I know nothing about network programming, sockets or even ports, for clarification I’m not aiming for building a multi-client production grade server just a simple TCP echo server that listens on a port and prints responses. 
+Thanks in advance ",41,39,blexed_mostafa,learnprogramming,4261006,2025-10-29 11:11:50,https://www.reddit.com/r/learnprogramming/comments/1oj1nr8/i_got_stuck_faster_than_expected/,False,False,False,False,0,"['[https://www.beej.us/guide/bgnet/html/](https://www.beej.us/guide/bgnet/html/) here’s a guide to network programming. It’s for C instead of C++, but it should still be applicable.', 'You’re never going to get over this unless you also learn to take some accountability. This didn’t happen to you. You’re not a victim. You made a conscious decision to let your LLM take the wheel. \n\nGenuinely though, congrats on changing course. I hope you stick with it.', ""> I know nothing about network programming, sockets or even ports,\n\n...and what gave you the idea to build a server?\n\nSo, start by learning exactly what you stated above. Do your research. By research I don't mean posting on reddit to get the information served for you.\n\nWhy do people always try to program things they have zero understanding of? You cannot solve what you don't understand."", 'Pick an OS and play with socket APIs first.\n\nJust read docs (WinSock on Windows or man pages on Linux) and do stupid experiments to understand.\n\nMost will fail, but you’ll learn.\n\nSmall steps are better. For example, just open a socket that listens on some port.\n\nLearning is effort. There’s always pain and frustration. Embrace it and the sky is the limit.\n\nAlso the high you get once you finally understand is indescribable.', 'I would recommend this readings:\n- [C++ asio](https://think-async.com/Asio/) which is using the proactor model\n- [C++ executor](https://github.com/bemanproject/execution) implementation\n- [C++ networking](https://github.com/bemanproject/net) which is an implementation of the C++ networking paper.\n\nThis should be a good starting point']"
+1oiwnd1,Where do I put Unit Tests?,"From my understanding unit testing ensures a partcular piece of code works by passing input and getting the correct output back, and continues to work long after. However, i'm still unsure about where it's needed.
+
+For example if you have a function that calculates the square root of a number, it's quite easy to unit test. But is that really necessary? 
+
+Just check it once and you can be essentially sure that it'll work perfectly forever (until a vibecoder modifies it for some reason). After all there's no reason to change it now or ever.
+Won't unit tests be overkill for this?
+
+What about functions and classes that are simple to understand/debug/modify? Should unit tests only be done for more complex code/frequently modified code?
+
+And if something needs unit tests how many should I do? Should I try to cover all the edge cases? Or just the common ones that are easy to break.
+
+Finally, what scope should unit tests be? It's probably not a good idea to make unit tests for each function, but what about per class? Should it be done per system instead?
+
+thanks!",41,17,LilBluey,learnprogramming,4261006,2025-10-29 05:49:28,https://www.reddit.com/r/learnprogramming/comments/1oiwnd1/where_do_i_put_unit_tests/,False,False,False,False,0,"['Let\'s take the square root example.\n\nIf your function is just calling sqrt(x) and returning, then no that\'d be silly to unit test - but then again why would you have such a function in the first place?\n\nLet\'s say the function is actually computing the square root using Newton\'s Method. Then wouldn\'t you want to test that it works? You could easily have a bug in your code. What if it works most of the time but fails for small numbers? What if it crashes if you give it a negative number?\n\nUnit tests can be useful for this sort of thing - trying a wide range of inputs to a function to ensure it works correctly.\n\nAs far as where to put them, the standard practice is to make them part of the same repository and to make an easy way to run all of your tests. The idea is that every time you change your code, you run all of your tests and make sure you didn\'t break anything.\n\nSo that brings up the second value of unit tests - they catch future problems. Suppose you want to speed up your code by using SIMD instructions to speed up math. You could rewrite your square root function and then re-run the unit tests to make sure it still gives the correct answer.\n\nThere\'s no rule for how many tests you need, but one goal that a lot of people strive for is to cover every line of code with at least one test. So if your function has an ""if"" statement in it at the top level, you\'d need at a minimum two tests to cover it - one test that covers the true branch, and one test that covers the false branch.\n\nThere are tools that will run your tests and tell you exactly which lines were and weren\'t covered by tests.\n\nFinally, as to what to test, unit tests are generally for testing individual functions. A good rule of thumb is to test all of the public interface of any class. So if there are some helper functions inside of a file that can\'t be called from anywhere else, you don\'t have to test those, but you should test whatever public functions or methods other parts of your code might be able to call.\n\nTesting systems is also a good idea, but then they\'re not called unit tests, they\'re called something else, like integration tests. They tend to have different tradeoffs, like they\'re usually slower so you can\'t have as many of them, and you might care more about the tests being robust than them being comprehensive.', 'Looking at your example specifically, A square root function could have plenty of side effects you’d want to test, and they may not be related to the math. Like logging abnormal inputs. If you replace your logging provider 3 years from now, you may forget about the log message until it breaks. Unit tests help catch that, if you have a test ensuring a log message is written properly. \n\n All of the following questions could be behavior you want to test so a) you know it’s working as designed, and b) you know it continues to work every time you run the tests.\n\n- depending on how strict the type system is for your language, what happens when the user enters “fish” or the string “42”, rather than the number 42?\n- What if the user provides a negative number - how do you want to handle that? Do you check the input before the calculation and exit gracefully? Or attempt it anyway?\n- Do you support the imaginary portion, or do you throw an exception? \n- What exception do you throw, and what is the message?\n- you may want to know if the input was abnormal or caused an error, do you have logging? You can unit test that a log message was emitted. \n- what happens when you provide 0? Or the largest input number? Or the smallest input number.\n- does it handle fractions correctly?\n- if it’s a sensitive calculation, you may care about the precision of the result - is that correct?', 'I think that you gave the perfect example on why to write unittests.\n\nSome vibe coder might change it for some reason. \n\nYour tests protect the production code from this kind of regression.', 'Lot\'s of good answers on the technical implementation but I think some things were left unanswered.\n\n1. How many people are working on the code\n2. What is the domain\n\nIf you are working on your own you can think more greedily about your own productivity. For example, only create tests when you start developing something and you know it\'s going to be annoying to test manually (like someone mentioned, a reimplementation of calculating a square root). Another good point to write some tests is before a big refactor.\n\nOnce there are more people working on the project it makes sense to add tests to provide some stability to the project. Most contributors are not able to test a project comprehensively, often code lacks the proper data to test the program, and tests can provide that. In general, a small team of experienced developers can work with less tests, only adding tests were it truly makes development easier. Once you go into bigger organizations or open source you will need more tests, because there is going to be people whose main task is to review and merge code and their life is made so much easier with tests.\n\nSecond, what is the project? I\'ve seen application UI code has usually less tests because a lot of the output is visual. Sure there are some methods like monitoring visuals changes, or component libraries where you can click though individual components. Something as simple as just checking all components render can be a good enough test. But in general the passing test for UI is that it looks good and is usable, and that needs more often than not some manual testing anyway.\n\nData processing oriented code, infrastructure code, and code that has difficult inputs or outputs on the other hand rely more on tests. Like how are you ""manually"" going to test that some data objects coming through your kafka stream are processed correctly so they can be sent to the database? The whole premise just asks for some kind of programmatical test.\n\nWhile 100% code coverage can be good, it is not the ultimate milestone. You can have 100% code coverage but still you are not handling some cases correctly and have bugs in your code.', ""If you don't know any better, just do a unit test. At worst, it shows how to run the code, at best it finds issues.\n\nCode coverage is a fine metric, so yes, cover every edge case. I have had error handling that failed on runtime because printing the error failed in python. \n\nA thing I like to do is make asserts or early returns specifically to break tests if my assumptions about the world has changed going into the function.\n\nOnce you have real world data (reported bugs by users) you need to add additional tests to make sure those cases are covered as well.""]"
+1oj59uk,Should you not do courses and directly develop/implement?,"I recently talked to a relative who just completed his degree from a prestigious college and landed his first job through campus placement. I told him that I'll complete my undergraduate in one year (I'm in a tier 4 college) and that I'm currently doing a web developement course, and will do a DSA course when I'm done. 
+
+This is the essence of what he said:
+
+""Courses are useless. You'll be stuck in an endless hell and waste your time. Instead, directly start developing and learn what you need on the way.
+
+For example, instead of doing a web developement course, decide on building some website, then ask ChatGPT how to do it. ChatGPT is the best learning resource right now. Note down the steps and watch YouTube videos to learn just what's required for the development of the website, for each step. Keep developing and you'll learn along the way. 
+
+Similarly, instead of doing a DSA course, just start solving LeetCode and learn as you do. You can look for explanatory videos for specific problems along the way.""
+
+I find that to be an interesting perspective. I would like to know what others think about it.
+ 
+I've completed about 40% of the course and it's a long one. Should I give it a stop?
+
+He also told me that software development/engineering is currently the easiest way to get into the industry. Once you're in, you can eventually move to other fields (AI, Cybersecurity, whatever you wish to get into). I would like to know your opinion about this as well.
+
+I thank you in advance for helping me out.",28,32,_Starblaze,learnprogramming,4261006,2025-10-29 13:58:45,https://www.reddit.com/r/learnprogramming/comments/1oj59uk/should_you_not_do_courses_and_directly/,False,False,False,False,0,"[""*Proper* courses (like FreeCodeCamp or The Odin Project for web dev) are still the way to get started and absolutely not a waste of time.\n\nGoing for tutorial after tutorial and only copying projects, however, is a waste.\n\nYou need to first get some foundation through a proper course and then, as soon as possible start using your learnt skills to do projects - starting with small, simple mini projects and gradually increasing scope, scale, and complexity.\n\nPersonal opinion: I would stay clear of AI for anything else than giving explanations or exercises.\n\nStick to your course and then do a bit of programming, then DSA. DSA don't make sense without experience. You will lack the context."", ""He's just completed his degree, so he doesn't know anything about working or teaching"", 'i wouldn’t trust anyone who says an llm is the best method for learning pretty much anything', ""So he finished his degree from a prestigious college AND got a job placement through the school, and he's telling you all of that is completely useless?\n\nAnd then he's telling you that you can accomplish the same thing by just asking chatGPT?\n\nI'm not sure why you find that perspective to be interesting, when your friend appears to have done something completely different to get to where he is.\n\nI mean, it would be interesting if it were true and everyone can avoid the financial heartache by skipping the multi-year degree programs (I'm surprised you can get a degree in one year), but it doesn't sound like he has much experience relying on being self-taught?"", 'How are you going yo directly develop something when you don’t know how to?\n\nThat’s what courses are for\n\nYour relative is stupid']"
+1oix6ga,"Feeling lost after 2 months of learning programming  I love it, but I’m stuck","Hey everyone,  
+I’ve been learning programming for almost 2 months now, and honestly… I feel really lost.
+
+I use AI sometimes to help me understand or write code, and while I *do* understand everything at first, after some time it’s like my brain just forgets it all. I feel like I’m learning things temporarily, not really *understanding* them deeply.Yesterday hit me hard my mentor asked a simple question about something basic, and I just froze. I couldn’t answer. I felt so dumb and that moment made me question if I’m even cut out for this.But deep down, I **really love programming**. I love problem-solving, creating things, and the feeling when something finally works. I just don’t know how to move forward when I keep forgetting what I learn.
+
+It hasn’t been long since I started, but I already feel like I’m behind everyone else. Should I restart from zero and rebuild my foundation? Or is there a better way to actually *retain* and *remember* things long term?If anyone here has gone through the same thing forgetting concepts, doubting yourself, feeling stuck how did you get through it?  
+What actually helped you improve your memory and confidence while learning to code?Any tips, motivation, or study habits would mean a lot. I really don’t want to give up on something I truly care about.
+
+ Ps i forgot to mention that i enrolled a program but they are really in rush imagine in this 2 months  we already passing through front end dev and java script and also react / react js  and now  react native",25,50,Celinee19675,learnprogramming,4261006,2025-10-29 06:24:12,https://www.reddit.com/r/learnprogramming/comments/1oix6ga/feeling_lost_after_2_months_of_learning/,False,False,False,False,0,"['You are describing how learning feels.  Your brain caps out on space. You need to sleep to create long term memory. \nAnd you need practice. I use mimo to learn the basics and review my knowledge.  Repeating and using your new knowledge is key to retaining it long term', ""> I use AI sometimes to help me understand or write code\n\n...and exactly there is the problem. If you let AI write the code, you do not *understand* it. You do not *learn*.\n\nThis is pretty much like reading and understanding novels doesn't automatically enable you to write them.\n\nYou need to write code yourself, you need to learn to solve problems yourself in order to improve. You need to struggle.\n\nAlso, practice, practice, practice, and more practice. That's the way to retain. Play around with the code. Try things. Experiment. Fail. Fix. Succeed.\n\nLearning programming is a marathon, not a sprint. Slow and steady wins the race.\n\nDon't compare yourself to others. You don't know their background. Compare yourself to your former self a couple weeks ago and see what progress you have made.\n\nRevisit your old programs and try to improve them with the new skills you have acquired.\n\n> If anyone here has gone through the same thing forgetting concepts, doubting yourself, feeling stuck how did you get through it?\n\nEverybody goes through such phases. Who claims they didn't is plain lying.\n\nPushing through this obstacles, being stubborn enough to not give up is the key to success. You already said you love programming, you are passionate for it and that's one of the keys to keep going.\n\nIf you *truly* care and *truly* love it, the thought of giving up shouldn't even encounter.\n\nSide note: 2 months is just the bare beginning. You have not even really scratched the surface of what is there. This is not meant to discourage you, but to only remind you of the vastness of the subject. Again, even that is not discouraging. Just do not look at the summit, at the amount that lies ahead of you. Look at the next step. Just keep going as if you were climbing a mountain."", 'Tldr; stop asking AI to write code \n\nPeople post this exact question all the time, and every single time there is ""I use AI to..."" Somewhere in the description \n\nWhat do you THINK is the solution to your problem? Only you know how much of your programming is done by AI but it sure sounds like that is the issue\n\nUsing AI as a simpler Google is one thing, its like having a personal mentor to explain things but using AI to write your code practically means you are just a manager telling someone else to do the programming, you obviously arent going to get any deep knowledge and muscle memory for solving even the most basic problems from that', 'Get a book', ""Like the others said, lay off the LLM. They severely hamper learning. You wouldn't become a good cyclist by doing laps on a motorcycle either. Writing is mental exercise.\n\nAlso, do give it time. The brain is a physical organ too, and sometimes it needs more time and exercise to be able to do something. Looking for a shortcut is very often futile, because what you actually need is to exert yourself.\n\nAlso, take breaks. The brain needs restitution too. Stare at clouds. Get lost in thought. [Talk to someone, or something](https://en.wikipedia.org/wiki/Rubber_duck_debugging).\n\nFinally, [_How not to learn Rust_ by Oláfur Waage](https://www.youtube.com/watch?v=DL9LANLg5EA) is a good talk on learning strategies, that mostly uses Rust as a concrete example of something to learn, but also painting styles and even baseball.""]"
+1oiuhad,What to learn to make Desktop Apps,"C# or Javascript + Electron? 
+
+&nbsp;
+
+I've been learning Python for the last couple of months so I'm already familiar with programming basics like iterations and Booleans and OOP and stuff, but honestly interacting with the console got old real fast.
+
+I finally managed to get into tkinter, and it was fun. So I think I wanna focus on that and I heard C# and JS are best for that. and I mean for actual desktop applications not web based services.
+
+&nbsp;
+
+I'm not particularly looking for career out of this, I'm just hobby coding and I want to know which of them is better.
+
+(I'm not ready for C++ yet)
+
+**Thanks**",18,14,Yelebear,learnprogramming,4261006,2025-10-29 03:44:16,https://www.reddit.com/r/learnprogramming/comments/1oiuhad/what_to_learn_to_make_desktop_apps/,False,False,False,False,0,"[""It's not better or worse, it just depends on what your goals are.\n\nIf you use C# with WinUI 3, you can make Windows apps that look and feel like other Windows apps. The typical way to do it would be to drag and drop UI controls into a template in Visual Studio, then write little bits of C# code to hook them up. You could also do it in pure code and a Hello World GUI app would only be 20 - 30 lines of code or so.\n\nIf you use Electron, you're basically building a web page using HTML+CSS+JavaScript and Electron runs an embedded web browser inside your app window. It will look like a web page inside of an app window. If you're already good at web development or you want to learn web development this will be very convenient. If not, it will feel more complex to get things up and running because you'll need HTML, CSS, frontend JavaScript, and backend JavaScript.\n\nElectron makes a ton of sense if you want a website and a desktop app. You can share most of the code. There are similar frameworks that let you build mobile apps and share a lot of the code too.\n\nComing from Python and Tkinter, C# with WinUI will feel more familiar and just more polished and powerful. But if you wanted to build a Mac app, mobile app, or web app later you'd have to start from scratch."", ""I'd recommend Javascript + Electron (+ CSS/HTML) for what it seems you're looking for\n\nBut C# has a nice ecosystem, not a bad choice"", ""you may use QT's python binding like pyside6 to get familiar with its concepts first and then learn C++ ."", 'if you want something lighter than electron but prefer using a web stack:\n\nhttps://tauri.app/\n\nhttps://neutralino.js.org/', 'C# is the best option for desktop apps']"
+1ojc4as,Is there any benefits to limiting the recourses you learn from?,"So I asked myself this question when I first watched a podcast with John Carmack. He was explaining how he learned programming from the very small selection of books his library offered, but mostly from NEWSPAPER CUTOUTS. On top of that he was programming games in assembly!
+
+When it comes to problem sets, I find that I learn best without the help of ai. But I ask this question in regards to googling as well because this is something I'm very indecisive about. I'll give an example, the other day I was working on a CS50 problem set and I ended up spending too much time trying to make over complicated for loops to compare each char in an array of strings. Then, when I finally googled it, I found out there was a function in a library that did it for me. Maybe this isn't the best anecdote because I could've read the documentation on the library before hand, but I hope you get my point. I also think ai is so much more looked down upon than googling, but I think both can reinforce the same bad habits, I.e when things get difficult you end up relying on something else. 
+
+I understand that it wasn't the limited resources that made John Carmack into John Carmack. However, I personally think a scarcity in resources indirectly makes you remember things better. ""Why would I need to remember the syntax differences in declaring a function in JS vs Python if the answers are a couple clicks away."" 
+
+I'm genuinely curious to hear what your opinions are on this. What would be ways to balance this? Could the complete opposite of googling everything be beneficial, i.e only picking a handful of resources and limiting yourself to that? ",14,5,Defiant-Ad588,learnprogramming,4261006,2025-10-29 18:15:14,https://www.reddit.com/r/learnprogramming/comments/1ojc4as/is_there_any_benefits_to_limiting_the_recourses/,False,False,False,False,0,"[""So here's just a thing that is true about learning:\n\nThe harder/more frustrating things are *while not being too hard for you to do or so frustrating that you quit*, the more you'll learn.\n\nThink about a weightlifter at the gym - they want to push themselves as hard as they can (either in terms of weight or reps) while still being able to do the exercise. It is that strain that allows them to build muscles. Your brain is the same.\n\nSo, generally, the harder you can make things on your brain without making it so hard that you quit, the better. If things feel buttery smooth and easy you're likely not learning anything."", 'No. When Carmack learned to code you could pretty much buy 1-2 books and that would be enough for a lot of things. \n\nI mean we are talking languages like BASIC, C, Assembly for 68000 chips etc.  \n\nModern languages are so much bigger and you usually need more than one to build something.  Having more access to resources means you can find better explanations and learn faster. You can find multiple ways to solve a problem and compare them. \n\nFor every John Carmack who thrived with that lack of resources there’s loads more who struggled', ""Read enough to get it done, if you like a style of explanation, seek more from the same authors/groups.\n\nRemember that for people learning before 1994, or more realistically like 2000, internet resources generally sucked. Prior to this, in order to write a book or get some spot in print to talk about things, you generally had to have some means to show expertise, so there can more eyes on the writing, more editors in tow, etc. \n\nOverall, don't try to find all the resources, judge them, and then try to use them, as that will lead to tutorial hell. Don't settle on garbage though either, but pick something stick with it, and try to get what you can.""]"
+1oitpd8,Java HELP !!!,"Hi, I’m new to Java and I’m struggling to really understand it. I just started my first year in computer science, and I don’t have much programming experience, so it feels pretty overwhelming. I’m also taking 8 courses right now, so it’s a lot to handle.
+
+I don’t just want to pass for the grade; I actually want to understand Java and enjoy learning it. I’ve tried watching YouTube tutorials, but they didn’t really help me grasp the basics or how to apply them.
+
+If anyone has tips on how to properly learn Java as a beginner, what resources to use, or how to practice effectively, please let me know. Any advice would be really appreciated!
+
+Thanks!",6,22,ModernStoiz,learnprogramming,4261006,2025-10-29 03:04:02,https://www.reddit.com/r/learnprogramming/comments/1oitpd8/java_help/,False,False,False,False,0,"['You haven\'t given us much to go on. ""Read the textbook and do the homework"" is all I can give you unless you have more specific questions.', 'What exactly is it that you struggling with?\n\n>they didn’t really help me grasp the basics\xa0\n\nHow many lines of Java code have you managed to write?\n\nWhich of those lines of code is causing you trouble?', ""I know this is not what you wanna hear. But if you are struggling with the absolute basics this early on, and even beginner YouTube tutorials are not helping. You are either not paying attention at all, or this field is not for you. Basics of programming (especially high-level programming), are usually super fun, engaging and easy to follow, it's later that it gets complex.\n\nAnd you didn't even add what exactly you are struggling with.   \n  \nIm always up for helping people learn coding, but this is just the reality of the situation."", '8 courses? Seems a bit much.\n\nSome things just take time and practice to get. Constant repetition is the best I can suggest.', ""Learnt Java maybe 20+ ago, I knew C++ then, I just had a single Java book and Javadoc. The JDK library was like a tree hierarchy which I can still remember, wrote a lot of code, later learnt from other people's code.\n\nBasically, what i am trying to say is give it time, slowly you will notice a pattern that will help you to learn and apply the language.\n\nEdit 20+ years lol""]"
+1oja6fi,Typical DSA post,"Just wondering in what language should I start learning data structures in. Currently my college has a course taught in C, and I know C well enough to get by the course but for personal goals I kind of find it lacking. Now, I know that what language I learn does not matter if I want to learn DSA itself but I have to learn one regardless, and so I am a tad confused about C++ or Java, I have no knowledge of Java and learning it would be from scratch for me. I dont have much experience with C++ either but I am assuming that it shares some similarities with C so maybe it makes it a tad easier for me to learn. I am still confused, and any advice would be greatly appreciated. Thank you",5,19,rustandblood,learnprogramming,4261006,2025-10-29 17:04:42,https://www.reddit.com/r/learnprogramming/comments/1oja6fi/typical_dsa_post/,False,False,False,False,1,"[""Two approaches:\n\n\\- Pick the language you know best and proceed until something gives you trouble or you don't/can't fully understand because of abstraction etc. This might not happen, depending on the language chosen and what you actually learn.\n\n\\- Pick a language with all the control you'll need from the start, even if that means learning some Computer Systems Fundamentals and/or language features.\n\nPersonally I'd always pick the latter. I see learning CSF as complimentary to the goal of learning Algos and Data Structures, and I've never had problems picking up language features. I just read docs or find a good book or article etc.\n\nDoesn't matter which you go for. You can switch languages pretty easily at any time and your understanding remains.\n\nC is an excellent language to pick for this."", 'Honestly? Pick C++ since you already know C—most of the syntax carries over, plus you get the STL (built-in data structures like vector, map, queue) which saves you time. You’ll still understand memory/pointers but won’t be manually implementing every DS from scratch when you just want to \\*use\\* them for problems. Java’s solid too but C++ hits that sweet spot for DSA: low-level enough to learn, high-level enough to not waste time.', 'C or C++ are good for learning them with dynamic memory allocation and managing memory manually.\n\nJava can be good but is higher level, it will teach you the data structures but nothing about manually managing memory for them. \n\nJava is very different from C and C++ and DSA is somewhat more advanced topic that requires a good understanding of the basics. If you know C the best then learn it in C.', ""It sounds like you don't know any language well enough. Maybe wait until you get better before delving into DSA? Say, six months?"", ""C++ is always a solid choice and the main language for competitive coding. One thing - once you learn any language be it c++ or java, learning the other would not take much effort.\n\nHowever, you can NOT go wrong with java. It is hugely used in industries, and in interviews you can always pick java and expect your interviewer to be familiar with syntax. Debugging in c++ may feel bit daunting with all the 'segmentation fault, core dumped' whereas java will say what is the issue.\n\nAlso, in your other comments you have mentioned you know python already. You can go ahead with this too. Python has become quite popular recently due to it's simpler syntax and lower 'thought-to-code' barrier.""]"
+1oj0ni0,Want to get back into programming.,"I haven't done any programming for a few years and am feeling rather rusty but ready to learn something new. 
+
+  
+The application I want to build would periodically import a JSON feed, manipulate it and display results on screen. I have experience of c++, java, javascript & python, but would be happy to learn something new. 
+
+Mainly I want something that's fairly easy to get going , is free, and its easy to manipulate JSON and make GUIs (either web or desktop). 
+
+I am currently running windows 11 and I would prefer not to faff with VMs but I do have MSYS2 installed. 
+
+Thanks
+
+Steve",3,4,Stevetrov,learnprogramming,4261006,2025-10-29 10:14:54,https://www.reddit.com/r/learnprogramming/comments/1oj0ni0/want_to_get_back_into_programming/,False,False,False,False,0,"['Tkiner gui with python programming language.\n\nThat is what it sounds like you saying you are using to make this.', 'Write a powershell script.\nYou dont need any deps for that.', 'Whatever language you choose, just go over the material and take your time. Directions more important than speed, get comfy. If you decide to full time it.']"
+1ojg0gi,How do you learn to analyze the design of code in tutorials/learn to implement ideas from scratch?,"in concept art, there is a term called 'kitbashing' where people use assets to make a collage to build their project off of, whether it is using a 3d render to paint over for a 2d illustration or using kits of generalized parts such as screws or technical looking parts of machinery.
+
+This is likely a stupid analogy, but I have viewed this to be similar to using tutorials. So far, when I am designing a program from scratch, I make a diagram where I roughly describe and draw out features, then I try to write down potential places I could find an example of the feature. usually it starts with generally describing the feature in google ""How to draw a line between two objects in godot"" for example, then I start looking up classes in the godot library I can use and watching tutorials of feature implementation that is somewhat similar.
+
+But I often get stuck trying to then understand the code in the tutorial and studying whether the method used in the tutorial is the most efficient way for my project, or if I cannot find a tutorial that is directly relevant I struggle to try and take apart the code line by line in the documentation.
+
+But as a programming beginner, I also don't really understand the design of a library. I may roughly understand the description of a function such as vector2 get\_point\_position(index:int) for example returning the position of a point, but I  may not understand the underlying design, such as how I still don't understand how a vector can have an index, or whether it's the 2d line itself  that is an array containing points.
+
+  
+Initially I thought there was some holy grail book of software architecture & programming library design that if I read, I would have a rough idea of how to outline the implementation of any project, I wouldn't awkwardly type in a rough description of my feature into google but I would rather have a label for the type of data structure and algorithm the feature uses and knew exactly where to look in the library documentation, or if developing from complete scratch.
+
+I've went through CS50, reviewed the programming fundamentals of addresses, pointers, OOP principles, intermediate programming in java implementing binary searches and linked lists etc, but my implementation skills still really suck, even after making a design diagram and pseudocode, I never know where to look in order to translate my pseudocode into a specific function in a library or a class from scratch. It feels like I am somewhat a native speaker in 'design', but I barely know my alphabet in terms of implementation.  
+
+",3,1,tree332,learnprogramming,4261006,2025-10-29 20:42:28,https://www.reddit.com/r/learnprogramming/comments/1ojg0gi/how_do_you_learn_to_analyze_the_design_of_code_in/,False,False,False,False,1,"['> whether the method used in the tutorial is the most efficient way for my project \n\nI would not worry about this when you\'re still _making the thing_. Deal with optimizations when you need to, or when you feel like it. Get it running and working first. \n\n> or if I cannot find a tutorial that is directly relevant I struggle to try and take apart the code line by line in the documentation. \n\nThat\'s okay! It\'s a skill you develop with time. The way I approach this is, ""how does what I want to do differ from the tutorial?"" and most of the time I can kinda figure out a way to progress from tutorial to what I desire. \n\n>  I still don\'t understand how a vector can have an index, or whether it\'s the 2d line itself that is an array containing points. \n\nIt is always interesting to learn how a library works, but it\'s not _always_ necessary. Going back to your art example, I might know how to use a paint brush, I might know how to mix two paint colors together to get something new, but I might not know how a brush is made from scratch or what the individual pigments that go into a paint color are. Sometimes it helps, maybe one pigment reacts differently in certain conditions, and not knowing that might catch you off guard. But, it\'s not _required_ knowledge, most of the time. \n\n\nGood luck, hang in there. I remember feeling this way too, but I can\'t pinpoint a singular thing that got me over it. I think it was just stubbornness? I tend to go ""fuck it, IDC if it exists or if it\'s slow, I just wanna make the thing and see it work"". Slowly but surely, you start picking up new skills. At times they feel distinct and disjointed, but sooner than later they\'ll click. Another thing try is to view your initial idea document as just a guideline. You _think_ you\'ll use a linkedlist here, recursion there, etc etc. But when it comes to actually implementing it, you might find that your initial assumptions about the project were not accurate, and you\'ll have to adapt.']"
+1ojeldu,Web Development learning material for experienced professionals?,"I work with C, C++, Python and mainly C# & .NET. Most of the time I'm programming a desktop software that controls lab equipment. I do some things with microcontrollers, data analysis with Python, build some custom tools for specific tasks...
+
+I've never touched anything web related. But we will be developing some new products that will be web based, so I need to learn Angular, ASP.NET, etc...
+I've been looking for some learning material and I get the feel that it is all aimed to people who have never programmed and are trying to get into the field.
+
+Can you guys recommend some material for people that know nothing about web based apps but have a good background in programming?",3,2,Fulk0,learnprogramming,4261007,2025-10-29 19:47:57,https://www.reddit.com/r/learnprogramming/comments/1ojeldu/web_development_learning_material_for_experienced/,False,False,False,False,1,"[""If you are good at coding C# and .NET I'd recommend taking a look at Blazor. \n\nAs a Web framework, Blazor is really easy to use, and apart from having to learn some Razor markdown, the rest is basically C# and .NET coding.\n\nAnd it is very easy to start learning. Create a Blazor Web Application in Visual Studio and away you go.\n\nNow you can also write Blazor WebAssembly as well, but I recommend starting with the local Web Server application."", 'Skim through getting started material and just start building.']"
+1oj4ube,What is the simplest way to setup a web development server on a Mac?,"Let me start by saying I'm not a developer but I dabble in webdev. I was hoping that MAMP would be the easiest way to get a webdev server setup but having a lot of problems with version compatibility within MAMP stopping me using mySQL so I started to look at installing apache php mysql individually but then run into another issue that PHP is depreciated on Macs. 
+
+I appreciate that both of the issues above an not insurmountable and could be resolved but ultimately, I want to use my time developing a website, not faffing with the environments so I wanted to find the simplest, hassle free way of getting an environment up and running. 
+
+Would something like docker or Apple containers be a better direction? Any ideas / advice appreciated :-) ",4,5,notreadyforthe_tdf,learnprogramming,4261007,2025-10-29 13:41:07,https://www.reddit.com/r/learnprogramming/comments/1oj4ube/what_is_the_simplest_way_to_setup_a_web/,False,False,False,False,0,"[""For backend you usually install a server side language (ex: Python, Node, Java).\n\nThen install a database (Postgres, MySQL), you could optionally use a Docker container but I prefer to install the DB.\n\nFor HTML it depends if you're going to render it server side, in which case you just install the appropriate library (ex: Express, Django, etc).\n\nThe other option is to go with a modern JS framework and develop the UI separately."", 'XAMPP: https://www.apachefriends.org/\n\nNever had any trouble with it at all', ""A comment on Apple containers. Since it doesn't support docker compose files yet I don't like using it when you have possibly multiple containers you want to run parallel (like a web server and a database). Workaround/community tools don't seem too stable either. So docker and docker-compose is great for now.\n\nDefinitely jumping on Apple containers train though once it becomes a bit more mature."", 'Docker with docker compose for the complete stack is a great solution as it avoids installing stuff natively on your Mac, and gives you benefits of being able to tear down and replace the stack within seconds as you iterate on your approach. Plenty of guides online to containerize Apache with php and MySQL (it’s the standard stack for Wordpress for example)', 'Go for rails or Django. The rest is lame.']"
+1oiytcp,New language learning,"All the courses are from zero  
+Since I learned Java and knew how to coding, how i can learn a new language without wasting my time learning things I already know  
+any tips ?",3,5,vb_s5,learnprogramming,4261007,2025-10-29 08:15:55,https://www.reddit.com/r/learnprogramming/comments/1oiytcp/new_language_learning/,False,False,False,False,1,"['Project based learning. Build something. Learn something.', '""Since I learned Java and knew how to coding, how i can learn a new language without wasting my time learning things I already know""\n\nIsn\'t it like saying I know English so I would like to learn German without wasting my time learning things what I already know ?\n\nFor example , strings. Basic and common. Yet there is an article on medium about the differences between strings in Python and Java.  So then how do you know which to skip and which to learn in the new language ?\n\n[Decoding the Difference Between Python and Java String Equality | by Shreya Goswami | Medium](https://medium.com/@shreyagoswami0307/decoding-the-difference-between-python-and-java-string-equality-62ca068344f1)', 'Go through the ""getting started"" section that more or less every language documentation has and then start building projects. Revisit your old projects and do them in the new language.\n\nWork with the documentation.\n\nThat\'s the quickest, no fuss way to learn new languages.\n\nAlso, a resource: https://learnxinyminutes.com\n\n----\n\nThe only caveat is that each programming language has its own pragmatic approach. What you do in one language might be considered an anti-pattern in another. You need to learn the language specific ways.\n\nHonestly, don\'t overestimate your skills. Java is a great language with great libraries and a wonderful ecosystem. Your programming skills might be very good already, but still.\n\nIf you switch to e.g. Python, you\'re entering a fairly different world. Sure, *programming* itself stays mostly the same, but the *approach* to *implementation* is vastly different to Java. In such cases, I commonly recommend to drop your ego and start with a beginner course. You can breeze through the early parts fairly quick, but when it comes to details and the ""Pythonic"" approach, you will quickly learn that the Java way doesn\'t translate well.', ""That will be fine. Most of what Java people think they know is wrong anyway.\n\nJava likes to treat its opinionated (and sometimes just old) design choices as universal truth, like for example that everything needs to be a class, == always does referential equality, you need getters/setters, static is bad, null checks everywhere, immutability with interfaces, you have no control over the lifetime of objects... the list goes on.\n\nJust take the course and try to be open to a new way of interacting with the computer. The basics will be the same. All programming languages ultimately do the same things, but if it's your first other language, you'll still be in for a lot of surprises.""]"
+1ojg8ew,My mit app inventor code is just not working,"Hi. Im doing my first coding class and this is my first project where we get to pick what to do. Its not going well. My object of the game is to 
+
+1. pick a random color
+
+2. make the small colored ball go into the a category with the same ball. Ex: a red ball must be dragged into the red section.
+
+3. if it goes into the wrong category, it fails. 
+
+4. Then it has to go to another level and pick a different color
+
+That was what i set out to do but its not working. Every time I try to make the ball pick a different color when the level is complete, it keeps selecting another color until it lands on the same color it was. I have no idea how to fix this.  
+[link to my project](https://code2.appinventor.mit.edu/?locale=en#349295)  
+",2,2,SeaWear6581,learnprogramming,4261007,2025-10-29 20:50:55,https://www.reddit.com/r/learnprogramming/comments/1ojg8ew/my_mit_app_inventor_code_is_just_not_working/,False,False,False,False,0,"[""I have never used mit app inventor but when I click on the link it sends me to an empty repo, I can't seem to find your project ?""]"
+1oj7h4e,looking for backend suggestion,"I have decent knowledge in
+Frontend (React + Ts , Next.Js )
+Backend (Express , PostgreSQL)
+Devops (AWS, Docker,Jenkins, GitHub Actions)
+
+So, 
+I have decided to learn some deep backend 
+
+Here my are current stack for backend:-
+Express,
+Rest Apis
+Typescript,
+JWT 
+Zod,
+Docker 
+AWS --:
+EC2
+RDS
+
+
+Iam thinking to learn 
+Prisma 
+Redis
+Mongodb 
+GraphQL
+Web Socket
+
+
+I would like to know any other tech stacks which are recommended .
+Should I learn secondary Backend framework 
+Maybe Go (Gin) or .py (Fast Api) . Iam familiar to go and python but not mastered them!!! 
+Or stick to Express.
+
+Thanks for Reading ",2,0,themintguy31,learnprogramming,4261007,2025-10-29 15:24:39,https://www.reddit.com/r/learnprogramming/comments/1oj7h4e/looking_for_backend_suggestion/,False,False,False,False,1,[]
+1oj7gsz,Best YouTube projects to learn Next.js (no prior web dev experience)?,"Hey everyone,  
+I’ve been coding in Python for about a year and now I really want to start building real apps with Next.js. I don’t have much background in web development, so I’m looking for good YouTube videos that teach through building things, not just theory.
+
+I have no JS or React knowledge so i guess i have to learn that first but i feel i learn better with project based videos so any recommendations?",2,1,Far_Cloud9740,learnprogramming,4261006,2025-10-29 15:24:19,https://www.reddit.com/r/learnprogramming/comments/1oj7gsz/best_youtube_projects_to_learn_nextjs_no_prior/,False,False,False,False,1,"['The official tutorials, \n\nThey always walk you through building a simple app, both React & NextJS (and pretty much every framework does).\n\nI would avoid YouTube videos.\n\nSitting and watching someone else code is not great for retention. It also creates some habits that are hard to unlearn. You’ll end up needing a “video tutorial” for every little thing, and eventually find it doesn’t work.']"
+1oj455o,Hey coders! Share your daily routine — I need some inspiration to improve mine,"Hello friends! 
+I’ve been struggling with my coding routine. When I’m free, I usually do small coding tasks but then end up scrolling on my phone or playing games. I’ve managed to fix my inconsistency a bit, but now I’m stuck figuring out the best daily routine.
+
+I’d love to know how you all study or code throughout the day — from morning to night. What does your daily coding routine look like? Maybe your routine can motivate me to improve mine! ",2,1,Curious-coder235,learnprogramming,4261007,2025-10-29 13:11:52,https://www.reddit.com/r/learnprogramming/comments/1oj455o/hey_coders_share_your_daily_routine_i_need_some/,False,False,False,False,1,['All over the place. Some days I just game all day or finish content. Some days I’m clearing tasks for some hours and going over review material.\n\nBetween 15-40 hours a week usually.']
+1oj0v3b,Does a try block run in a separate thread under the hood?,"I can imagine it might depend on the programming language, but in general does a try block run in a separate thread under the hood? Note specifically I know that it does not count as a separate thread for my program per se, but I was wondering if it would spin up a virtual thread. How else can it catch exceptions that would otherwise crash the program?",2,13,Simple-Count3905,learnprogramming,4261007,2025-10-29 10:27:28,https://www.reddit.com/r/learnprogramming/comments/1oj0v3b/does_a_try_block_run_in_a_separate_thread_under/,False,False,False,False,0,"[""No, it does not. Exceptions are just normal objects (or whatever the language uses if it's not OOP)."", '> How else can it catch exceptions that would otherwise crash the program?\n\nYou\'re starting from a false premise. Exceptions don\'t *automatically* crash the program.\n\nInside a try block, the exception handler is ""registered"" somehow with the **current thread\'s** stack. The details of this depend on the language and the runtime environment.\n\nWhen an exception is thrown, exception-handling code is run. This code ""unwinds the stack"", one stack frame at a time, until it finds a corresponding handler. It only terminates the thread/program if it **doesn\'t** find a handler. That\'s just another way of saying that setting up a handler prevents termination.', 'No. Exceptions are a language concept. Signals can be caught and the language can convert signals to exceptions which are handled by the runtime of the language.', 'Not in any language I\'m aware of.  I\'m not sure what you mean by ""how else could it catch exceptions"".  A try catch is basically just a glorified goto, so under the hood in assembly its basically just a conditional jump instruction, so thats how it catches exceptions.  No need for additional threads.', 'The confusion arises from two different kinds of exceptions: language exceptions and machine exceptions. To simplify: language exceptions are things thrown within the language by language statements, machine exceptions are things like ""divide by zero"" which are generated by the processor.\n\n\nThere\'s then two additional pieces of machinery:\n\n\n- when a machine exception happens, the OS can pass it to the process to handle. On Unix this is done with signals. If there is no handler, the process will crash.\xa0\n\n\n- But if there is a handler, it can convert a machine exception into a language exception, which can then be caught. This happens in most managed languages - Python, Java, C# etc.\n\n\nC and C++ generally do not provide such handlers. Microsoft does have a mechanism called ""structured exception handling"" on Windows which lets you do this, but there\'s a high risk of the program ending up in an inconsistent state.']"
+1ojkp6n,How do I use vscode cs50 locally offline,My internet is pretty bad so it being online makes it very unreliable I've tried seeing videos and cs50 made one but it's very outdated. I tried using just its libraries but it doesn’t work that well… how can I use it offline with a docker?,1,2,ImHighOnCocaine,learnprogramming,4261007,2025-10-29 23:52:17,https://www.reddit.com/r/learnprogramming/comments/1ojkp6n/how_do_i_use_vscode_cs50_locally_offline/,False,False,False,False,1,"[""You can't really use it offline, it's a codespace meaning you're connecting to the cloud. Your best bet is trying to get the libraries installed, doing your work offline and then submitting when you have internet. All of CS50s functions like submit50, check50, and the CS50 codespace do need you to have internet because they connect to CS50 servers. So, your best chance is to try and get the libraries and tools installed locally so you can do your work offline with VSCode.""]"
+1ojfhdo,can you review my tech stack setup for a webpage?,"**Modern & Secure Website for medium Support Group**
+
+## Requirements:
+- Content-focused: articles, topics, categories
+- ~3 authors, intuitive content UI
+- No visitor login or personal data storage
+- Secure, no common exploits (like WordPress)
+
+## Tech Stack:
+
+Backend:
+- Directus (Admin Panel)
+- REST API
+- Hosted on Fly.io
+
+Database:
+- ~~PostgreSQL~~ LiteSQL/MySQL
+- Hosted on Fly.io
+
+Frontend:
+- ~~next.js~~ Astro
+- SSG (Static Site Generation)
+- Hosted on Vercel
+
+*codebase on github for easy deployment?*
+
+is this ok or am i doing bs?",1,3,Spiritual-Dingo2804,learnprogramming,4261007,2025-10-29 20:21:45,https://www.reddit.com/r/learnprogramming/comments/1ojfhdo/can_you_review_my_tech_stack_setup_for_a_webpage/,False,False,False,False,1,"[""I thought WordPress was fine as long as you keep it updated and don't go installing unvetted plugins. And if you use managed hosting, they'll take care of updates for you.\n\n\n> PostgreSQL\n\n\nYou probably don't really need relational features for this sort of site. But PostgreSQL is also probably (better than) fine for your sort of site & workload anyway.""]"
+1oj91j8,Is the following an acceptable use of global variables? (Arduino C),"So I know that it can be dangerous/unmaintainable/bad to use global variables. I read [this post](https://stackoverflow.com/questions/176118/when-is-it-ok-to-use-a-global-variable-in-c) and I think I kinda understand it, but it doesn't cover my exact situation and I am not experienced enough to judge.
+
+So I have written [this module](https://github.com/hashtaglifesux/ELEGOO-Kit-module-drivers/blob/a38ea480b6ee0a941fb7cca23321af7d8bda06c7/src-arduino/joystick.h) which reads from a joystick, and [this program](https://github.com/hashtaglifesux/ELEGOO-Kit-module-drivers/blob/main/tests/arduino/max7219_snake.ino) as a fun project to use the joystick. Is my use of global variables ok? Especially in the joystick module because I put more effort into making that neat and clean. ",1,7,OhFuckThatWasDumb,learnprogramming,4261007,2025-10-29 16:22:50,https://www.reddit.com/r/learnprogramming/comments/1oj91j8/is_the_following_an_acceptable_use_of_global/,False,False,False,False,1,"['What if you want to support two joysticks? \n\nIf you keep your data in a struct and your functions take a reference to that struct as a parameter, then you can easily extend your program to use multiple joysticks (say for a tank game or a two player game) with almost no additional effort.', 'So, I hesitate to say this, because it can be hard to get right. Or, at least, there are easy mistakes to make. \n\nYou can use C++. If you have a class, with local variables, that will isolate them and let you have multiple copies. \n\nI did this on an Arduino with 2K of RAM. Tiny amount of memory. I had six buttons, and I wanted to debounce them in software. \n\nIf you have them created statically- don’t use `new` - then they don’t really take much if any extra memory. The compiler magically makes it all work. \n\nSomething like:\n```\nauto up_arrow = MenuButton(5);\nauto down_arrow = MenuButton(6);\n\n```', 'Amplifying an answer by wildgurularry, a major argument against making something global is the possibility of there being more than one of whatever it represents.  This principle applies not only to variables, but also to functions.  Consider the following two functions:\n\n        void setpixel(int x, int y, int color);\n    \n        struct drawContext;\n        void setpixel(struct drawContext *dc, int x, int y, int color);\n\nWhen using the latter, code can easily deal with the possibility that multiple drawing contexts might exist, and that different functions might want to draw to different ones.  When using the former, that may be more difficult.  It\'s often possible to use the former pattern if one adds a function:\n\n        struct drawContext;\n        struct drawContext *swapContext(struct drawContext *dc);\n\nWhen passed a null pointer, the swapContext function would return a pointer to the current context without affecting it.  When passed anything else, swapContext would switch to using the passed context but return a pointer to the old one.  A function wanting to draw to myDC could then do:\n\n\n\n        struct drawContext *oldDC = swapContext(myDC);\n        ... do some drawing\n        swapContext(oldDC);\n\nThis pattern, however, can be a nuisance, and neglecting to use it may result in things being accidentally drawn to the wrong context.  Further, if different threads might need to draw to different contexts simultaneously, it would require that the ""current context"" setting be thread-bound.', ""I looked at the code, I'm not familiar with Arduino but I don't understand why you are using globals here at all?  You pass values in and out of some functions,  why not all of them?""]"
+1oj4fs7,Homelab for load testing,"Hello everyone.
+
+This is my first post here.
+
+I want to set up a homelab to load test simple to complex backend designs, that's going to involve RDBMs, NoSQL, NewSQL, queues and such. For example set up a e-commerce backend and such. Basically testing read and write throughputs. I'll use my existing PC (R9 3900X) as the load generator.
+
+For the app server I have two choices, Dell R730 (2X E5-2699V4, 88 vcores in total) or an HPE D560 G9 (4x E5 4699 v3, 144 vcores in total). Which would be the best choice, and would 144 cores be an overkill for this?
+
+I am going for a high core count since I get more granularity in allocating cores to docker containers, also I get to experiment with NUMA and such.
+Has anyone used a homelab setup for this kind of usecase? Also would going for Xeon Gold 6138 have any benefits, since it has support AVX512?
+
+Thank you in advance.",1,3,potatorobrot,learnprogramming,4261007,2025-10-29 13:24:21,https://www.reddit.com/r/learnprogramming/comments/1oj4fs7/homelab_for_load_testing/,False,False,False,False,0,"[""What's the goal of the load testing? Is it purely for learning? Are you trying to emulate a production environment?\n\nHow much load are you estimating? Are you sure you need a full rack server? They are noisy, power-hungry, and expensive. Could it run on cheap hardware?\n\nI cluster a bunch of mini PCs for my homelab.\n\nMake sure you setup monitoring for the app you are load testing (and the application generating the load), I use Grafana dashboard to see how everything is performing.""]"
+1oj2xu3,"I’m in 3rd year (5th sem), should I focus on Web Dev or AI/ML in 2025?","Hey everyone,  
+I’m a 3rd-year student (5th sem) and I’m trying to figure out what to focus on next. I’ve been doing DSA in C++, but I’m confused between going deeper into **Web Development** or starting with **AI/ML**.
+
+Some people say Web Dev is still great for internships and placements since it’s practical and project-based. Others say the real opportunities are shifting toward AI/ML, especially with how fast that field is growing.
+
+For someone in college right now who wants to build good skills and improve their resume, which one makes more sense to focus on in 2025: **Web Dev or AI/ML**?
+
+Would love to hear what others in the same situation or in the industry think.",1,9,Resonable-Dev238,learnprogramming,4261007,2025-10-29 12:17:33,https://www.reddit.com/r/learnprogramming/comments/1oj2xu3/im_in_3rd_year_5th_sem_should_i_focus_on_web_dev/,False,False,False,False,0,"[""These are two different fields, it's like asking if you prefer apples or oranges."", ""I would generally advice most people to start in web because its easy to get into and the pay is more or less the same as other dev jobs.\n\nIn my opinion AI/ML is still a pretty niche and unstable field. Even though everyone is very excited about it, you can't know for sure that its going to that big 5-10 years later. But everyone already uses web browsers for everything, and that's not going to change anytime soon."", 'well this depends on what you like to working with... try to ai fundamentals program from google cloud or oci so that you understand basic ai then if possible try to make a basic ai project then same for web dev see what exict you more to work with then there will a answer', 'in my opinion go for the web dev. it would be easier to get entry level jobs and then start learning AI/ML in your free time', 'AI/ML needs at least a dedicated master’s degree. Realistically, you actually need a PHD.\n\nYou won’t get an entry AI/ML job without that.']"
+1oj1az1,[Swift] Beginner question: function optimized out by the compiler,"Hi everyone, I'm a beginner to both coding and swift who is currently going through the Hacking with Swift course.
+
+During checkpoint 8 of the course, I was asked to create a protocol called Building that not only requires certain data, but also contains a method that prints out a summary of those data. I was also asked to create two structs - House and Office that conforms to the Building protocol.
+
+I wrote the some code that compiles but when run shows this error:
+
+>error: Couldn't look up symbols:
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>  \_swift\_coroFrameAlloc
+
+>Hint: The expression tried to call a function that is not present in the target, perhaps because it was optimized out by the compiler.
+
+The code compiles and run as intended on an online Swift compiler, so I'm not sure what went wrong. Did I adopt some bad coding practice that tricked Xcode into thinking my `printSummary()` method wasn't used? Is this a playgrounds problem? I'm asking as I don't want to continue some bad coding practice and have it affect my code down the line when I'm actually writing an app.
+
+Thanks for your help and here's my code:
+
+    import Cocoa
+    
+    protocol Building {
+        var name: String {get}
+        var room: Int {get}
+        var cost: Int {get set}
+        var agent: String {get set}
+    }
+    
+    extension Building {
+        func printSummary() {
+            print(""""""
+            Sales Summary:
+            Name of building: \(self.name)
+            Number of rooms: \(self.room) 
+            Cost: \(self.cost)
+            Agent: \(self.agent)
+            
+            """""")
+        }
+    }
+    
+    struct House: Building {
+        let name: String
+        let room: Int
+        var cost: Int
+        var agent: String
+    }
+    
+    struct Office: Building {
+        let name: String
+        let room: Int
+        var cost: Int
+        var agent: String
+    }
+    
+    var myHome = House(name: ""Buckingham Palace"", room: 300, cost: 200, agent: ""Elizabeth"")
+    var myOffice = Office(name: ""The Pentagon"", room: 100, cost: 100, agent: ""Barack"")
+    
+    myHome.printSummary()
+    myOffice.printSummary()",1,2,justalemontree,learnprogramming,4261007,2025-10-29 10:52:41,https://www.reddit.com/r/learnprogramming/comments/1oj1az1/swift_beginner_question_function_optimized_out_by/,False,False,False,False,1,"['How exactly are you compiling and running your code? A quick Google search suggests that this is a [known bug](https://github.com/swiftlang/swift/issues/84402) in the Xcode Swift Playground. The missing symbol is from Swift internal code, not something you wrote.']"
+1oj0swa,is checking for null always a good practice in Unity? more details in description,"for example ai wrote this
+
+            if (objectToMove != null)
+            {
+                // Store the initial position of the object to move.
+                originalPosition = objectToMove.transform.position;
+    
+                // Calculate the target position based on the object's scale and the offset.
+                float yPosition = originalPosition.y - (0.5f * objectToMove.transform.localScale.y) - offsetY;
+                targetPosition = new Vector3(originalPosition.x, yPosition, originalPosition.z);
+            }
+            else
+            {
+                Debug.LogError(""WorldButton is missing a reference to the 'objectToMove'. Please assign it in the Inspector."", this);
+            }
+
+but I think we dont need this since unity errors in a very understandable way anyways and this should never happen in production but whilst a misconfiguration while level designing. I would have wrote this:
+
+           // Store the initial position of the object to move.
+           originalPosition = objectToMove.transform.position;
+           // Calculate the target position based on the object's scale and the offset.
+           float yPosition = originalPosition.y - (0.5f * objectToMove.transform.localScale.y) - offsetY;
+           targetPosition = new Vector3(originalPosition.x, yPosition, originalPosition.z);",1,4,sakaraa,learnprogramming,4261007,2025-10-29 10:23:55,https://www.reddit.com/r/learnprogramming/comments/1oj0swa/is_checking_for_null_always_a_good_practice_in/,False,False,False,False,1,"['object is assigned in the editor and is declared in the code like this: `[SerializeField] private GameObject objectToMove;`', ""If you don't want to make your code unnecessary nested I recommend to create a simple helper function, which takes nullable object and throws exception in case of null with [NotNull] attribute."", 'Always having to check whether your object still exists/is valid is usually a sign of bad design.\n\nWhy would you attempt to even call this function on an object that is null?']"
+1oj0j3j,Made Progress in Odin Project But Wanna Learn ML,"I'm 16 in high school and I've been learning to program for the past year, I've finished up to the JS module in the odin project, so foundations, intermediate html and css, and JS, but front end and web dev doesn't seem as exciting as ML.   
+I'm looking for advice on where and how to start.",0,1,Specialist_Guava_416,learnprogramming,4261007,2025-10-29 10:07:54,https://www.reddit.com/r/learnprogramming/comments/1oj0j3j/made_progress_in_odin_project_but_wanna_learn_ml/,False,False,False,False,0,[]
+1oix3uo,Do I continue with c++?,Currently I am in a debate whether I should continue learning c++ or if I should just do python or another language. I've been using both python and c++ since 2023. I most definitely will need c++ for the next couple of years for school. I want to go somewhere between the fields of machine learning/data analysis and mechatronics or possibly something to do with software. What is the best option? ,0,5,mariyss,learnprogramming,4261007,2025-10-29 06:19:13,https://www.reddit.com/r/learnprogramming/comments/1oix3uo/do_i_continue_with_c/,False,False,False,False,0,"["">\xa0possibly something to do with software\n\nOK, so kind of a broad range of interests. :)\n\nPersonally, I'd say C++. Everyone and their dog learns Python, you're going to leave school with Python and apply for the same jobs hundreds of other people.\n\nNot many young developers learn C++, it's a good position to be in going for that first job."", 'Both Python and C++ will make you  competitive in these fields, so go on with it.', 'Python is well used with ai/ml projects but keep c++ is on the side as well it will eventually impact the grades']"
+1oj71r3,"I'm Screwed. Codevita is in 2 days,didnt prepare,can't do CP.What should i do?","My CodeVita exam is in 2 days,and i wasted too much time overthinking instead of preparing.I spent last week overthinking whether I'd even get the mail or not.Turns out i finally got it today.
+
+  
+Now I'm completely blank.I know some DSA ---- arrays,strings, Linkedlist,a bit of trees and graph --but i suck at competitve programming.
+
+I tried looking at a few past CodeVita questions ----- and honesty , I cant even understand them.The statements are long and confusing.
+
+  
+And Even if i understand the question,I just can't figure out the approach.I get the input and output but no idea what logic connects them.
+
+  
+Is there anything realistic I can do in these 2 days to at least qualify the test and shortlisted to TCS Ninja?
+
+Are there any pattern recognition in TCS codevita exam? I need to get employed.
+
+I'm not a total beginner ----- I've got descent knowledge in Spring boot,and even a bit of Docker and Kubernates.
+
+Any tips or past Experience would really help right now.",0,1,Ornery_Seaweed_6878,learnprogramming,4261007,2025-10-29 15:08:01,https://www.reddit.com/r/learnprogramming/comments/1oj71r3/im_screwed_codevita_is_in_2_daysdidnt_preparecant/,False,False,False,False,0,"[""I had to Google what that is but if you haven't been practing competitive programming questions, I see no way you would do well on this exam. Postpone or cancel it?""]"
+1oj30z0,"Need motivation help, to not be lazy.","I know C, and I'm working on an os with it, but how do I stop getting lazy, and stop relying on ai sometimes? I just feel like I'm not learning anything from using AI, and every time I use AI, I curse myself to not do it again, but I still do it.",0,2,Astrox_YT,learnprogramming,4261006,2025-10-29 12:21:36,https://www.reddit.com/r/learnprogramming/comments/1oj30z0/need_motivation_help_to_not_be_lazy/,False,False,False,False,0,"[""[https://www.youtube.com/shorts/OwlqboyTowk](https://www.youtube.com/shorts/OwlqboyTowk)\n\nIf you don't stop using AI, you will be homeless just like him."", 'Put a rubber band around your wrist. Every time you find yourself using AI, snap yourself with the rubber band, hard enough that it hurts. That should help the message sink into the part of your brain that understands stimulus and response.']"
+1oj2yvf,[Python] I lowkey feel like a fraud,"I’m a sophomore CS major with the goal of becoming a Data Scientist. When it comes to python, I thought I understood the basics. I can code pretty basic things, so I went online and found “20 coding projects for beginners to intermediate” by GeeksForGeeks just to fuck around and practice. The first one was to make a number guessing game. It was easy. The second was a word guessing game. A little harder but manageable. The 3rd was hangman. And I was completely lost.
+
+If you look through my previous posts you’ll see me asking where to go next. What to learn, how to advance but after that I don’t think I should advance. I think I need to study more of the basics. I think the problem is I try “memorizing” everything, instead of understanding. 
+
+Anyone have any suggestions on how I can practice more? People keep saying telling me to work on projects but I don’t know what projects. Then they say “make something you need/want” but that doesn’t really help me cause theres not really anything I need and don’t really have any ideas on what to make.",0,4,Prior-Scratch4003,learnprogramming,4261006,2025-10-29 12:18:51,https://www.reddit.com/r/learnprogramming/comments/1oj2yvf/python_i_lowkey_feel_like_a_fraud/,False,False,False,False,0,"['Honestly, it surprises me that you got stuck on something as simple as ""hangman"". Really. This is a *beginner* project.\n\nYou need to stop memorizing and start to learn for *understanding*. Memorizing is counter-productive in programming.\n\nAs sites for more practice: [Exercism](https://exercism.org)\n\nAs a learning resource for Python that will *really* teach you programming: MOOC [Python Programming 2025](https://programming-25.mooc.fi) from the University of Helsinki. It makes you program right from the start.', 'Try grinding codewars and read an introductory python book like learning python by lutz. Then move to actual projects. Build a portfolio site using django or fastapi', "">Anyone have any suggestions on how I can practice more?\n\n  \n[freecodecamp.org](http://freecodecamp.org) daily challenge (they do have an option to do it in python). Do it every day. Before long you'll be solving without looking a single thing up, then work on code optimization--whether that means to you that your code is highly readable or super condensed and efficient. Some days are super easy, done in a minute but some days are pretty tricky to nail down all requirements, I was surprised."", ""Don't worry, everyone feels like a fraud at various points. I think you should keep working on solving this hangman challenge. It'll be good for you to figure out, even if you need to look up ways of doing it.""]"
+1oj3bmv,A beginner to rely AI to build system,"Hi everyone! I’m a beginner for building systems because i've noticed that I often rely on AI tools to help me build systems. I want to improve my own problem-solving and coding skills so I can depend less on AI and understand how things really work.
+
+What are some effective tips, study habits, or learning approaches that can help me become more confident in building systems on my own  like using documentation, searching for solutions properly, or practicing real projects?  
+
+I am 3rd yr college now and the capstone project 1 is waving for our school this coming 2nd semester to be honest i guidance how to improve myself for building systems without to much relying in ai
+
+Thanks in advance for any advice!
+",0,3,ch4r_GJB,learnprogramming,4261007,2025-10-29 12:35:25,https://www.reddit.com/r/learnprogramming/comments/1oj3bmv/a_beginner_to_rely_ai_to_build_system/,False,False,False,False,0,"[""Stop using AI.  If you cannot do your project without AI,  you're not ready to work in the industry."", 'Reading comprehension first.\xa0\n\n\nYou read the questions/description of the project and you mark everything you don\'t know first. You go and search for those words and their meaning as well as the concept behind. Then you go back to read a second time, this time with your new knowledge. You slice that paragraph in concepts and you build a architecture composed of every bits you just read. This should give you the way to start a project from scratch. It\'s necessary to become good in engineering and lots of people fail at reading comprehension.\n\n\nAt first it will be slow but eventually you can skim through text in 5 sec to know if the article or doc can answer your question. You can eventually also breakdown the requirements into a architecture at the same time you read it.\xa0\n\n\n\xa0Overall, that\'s what bad engineers lack and good engineers excel at. ""10x engineers"" are just 10x faster to digest the informations and getting to know where they go. Ofc, you need to learn how you best learn, like for me, it\'s from technical books because videos are so fucking slow and the person usually doesn\'t know it\'s material well. The books are also reviewed by alot of people so the information is well presented. It\'s denser than in term of information but it leads to a much deeper understanding of the subject.\n\n\nThat\'s it. That\'s the only thing. Just learning to read to get information and after that, learning to align these information and finally learning how you learn best.', 'If you are a 3rd year college student, surely you will have learned how to build systems by now? As far as I know, no college has changed their curriculum in the past 3 years to replace everything they used to teach with AI tools ...']"
+1oj0zf4,Does it make sense to learn data structures and algorithms in python in depth and grind leet code as an AI/ML Engineer?,"So basically the title 
+
+I want some advice i am aiming to be a good AI/ML engineer,and currently i am learning important topics and also have a little experience,but i was wondering if i need to grind leet code because recently my python programming as gone way down (thanks to AI :not complaining though)
+
+So will it help me in my journey?
+Or any other advice or roadmaps to become a good job ready candidate would be appreciated 
+
+
+Thank you",0,3,Flashy_Aardvark_1807,learnprogramming,4261007,2025-10-29 10:34:26,https://www.reddit.com/r/learnprogramming/comments/1oj0zf4/does_it_make_sense_to_learn_data_structures_and/,False,False,False,False,0,"['Yes', 'Absolutely', '💯']"
+1oiqzac,What should be my next step if I want to work remotely abroad?,"Hey everyone,
+
+I’m a 21M Computer Science undergraduate with about 2 years of experience in software development — 1 year as a full-time developer (current job) and 1 year as an intern.
+
+In my current position, I work mainly with PHP, JavaScript, Vue, Doctrine ORM, and PostgreSQL.
+
+During my internship, I also used JavaScript, Vue, Node.js, and PostgreSQL.
+
+My goal is to eventually work remotely for a company abroad(My expectations are for something around 1 to 1.5 years from now) and I’d be glad to recieve some advice on what steps I should take next to move in that direction, and also what technologies I could be learning or improving on.",0,7,NotMyCake-Day,learnprogramming,4261007,2025-10-29 00:55:14,https://www.reddit.com/r/learnprogramming/comments/1oiqzac/what_should_be_my_next_step_if_i_want_to_work/,False,False,False,False,0,"[""If you have access to a time machine, go back to right before COVID.\n\nFailing that, maybe build an impressive GitHub, make high profile contributions to open source projects, and just keep blasting out resumes\n\nThird option: work for yourself somehow.  Create an app or service that's profitable"", 'Remote jobs now are only for senior positions. Once you have five years of experience you will be able to.', 'Most companies won’t hire from abroad due to tax laws.\n\nYou usually have to work for a company that has an office in your country as well.']"
+1oj8i4h,How do i check if there are a minimum of 5 numbers and 5 special characters in a python string?,"In this code block, i am trying to check if there are a minimum of 5 numbers and 5 special characters in the password so that the password is valid. The only thing i can think of is putting the ""<>"" and the len() operator to find if there  
+In this code block, i am trying to check if there are a minimum of 5  
+numbers and 5 special characters in the password so that the password is  
+valid. The only thing i can think of is putting the ""<>"" and the  
+len() operator to find if there are 5 numbers and 5 special characters  
+in the password. I don't know how to do better than this with a string.
+
+Here is the code:
+
+    # making the password input
+    password = input(""Enter your password: "")
+    findnum = re.search(""[0-9]"", password) # variable to find numbers
+    findspecialchar = any(not char.isalnum() for char in password) # variable to find special characters
+    findupper = any(char.isupper for char in password) # finds upper cases letters in the password
+    # checking if the password is minimum 10 characters long
+    if len(password) < 10:
+    print(""\nYour password must contain at least be 10 characters long."")
+    # checking if the amount of characters is less or equal to the maximum required
+    elif len(password) >= 25:
+    print(""\nYour password you must be less, or equal to 25."")
+    # using regex to search if there's any numbers in the password
+    elif findnum and findspecialchar and findupper:
+    if len(findnum) < 5:
+    print(""Your password must have minimum 5 numbers."")
+    print(""\nYour password is strong enough. Your password must contain special characters, and uppercase letters"")
+    # runs if all requirements are valid
+    elif password.find(spaces) is True:
+    del spaces
+    else:
+    print(""\nYour password isn't strong enough."")
+    # runs if all the requirements aren't valid
+
+In the problems section of vscode when code doesn't work, this is what is written:
+
+    Argument 1 to ""len"" has incompatible type ""Match[str]""; expected ""Sized""",0,32,ScientificlyCorrect,learnprogramming,4261006,2025-10-29 16:02:53,https://www.reddit.com/r/learnprogramming/comments/1oj8i4h/how_do_i_check_if_there_are_a_minimum_of_5/,False,False,False,False,0,"[""1. Fix your indentation. The Python code is ambiguous.\n2. This is not *your* code as your comments in the thread clearly indicate. This code was written by AI. If you want to learn, don't use AI.\n3. I side with /u/Watsons-Butler to use a simple, single loop and counters. Simple solutions are the best."", 're.search only gets the first match. \n\nTry using re.findall()', ""Create a function to iterate through each character and tally the amount of numbers and special characters on each iteration.\n\nAlso, your max length will send the error print if the password is 25 characters, replace '>=' with just '>'"", 'use a for loop to count how many str\\[i\\].isnum() and (not str\\[i\\].isalnum())', 'Your first step is to explain why you wrote the code that way.']"
+1oiztue,Can someone help me find the bug in this C programming assignment,"The problem is that once the program compiles and asks me to choose from the options. no matter what I enter it just tells me that the input is incorrect.  
+Good Afternoon miss
+
+There seems to be some problem in this code i've to make for a project. I tried debugging it even used AI but the problem persists. Can you please look into it.
+
+
+
+\#include <stdio.h>
+
+
+
+ struct Movie{
+
+char Title\[100\];
+
+char Director\[100\];
+
+int Year;
+
+float Rating;
+
+};
+
+
+
+  \#define Max\_Movies 100
+
+struct Movie database\[Max\_Movies\];
+
+int movie\_count=0;
+
+
+
+//UI Functions//
+
+void clear\_screen();
+
+void press\_enter\_to\_continue();
+
+void clear\_input\_buffer();
+
+
+
+//Non-UI Funtions
+
+void add\_movie();
+
+void display\_movie();
+
+void save\_database();
+
+void load\_database();
+
+
+
+//Definitions of UI Functions
+
+
+
+ void clear\_screen(){
+
+  for(int i=0;i<50;i++)
+
+printf(""\\n"");
+
+ }
+
+
+
+  void press\_enter\_to\_continue(){
+
+printf(""\\nPress Enter To Continue..."");
+
+getchar();
+
+  }
+
+
+
+  void clear\_input\_buffer(){
+
+int c;
+
+while((c=getchar())!='\\n');
+
+  }
+
+
+
+  //Definitions of Non-UI Functions
+
+
+
+//add\_movie
+
+  void add\_movie(){
+
+if(movie\_count>=Max\_Movies){
+
+printf(""\\nError: The Database is Full."");
+
+return;
+
+}
+
+
+
+printf(""Enter Movie Title:"");
+
+scanf(""%\[\^\\n\]"" ,database\[movie\_count\].Title);
+
+clear\_input\_buffer();
+
+
+
+printf(""Enter Movie Director:"");
+
+scanf(""%\[\^\\n\]"" ,database\[movie\_count\].Director);
+
+clear\_input\_buffer();
+
+
+
+printf(""Enter Year of Release:"");
+
+scanf(""%d"", &database\[movie\_count\].Year);
+
+clear\_input\_buffer();
+
+
+
+printf(""Enter Rating (out of 10):"");
+
+scanf(""%f"", &database\[movie\_count\].Rating);
+
+clear\_input\_buffer();
+
+  }
+
+
+
+//display\_movie
+
+  void display\_movie(){
+
+if(movie\_count==0){
+
+printf(""No Movies To Display."");
+
+return;
+
+}
+
+
+
+printf(""\\n--- Complete Movie Database ---\\n"");
+
+for(int i=0; i<movie\_count; i++){
+
+printf(""Movie#%d\\n"", i+1);
+
+printf(""Title:%s\\n"", database\[i\].Title);
+
+printf(""Director:%s\\n"", database\[i\].Director);
+
+printf(""Year:%d\\n"", &database\[i\].Year);
+
+printf(""Rating:%f\\n"", &database\[i\].Rating);
+
+printf(""---------------------------\\n"");
+
+}
+
+  }
+
+
+
+//save\_database
+
+
+
+   void save\_database(){
+
+FILE \*file=fopen(""movies.txt"", ""w"");
+
+if(file==NULL){
+
+printf(""Error: could not open file for saving.\\n"");
+
+return;
+
+}
+
+
+
+fprintf(file, ""%d\\n"", movie\_count);
+
+for(int i=0; i<movie\_count; i++){
+
+fprintf(file, ""%s\\n"", database\[i\].Title);
+
+fprintf(file, ""%s\\n"", database\[i\].Director);
+
+fprintf(file, ""%d\\n"", &database\[i\].Year);
+
+fprintf(file, ""%f\\n"", &database\[i\].Rating);
+
+}
+
+
+
+fclose(file);
+
+printf(""Database saved successfully to movies.txt\\n""); 
+
+   }
+
+
+
+//load\_database
+
+
+
+   void load\_database(){
+
+FILE \*file=fopen(""movies.txt"", ""r"");
+
+if(file==NULL){
+
+printf(""Error: could not open file for saving.\\n"");
+
+return;
+
+}
+
+
+
+if(movie\_count>Max\_Movies){               
+
+printf(""Error: saved database exceeds maximum capacity.\\n"");
+
+movie\_count=Max\_Movies;
+
+}
+
+fprintf(file, ""%d\\n"", movie\_count);
+
+for(int i=0; i<movie\_count; i++){
+
+fprintf(file, ""%s\\n"", database\[i\].Title);
+
+fprintf(file, ""%s\\n"", database\[i\].Director);
+
+fprintf(file, ""%d\\n"", &database\[i\].Year);
+
+fprintf(file, ""%f\\n"", &database\[i\].Rating);
+
+}
+
+
+
+fclose(file);
+
+printf(""Database loaded successfully to movies.txt\\n""); 
+
+   }
+
+   
+
+//Main Code
+
+int main(){
+
+load\_database();
+
+press\_enter\_to\_continue();
+
+int choice;
+
+
+
+while(1){
+
+clear\_screen();
+
+
+
+printf(""\\n===== Movie Database Management System =====\\n"");
+
+printf(""1. Add New Movie\\n"");
+
+printf(""2. Display All Movies\\n"");
+
+printf(""3. Save Database\\n""); // Re-added
+
+printf(""4. Exit\\n""); // Renumbered
+
+printf(""==========================================\\n"");
+
+printf(""Enter your choice: "");
+
+
+
+if(scanf(""%d"", &choice) !=1){
+
+printf(""Invalid input. Please enter a number between 1 and 4.\\n"");
+
+clear\_input\_buffer();
+
+press\_enter\_to\_continue();
+
+continue;
+
+}
+
+clear\_input\_buffer();
+
+clear\_screen();
+
+switch(choice){
+
+case 1:
+
+add\_movie();
+
+break;
+
+case 2:
+
+display\_movie();
+
+break;
+
+case 3:
+
+save\_database();
+
+break;
+
+case 4:
+
+printf(""Exiting the program. hasta la vista baby!\\n"");
+
+return 0;
+
+default:
+
+printf(""Invalid choice. Please try again.\\n"");
+
+}
+
+if(choice!=4){
+
+press\_enter\_to\_continue();
+
+}
+
+}
+
+
+
+return 0;
+
+}
+
+
+
+Output:
+
+
+
+===== Movie Database Management System =====    
+
+1. Add New Movie
+
+2. Display All Movies
+
+3. Save Database
+
+4. Exit
+
+==========================================      
+
+Enter your choice: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+Invalid choice. Please try again.
+
+
+
+Press Enter To Continue...",0,8,Its-Akshum,learnprogramming,4261006,2025-10-29 09:23:37,https://www.reddit.com/r/learnprogramming/comments/1oiztue/can_someone_help_me_find_the_bug_in_this_c/,False,False,False,False,0,"['You need to post your code as [code block](https://i.imgur.com/EJ7tqek.png) so that the indentation is maintained. \r\n\r\nA code block looks like:\r\n\r\n    def __init__(self, prompt, answer):\r\n        self.prompt = prompt\r\n        self.answer = answer', ""So, if you want people to take a look at your code, you need to learn how to format it properly. \n\nOtpion 1: Use reddits codeblock formatting. It's an option in the visual editor, and looks like this: \n\n    #include <reddit.io>\n    \n    ...\n    ....\n    ...\n\nOption 2: Upload your code to github, or an alternative git hosting site that allows you to share public repositories. This is recommended for everything with a few hundred lines or above, as it gives basic search functionality, and allows users to download your code and search it with their IDE (although I would again caution everyone, not to run random code from the internet. Looking at it is generally fine, most of the time)"", ""The first thing you should do is turn up the warning level on your compiler.\n\nIf I compile your code I get these warnings:\n\n>C:\\\\temp\\\\test.c(127,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int \\*'\n\n>C:\\\\temp\\\\test.c(129,12): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'float \\*'\n\n>C:\\\\temp\\\\test.c(159,19): warning C4477: 'fprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int \\*'\n\n>C:\\\\temp\\\\test.c(161,19): warning C4477: 'fprintf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'float \\*'\n\n>C:\\\\temp\\\\test.c(201,19): warning C4477: 'fprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int \\*'\n\n>C:\\\\temp\\\\test.c(203,19): warning C4477: 'fprintf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'float \\*'\n\nThese warnings means these calls to `printf` will not work as expected."", 'Your if statement \n\n>if(scanf(""%d"", &choice) !=1)\n\nis not written right. \n\nThink about it. What exactly are you comparing to 1?', 'In the `load_database` function you use `fprintf` to try and load your movies.txt file. \n\nThat will not work as `fprintf` writes to a file stream, it does not read from a file stream.']"
+1oj7lys,"For, For Loop, While","I'm new to programming, can you guys tell me the difference between For, For Loop, Nested Loop, While & Do While (C Language)?
+Kindly, explain in simpler terms.",0,7,Hurridown,learnprogramming,4261006,2025-10-29 15:29:40,https://www.reddit.com/r/learnprogramming/comments/1oj7lys/for_for_loop_while/,False,False,False,False,0,"['Loops repeat work.\n\nFor loop: I want to repeat work a specific number of times.\n\nWhile loop: I want to repeat work some number of times, and I know when I want to stop.\n\nDo While loop: Same as above, but I want to always do the work at least once.\n\n""Nested loop"" isn\'t a particular structure, it just refers to a loop that is inside another one.\n\nAll looping can be done with the while loop. These are just handy, recognisable, expressive constructs for us humans. Don\'t get too hung up on the suggestions above for which to use when. It often doesn\'t matter (e.g. for and while are both used for traversing arrays often).', ""`while` is your basic loop, the thing keeps repeating while the condition is true\n\n`do {} while` is the same as while, but the condition is checked at the end of the loop. I've used it once or twice\n\n`for` is just like while but there's some shorthand built in. in the () you have some ;. it goes like `(setup; condition; increment)`. setup runs once, before we start looping, the condition is just the same as the condition from `while`, and then the increment runs at the end of each loop, right before we repeat"", 'All loops, For, while and do while basically do the same: They are control flow statements that repeat their body , depending on the condition specified. \n\nIn a for loop, the condition is very specific: \n\n    for (int i = 0; i < 3; ++i) {\n        printf(""%d"", i);\n\n`int i = 0` is executed once, when the loop is entered. It is called the initialization. In this case you specify the variable i to be an integer and initialize it to 0.\n\n`i < 3` is the condition. It is executed before every loop and exits the loop if it returns false. In this case you repeat until i reaches 3, and then stop.\n\n`++i` is the step, and is executed between two executions of the loop to set up the next. In this case you increase i by one for the next loop. \n\nThis loop will print 0, 1 and 2. \n\nIn a while loop you just put a condition down, and the loop is executed until that condition is false (not unlike the middle statement in an if loop)\n\n    int i = 0;\n    while (i < 3) {\n      printf(""%d"", i);\n      ++i;\n    }\n\nThis would do exactly the same as the foor loop above. \n\nA do while loop is similar, but the check is performed after each loop, not before. This means a do while loop always executes at least once. \n\n    int i = 0;\n    do {\n      printf(""%d"", i);\n      ++i;\n    } while (i < 3);\n\nAll of these will do exactly the same thing in this case. You can basically write any loop you want to write in any of the three styles, it just depends what is more readable and thus most appropriate in any given situation. \n\nA nested loop is just a loop, inside another loop, like: \n\n    while (condition) {\n      while (condition2) {\n        do_stuff();\n       }\n    }', ""This is the kind of thing LLM's give great answers for."", 'Simply put (for any language): The FOR loop will ALWAYS execute N-times. The DO loop will start executing and at each iteration end will check ""should i stop here""? So it will execute at least ONE time. The WHILE loop might NOT execute at all if the condition is not met. But if met it will start executing and at the beginning of each time will ask ""should i stop here""? That\'s it. Nested loop simply means that inside each loop you can have another loop (and many other loops).\n\nThe most simple thing to illustrate a nested loop is to traverse a matrix. A matrix is simply a 2D-array, which means a nested array, which means simply an array who\'se elements are also arrays.\n\n    //Imagine this: \n    ARR = [\n      [1,2,3],\n      [4,5,6],\n    ]\n\nSo to traverse this we will do (this is NOT real code, i am just illustrating):\n\n    for (x = 0; x < length(ARR); i++):  // this will run accross the main array\n      for (y = 0; y < length(ARR[x]); y++):  / this will run on each of the sub-arrays\n        # do something here']"
+1oj45bs,Can you take a second to evaluate my use of AI.,"Good morning,
+
+So for context  I work solo as a platform engineer  in a manufacturing facility. I make data pipelines and web pages inside of a monorepo.
+
+I never went to college. I have been interested in programming since i was 15 I am just turned 26. I have always been around programming but never was successful back in 2015 days. hard to find context specific details of work.
+
+fast forward today I start making reports for one of the managers from our oracle ERP database and got moved to where i am at.
+
+I am heavily involved in programming culture. I spend time listening to Casey Muratori, Jblow, Mitchell Hashimoto, Prime, Theo, Rich Hickey, BigBoxSwe I spend countless hours trying to learn via video to help shape opinions and design philosophy passively .
+
+Enough background and Context.
+
+When I use AI its to solve something like this.
+
+""In golang i want to move to a directory and execute a cli command and get the std in and out and report back. what does golang give you to do this?""
+
+""Can you look through my code base and scan for any errors they i may have missed or places i could have been more performant or idiomatic and explain why with links""
+
+""does this design pattern make sense here?""
+
+""insert error message because why are stack traces so cryptic""
+
+""Code Review this""
+
+""I have a idea to build this and wanted feedback what do you think""
+
+most  of my question pertain to seeing how something is done in isolation rather then trying to have it auto generate code for me.
+
+because im solo i try to reduce api finding as much as possible and i try to use that time to understand the docs of what pertains.
+
+I have guilt and imposter syndrome do to being isolated and AI being the only thing i can talk to.
+
+I wanna make sure im not cooking myself.
+
+I am genuinely wanting to improve and look forward to your feedback.
+
+I love being programmer and want to do the best I can to be competent so don't go easy on me :)
+
+I use Claude. I don't use agents. nor do I use AI autocomplete only jet brains local model that they have had for years",0,6,VastDesign9517,learnprogramming,4261007,2025-10-29 13:12:03,https://www.reddit.com/r/learnprogramming/comments/1oj45bs/can_you_take_a_second_to_evaluate_my_use_of_ai/,False,False,False,False,0,"['Seems fine to me.', ""To be honest, it doesn't sound perfect but you are learning. I don't think using AI is bad but if you are an engineer using AI you have to lean into it, not just kinda use it. Otherwise you get worst form both worlds. If you achieve the results and are comparable to your peers you are not an imposter. \n\nI think most people will agree when you are using AI you are not learning as much about development and programming. This can be an issue in the long run.\n\nSecond, your AI workflow looks lightweight. You should use coding oriented tools like Claude Code or OpenAI Codex, which have built in planning, context and code review tools. Your employer might limit access to these though.""]"
+1oj3ne3,Opinions on learning with AI,"I'm a new self taught programmer and have been using chatgpt and claude to understand and learn code.
+Everytime I have some really minor problem like logical errors or syntax errors which usually takes a huge amount of time to code, I use AI to debug it, or when i have problems building logic for things like pattern printing,sequence printing,projects etc.
+I'm not sure if this would even benifit me in anyway
+Edit: I'm sorry English isn't my 1st or 2nd language I couldn't explain everything clearly, y'all can ignore ts post for now",0,21,Silver-Attitude7452,learnprogramming,4261007,2025-10-29 12:50:15,https://www.reddit.com/r/learnprogramming/comments/1oj3ne3/opinions_on_learning_with_ai/,False,False,False,False,0,"[""You have not learnt to *program*, you have learnt to *outsource*.\n\nRevert back to square 1 and remove AI completely out of your workflow. Pretend that it doesn't even exist.\n\nEntire generations of programmers have learnt without AI (only available since 3 years) and even without the internet (only available since 1993). How? They invested effort and worked hard. They didn't outsource.\n\nWhat you did is akin to going to the gym to watch the others do the lifting thinking that you'd build muscle that way.\n\nPick a *proper* course, like, e.g. for Python the MOOC [Python Programming 2025](https://programming-25.mooc.fi) and work through it from A to Z. No AI. Then, you will learn and build up your skills."", ""If you're learning, its fine.  If you're just being lazy and not at least trying to figure it out on your own, then you're doing yourself a disservice"", 'There’s already plenty on here. What other opinions and validation do you need? Don’t overuse it. You should incorporate the original way of learning with new. Learn by building yourself. AI is supplemental.', ""As a successful self-taught programmer bashing my head against the wall for hours at a time on bugs and errors was the best thing I could have ever done for myself.\n\nThat forces you to learn how to solve the problem, and to solve those problems it forces you to learn and understand what is actually happening in the code at a deeper level than just what it is you're writing yourself. \n\nHaving AI debug for you isn't cheating at coding or anything, but you are cheating yourself if you're still learning. Debugging is a critical skill in software development and is one of the main skills that I feel differentiates a bad or ok programmer with a really good programmer."", 'I would avoid using AI for learning atm.\n\nIt\'s a good tool for learning path planning for well-known topics. But if you\'re looking to build the right mental models of concepts in your brain, doing things manually like coding by hand is a good check on your understanding. We\'re discovering all the benefits of hand-coding that we\'ve taken for granted before.\n\nStudents and junior engs I work with learn much slower with AI. It ""feels"" faster because they\'re producing more code, which used to be a good metric in manual coding days where all the code were produced by humans. But with AI tools, people with the wrong/fuzzy mental model can produce a lot of correct code. The feedback loop is kinda broken, and I fear many learners are shooting themselves in the foot with too much AI assistance.']"
+1oizdio,Hey there I want to ask you .what is programing .I am new here.and how can I learn it without laptop. Just by my smart phone.and do you think that programing required in future?.or become waste time,So I want help please,0,1,100justengineer,learnprogramming,4261006,2025-10-29 08:53:42,https://www.reddit.com/r/learnprogramming/comments/1oizdio/hey_there_i_want_to_ask_you_what_is_programing_i/,False,False,False,False,0,"['1. Start by reading the extensive **Frequently Asked Questions** right here in the subreddit - sidebar on desktop, ""About"" on mobile\n2. Go through the subreddit. Questions like yours have been asked and answered in abundance (including your ""can I learn without a computer"" question)\n3. Learning without a computer is possible, albeit very hard and tedious. Would not recommend it. If you can\'t afford a laptop, get yourself a Raspberry Pi microcomputer (a 3B or a 4 are sufficient - doesn\'t need to be the latest 5 - ideally, you could directly buy a Raspberry Pi 400 or 500 as these have everything integrated - the actual Raspberry Pi is built into a keyboard. All you need is a TV or monitor with HDMI.)\n4. Programming is a skill that will not die in the foreseeable future.']"
+1oitzh7,"I'm making a card game, how would i calculate the score of the hand","import random
+
+def deal (list,list2): #deals cards
+
+card=random.choice(list2)
+
+list.append(card)
+
+list2.remove(card)
+
+score=0
+
+play=""yes""
+
+dealer\_hand=\[\]
+
+hand= \[\]
+
+deck=\[""♠2"",""♠3"",""♠4"",""♠5"",""♠6"",""♠7"",""♠8"",""♠9"",""♠10"",""♠J"",""♠Q"",""♠K"",""♠A"",""♡2"",""♡3"",""♡4"",""♡5"",""♡6"",""♡7"",""♡8"",""♡9"",""♡10"",""♡J"",""♡Q"",""♡K"",""♡A"",""♢2"",""♢3"",""♢4"",""♢5"",""♢6"",""♢7"",""♢8"",""♢9"",""♢10"",""♢J"",""♢Q"",""♢K"",""♢A"",""♣2"",""♣3"",""♣4"",""♣5"",""♣6"",""♣7"",""♣8"",""♣9"",""♣10"",""♣J"",""♣Q"",""♣K"",""♣A""\]
+
+while play ==""yes"":
+
+for dealer in range (2): #deals player 2 cards
+
+deal (hand,deck,)
+
+for dealer in range (2): #deals dealer 2 cards
+
+deal(dealer\_hand,deck)
+
+hit=input(""hit? yes or no "")
+
+while hit == ""yes"":
+
+deal(hand,deck)
+
+hit=input(""hit? yes or no "")
+
+print(hand)
+
+print(dealer\_hand)
+
+print(len(deck))
+
+play= input(""play?"")",0,12,Excellent_Map_7037,learnprogramming,4261007,2025-10-29 03:18:25,https://www.reddit.com/r/learnprogramming/comments/1oitzh7/im_making_a_card_game_how_would_i_calculate_the/,False,False,False,False,0,"['how would you do it if you were playing in person? do it like that, but in code.', 'Time to learn how dictionaries work. Lots of tutorials, or you can check the docs', 'Each card has a point value, except for aces that have two. That means a hand can have multiple point values.', 'Is the game Black Jack? Do you know OOP?']"
+1oisacp,Learning how to program with or without AI?,"So as the title suggests, what do you think would be the best approach to learning how to program ?
+Should one use AI and if yes to what extent ?
+
+I have see many takes already including ones that claim 
+“ whoever is not using AI is gonna be left behind “ 
+
+Now to me that sounds kind of ridiculous and true at the same time, I do know people that are just cracked and don’t use AI at all with extensive knowledge in very broad fields and they got there because they are obsessed with coding and the technology in general.
+
+What’s your take on this matter ?",0,29,CodewithApe,learnprogramming,4261006,2025-10-29 01:55:46,https://www.reddit.com/r/learnprogramming/comments/1oisacp/learning_how_to_program_with_or_without_ai/,False,False,False,False,0,"[""> I have see many takes already including ones that claim “ whoever is not using AI is gonna be left behind “ \n\nYou should read that in the same way that a few years ago people were saying anybody who didn't embrace web3 or NFTs or the metaverse were going to be left behind."", ""I swear the AI questions need FAQ's at some point...\n\nAI is good once you know what you're doing. If you can't verify what the AI is producing is potentially wrong, then do not use AI. \n\nIf you're learning, you do not know what you're doing, at least yet."", ""I find that using AI to do programming for you doesn't give you nearly as good of a feeling when completing a task. (It is SUCH a good feeling when you've completed something all on your own). It's also always best to understand the underlying concepts."", ""The key to succeeding as a programmer is understanding your programming language. It's up to you whether you use AI or don't — it's one of many tools. (I wouldn't recommend using it as the primary tool, as it's often wrong.) However, you'll never get anywhere if you use AI to write something, you don't understand it, and then you move along.\n\nWhatever you're working on or learning, if you can't write it without AI, that's a sign that you're still working on learning it, and you're not ready to move on yet."", ""My AI is YouTube channel and Stackoverflow. I haven't switched from AI to another AI.""]"
+1ojfqhu,How do I make a program that will scream at me to autosave every 10 minutes,What programming language should I use for it? I’ve only used rust and c++ ,0,27,Outrageous_Nature388,learnprogramming,4261006,2025-10-29 20:31:37,https://www.reddit.com/r/learnprogramming/comments/1ojfqhu/how_do_i_make_a_program_that_will_scream_at_me_to/,False,False,False,False,0,"['Is it really “autosave” if you have to be reminded to do it?', 'literally any.\n\n    #include <iostream>\n    #include <windows.h>\n    \n    int main() {\n        while (true) {\n            Beep(1000, 500);\n            Sleep(600000);\n        }\n        return 0;\n    }', 'This looks like a good use-case for [lowkpro.com](http://lowkpro.com) tbh. Write a Lua program with a 10 minute timer that pops up a notification or message box or something.', 'Both of them I don’t really know how to make any programs other than mess around with an audrino.', 'Python, I guess?\n\n    import time\n    while True:\n        print(""Autosave"")\n        time.sleep(600)\n\nNot sure what you\'re really after.']"

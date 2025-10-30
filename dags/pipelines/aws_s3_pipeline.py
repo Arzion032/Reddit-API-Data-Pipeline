@@ -1,5 +1,5 @@
 from etls.aws_etls import *
-from utils.contants import AWS_BUCKET_NAME
+from utils.constants import AWS_BUCKET_NAME
 
 
 def upload_to_s3_pipeline(file_path: str):
